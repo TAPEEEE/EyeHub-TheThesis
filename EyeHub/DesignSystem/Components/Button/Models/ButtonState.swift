@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+public enum ButtonState {
+    case active
+    case onPress
+    case disable
+}

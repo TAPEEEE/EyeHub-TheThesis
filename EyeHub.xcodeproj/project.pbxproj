@@ -7,23 +7,121 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D4AC0062B67E48500D5F977 /* Sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4AC0052B67E48500D5F977 /* Sound1.mp3 */; };
+		2D4AC0082B68182900D5F977 /* Sound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4AC0072B68182900D5F977 /* Sound2.mp3 */; };
 		2DB974062B657F16009BE2C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974052B657F16009BE2C8 /* AppDelegate.swift */; };
-		2DB974082B657F16009BE2C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974072B657F16009BE2C8 /* SceneDelegate.swift */; };
-		2DB9740A2B657F16009BE2C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974092B657F16009BE2C8 /* ViewController.swift */; };
-		2DB9740D2B657F16009BE2C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB9740B2B657F16009BE2C8 /* Main.storyboard */; };
 		2DB9740F2B657F17009BE2C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DB9740E2B657F17009BE2C8 /* Assets.xcassets */; };
 		2DB974122B657F17009BE2C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974102B657F17009BE2C8 /* LaunchScreen.storyboard */; };
+		2DB974292B658244009BE2C8 /* EyeHubColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974282B658244009BE2C8 /* EyeHubColor.swift */; };
+		2DB9743F2B6594DC009BE2C8 /* EyeHubRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB9743E2B6594DC009BE2C8 /* EyeHubRadius.swift */; };
+		2DB974472B663077009BE2C8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974462B663077009BE2C8 /* UIView+Extension.swift */; };
+		2DB9746A2B666120009BE2C8 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974692B666120009BE2C8 /* Appearance.swift */; };
+		2DB9746C2B66612F009BE2C8 /* PaddingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB9746B2B66612F009BE2C8 /* PaddingModel.swift */; };
+		2DB9746E2B66613C009BE2C8 /* ButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB9746D2B66613C009BE2C8 /* ButtonSize.swift */; };
+		2DB974702B66614A009BE2C8 /* ButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB9746F2B66614A009BE2C8 /* ButtonState.swift */; };
+		2DB974742B666172009BE2C8 /* ButtonSubType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974732B666172009BE2C8 /* ButtonSubType.swift */; };
+		2DB974762B666182009BE2C8 /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974752B666182009BE2C8 /* ButtonType.swift */; };
+		2DB974782B666198009BE2C8 /* ButtonColorAppearanceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974772B666198009BE2C8 /* ButtonColorAppearanceBuilder.swift */; };
+		2DB9747A2B6661A4009BE2C8 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974792B6661A4009BE2C8 /* PrimaryButton.swift */; };
+		2DB9747C2B66641F009BE2C8 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB9747B2B66641F009BE2C8 /* Typography.swift */; };
+		2DB974A32B666C87009BE2C8 /* Kanit-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974912B666C86009BE2C8 /* Kanit-Italic.ttf */; };
+		2DB974A42B666C87009BE2C8 /* Kanit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974922B666C86009BE2C8 /* Kanit-Medium.ttf */; };
+		2DB974A52B666C87009BE2C8 /* Kanit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974932B666C86009BE2C8 /* Kanit-Bold.ttf */; };
+		2DB974A62B666C87009BE2C8 /* Kanit-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974942B666C86009BE2C8 /* Kanit-ExtraBold.ttf */; };
+		2DB974A72B666C87009BE2C8 /* Kanit-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974952B666C86009BE2C8 /* Kanit-ExtraLight.ttf */; };
+		2DB974A82B666C87009BE2C8 /* Kanit-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974962B666C86009BE2C8 /* Kanit-MediumItalic.ttf */; };
+		2DB974A92B666C87009BE2C8 /* Kanit-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974972B666C86009BE2C8 /* Kanit-LightItalic.ttf */; };
+		2DB974AA2B666C87009BE2C8 /* Kanit-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974982B666C86009BE2C8 /* Kanit-ExtraLightItalic.ttf */; };
+		2DB974AB2B666C87009BE2C8 /* Kanit-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974992B666C86009BE2C8 /* Kanit-BoldItalic.ttf */; };
+		2DB974AC2B666C87009BE2C8 /* Kanit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB9749A2B666C86009BE2C8 /* Kanit-Light.ttf */; };
+		2DB974AD2B666C87009BE2C8 /* Kanit-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB9749B2B666C87009BE2C8 /* Kanit-BlackItalic.ttf */; };
+		2DB974AE2B666C87009BE2C8 /* Kanit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB9749C2B666C87009BE2C8 /* Kanit-Regular.ttf */; };
+		2DB974AF2B666C87009BE2C8 /* Kanit-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB9749D2B666C87009BE2C8 /* Kanit-ThinItalic.ttf */; };
+		2DB974B02B666C87009BE2C8 /* Kanit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB9749E2B666C87009BE2C8 /* Kanit-SemiBold.ttf */; };
+		2DB974B12B666C87009BE2C8 /* Kanit-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB9749F2B666C87009BE2C8 /* Kanit-ExtraBoldItalic.ttf */; };
+		2DB974B22B666C87009BE2C8 /* Kanit-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974A02B666C87009BE2C8 /* Kanit-Black.ttf */; };
+		2DB974B32B666C87009BE2C8 /* Kanit-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974A12B666C87009BE2C8 /* Kanit-Thin.ttf */; };
+		2DB974B42B666C87009BE2C8 /* Kanit-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974A22B666C87009BE2C8 /* Kanit-SemiBoldItalic.ttf */; };
+		2DB974B62B666DB5009BE2C8 /* UIFonts+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974B52B666DB5009BE2C8 /* UIFonts+Extension.swift */; };
+		2DB974BA2B667C39009BE2C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974B82B667C39009BE2C8 /* HomeViewController.swift */; };
+		2DB974BC2B667F4F009BE2C8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974B92B667C39009BE2C8 /* HomeViewController.xib */; };
+		2DB974C02B6681BC009BE2C8 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974BE2B6681BC009BE2C8 /* OnBoardingViewController.swift */; };
+		2DB974C12B6681BC009BE2C8 /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974BF2B6681BC009BE2C8 /* OnBoardingViewController.xib */; };
+		2DB974C72B67CB9F009BE2C8 /* VoiceConceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974C52B67CB9F009BE2C8 /* VoiceConceptViewController.swift */; };
+		2DB974C82B67CB9F009BE2C8 /* VoiceConceptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974C62B67CB9F009BE2C8 /* VoiceConceptViewController.xib */; };
+		2DF334632B6AC0A50063944B /* HomeMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334622B6AC0A50063944B /* HomeMenuButton.swift */; };
+		2DF334652B6AC0AE0063944B /* HomeMenuButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF334642B6AC0AE0063944B /* HomeMenuButton.xib */; };
+		2DF334692B6AC4090063944B /* HomeMenuButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334682B6AC4090063944B /* HomeMenuButtonState.swift */; };
+		2DF3346B2B6AC46C0063944B /* HomeMenuButtonActionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF3346A2B6AC46C0063944B /* HomeMenuButtonActionState.swift */; };
+		2DF3346D2B6AC4B00063944B /* HomeMenuButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF3346C2B6AC4B00063944B /* HomeMenuButtonViewModel.swift */; };
+		2DF334702B6AD16A0063944B /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF3346F2B6AD16A0063944B /* CollectionView.swift */; };
+		2DF334722B6AD17B0063944B /* CollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF334712B6AD17B0063944B /* CollectionView.xib */; };
+		2DF334742B6AD3360063944B /* CollectionViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334732B6AD3360063944B /* CollectionViewType.swift */; };
+		2DF334762B6AD4750063944B /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334752B6AD4750063944B /* UICollectionView+Extensions.swift */; };
+		2DF3347B2B6AD7910063944B /* HomeScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334792B6AD7910063944B /* HomeScreenCollectionViewCell.swift */; };
+		2DF3347C2B6AD7910063944B /* HomeScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF3347A2B6AD7910063944B /* HomeScreenCollectionViewCell.xib */; };
+		DE0F44EA3DAA79C7B7D5C951 /* Pods_EyeHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76E8DB1A5C2B437BF40323E /* Pods_EyeHub.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D4AC0052B67E48500D5F977 /* Sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound1.mp3; sourceTree = "<group>"; };
+		2D4AC0072B68182900D5F977 /* Sound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound2.mp3; sourceTree = "<group>"; };
 		2DB974022B657F16009BE2C8 /* EyeHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB974052B657F16009BE2C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2DB974072B657F16009BE2C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2DB974092B657F16009BE2C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2DB9740C2B657F16009BE2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DB9740E2B657F17009BE2C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DB974112B657F17009BE2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DB974132B657F17009BE2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DB974282B658244009BE2C8 /* EyeHubColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeHubColor.swift; sourceTree = "<group>"; };
+		2DB9743E2B6594DC009BE2C8 /* EyeHubRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeHubRadius.swift; sourceTree = "<group>"; };
+		2DB974462B663077009BE2C8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		2DB974692B666120009BE2C8 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		2DB9746B2B66612F009BE2C8 /* PaddingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingModel.swift; sourceTree = "<group>"; };
+		2DB9746D2B66613C009BE2C8 /* ButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSize.swift; sourceTree = "<group>"; };
+		2DB9746F2B66614A009BE2C8 /* ButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonState.swift; sourceTree = "<group>"; };
+		2DB974732B666172009BE2C8 /* ButtonSubType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSubType.swift; sourceTree = "<group>"; };
+		2DB974752B666182009BE2C8 /* ButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
+		2DB974772B666198009BE2C8 /* ButtonColorAppearanceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonColorAppearanceBuilder.swift; sourceTree = "<group>"; };
+		2DB974792B6661A4009BE2C8 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		2DB9747B2B66641F009BE2C8 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		2DB974912B666C86009BE2C8 /* Kanit-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Italic.ttf"; sourceTree = "<group>"; };
+		2DB974922B666C86009BE2C8 /* Kanit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Medium.ttf"; sourceTree = "<group>"; };
+		2DB974932B666C86009BE2C8 /* Kanit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Bold.ttf"; sourceTree = "<group>"; };
+		2DB974942B666C86009BE2C8 /* Kanit-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2DB974952B666C86009BE2C8 /* Kanit-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraLight.ttf"; sourceTree = "<group>"; };
+		2DB974962B666C86009BE2C8 /* Kanit-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-MediumItalic.ttf"; sourceTree = "<group>"; };
+		2DB974972B666C86009BE2C8 /* Kanit-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-LightItalic.ttf"; sourceTree = "<group>"; };
+		2DB974982B666C86009BE2C8 /* Kanit-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		2DB974992B666C86009BE2C8 /* Kanit-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2DB9749A2B666C86009BE2C8 /* Kanit-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Light.ttf"; sourceTree = "<group>"; };
+		2DB9749B2B666C87009BE2C8 /* Kanit-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-BlackItalic.ttf"; sourceTree = "<group>"; };
+		2DB9749C2B666C87009BE2C8 /* Kanit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Regular.ttf"; sourceTree = "<group>"; };
+		2DB9749D2B666C87009BE2C8 /* Kanit-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ThinItalic.ttf"; sourceTree = "<group>"; };
+		2DB9749E2B666C87009BE2C8 /* Kanit-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-SemiBold.ttf"; sourceTree = "<group>"; };
+		2DB9749F2B666C87009BE2C8 /* Kanit-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		2DB974A02B666C87009BE2C8 /* Kanit-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Black.ttf"; sourceTree = "<group>"; };
+		2DB974A12B666C87009BE2C8 /* Kanit-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Thin.ttf"; sourceTree = "<group>"; };
+		2DB974A22B666C87009BE2C8 /* Kanit-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		2DB974B52B666DB5009BE2C8 /* UIFonts+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFonts+Extension.swift"; sourceTree = "<group>"; };
+		2DB974B82B667C39009BE2C8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2DB974B92B667C39009BE2C8 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		2DB974BE2B6681BC009BE2C8 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		2DB974BF2B6681BC009BE2C8 /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
+		2DB974C52B67CB9F009BE2C8 /* VoiceConceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceConceptViewController.swift; sourceTree = "<group>"; };
+		2DB974C62B67CB9F009BE2C8 /* VoiceConceptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoiceConceptViewController.xib; sourceTree = "<group>"; };
+		2DF334622B6AC0A50063944B /* HomeMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuButton.swift; sourceTree = "<group>"; };
+		2DF334642B6AC0AE0063944B /* HomeMenuButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMenuButton.xib; sourceTree = "<group>"; };
+		2DF334682B6AC4090063944B /* HomeMenuButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuButtonState.swift; sourceTree = "<group>"; };
+		2DF3346A2B6AC46C0063944B /* HomeMenuButtonActionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuButtonActionState.swift; sourceTree = "<group>"; };
+		2DF3346C2B6AC4B00063944B /* HomeMenuButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuButtonViewModel.swift; sourceTree = "<group>"; };
+		2DF3346F2B6AD16A0063944B /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		2DF334712B6AD17B0063944B /* CollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionView.xib; sourceTree = "<group>"; };
+		2DF334732B6AD3360063944B /* CollectionViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewType.swift; sourceTree = "<group>"; };
+		2DF334752B6AD4750063944B /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		2DF334792B6AD7910063944B /* HomeScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		2DF3347A2B6AD7910063944B /* HomeScreenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenCollectionViewCell.xib; sourceTree = "<group>"; };
+		5D0A4707885B1B8A1836066E /* Pods-EyeHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeHub.debug.xcconfig"; path = "Target Support Files/Pods-EyeHub/Pods-EyeHub.debug.xcconfig"; sourceTree = "<group>"; };
+		D76E8DB1A5C2B437BF40323E /* Pods_EyeHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EyeHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E916BFFA8F561DF8DDC4B198 /* Pods-EyeHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeHub.release.xcconfig"; path = "Target Support Files/Pods-EyeHub/Pods-EyeHub.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0F44EA3DAA79C7B7D5C951 /* Pods_EyeHub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +141,8 @@
 			children = (
 				2DB974042B657F16009BE2C8 /* EyeHub */,
 				2DB974032B657F16009BE2C8 /* Products */,
+				CA7D8D5D75254273230AFD2F /* Pods */,
+				9ED4E67478E51476DB408BBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +157,263 @@
 		2DB974042B657F16009BE2C8 /* EyeHub */ = {
 			isa = PBXGroup;
 			children = (
+				2DB974262B6581BB009BE2C8 /* Assets */,
+				2DB974212B6580CD009BE2C8 /* Extensions */,
+				2DB974202B6580BD009BE2C8 /* Constants */,
+				2DB9741C2B658057009BE2C8 /* Commons */,
+				2DB9741B2B65804D009BE2C8 /* Scenes */,
+				2DB9741A2B657FBD009BE2C8 /* Base */,
+				2DB974192B657FAF009BE2C8 /* DesignSystem */,
 				2DB974052B657F16009BE2C8 /* AppDelegate.swift */,
-				2DB974072B657F16009BE2C8 /* SceneDelegate.swift */,
-				2DB974092B657F16009BE2C8 /* ViewController.swift */,
-				2DB9740B2B657F16009BE2C8 /* Main.storyboard */,
 				2DB9740E2B657F17009BE2C8 /* Assets.xcassets */,
 				2DB974102B657F17009BE2C8 /* LaunchScreen.storyboard */,
 				2DB974132B657F17009BE2C8 /* Info.plist */,
 			);
 			path = EyeHub;
+			sourceTree = "<group>";
+		};
+		2DB974192B657FAF009BE2C8 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				2DB9741E2B658084009BE2C8 /* Token */,
+				2DB9741D2B65807E009BE2C8 /* Components */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		2DB9741A2B657FBD009BE2C8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2DB9741B2B65804D009BE2C8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2DB974C42B67CB7A009BE2C8 /* VoiceConceptViewController */,
+				2DB974BD2B6681A2009BE2C8 /* OnBoarding */,
+				2DB974B72B667C1A009BE2C8 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2DB9741C2B658057009BE2C8 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		2DB9741D2B65807E009BE2C8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2DF3346E2B6AD0940063944B /* CollectionViewHorizontal */,
+				2DF334612B6AC0880063944B /* HomeMenuButton */,
+				2DB9742C2B658D47009BE2C8 /* Button */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2DB9741E2B658084009BE2C8 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				2DB9743B2B6592CD009BE2C8 /* Radius */,
+				2DB974272B65820E009BE2C8 /* Color */,
+				2DB9747D2B666425009BE2C8 /* Typography */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		2DB974202B6580BD009BE2C8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		2DB974212B6580CD009BE2C8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DB974462B663077009BE2C8 /* UIView+Extension.swift */,
+				2DB974B52B666DB5009BE2C8 /* UIFonts+Extension.swift */,
+				2DF334752B6AD4750063944B /* UICollectionView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2DB974262B6581BB009BE2C8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2D4AC0052B67E48500D5F977 /* Sound1.mp3 */,
+				2D4AC0072B68182900D5F977 /* Sound2.mp3 */,
+				2DB9747E2B6669AB009BE2C8 /* Font */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		2DB974272B65820E009BE2C8 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				2DB974282B658244009BE2C8 /* EyeHubColor.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		2DB9742C2B658D47009BE2C8 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				2DB974682B66610C009BE2C8 /* Models */,
+				2DB974772B666198009BE2C8 /* ButtonColorAppearanceBuilder.swift */,
+				2DB974792B6661A4009BE2C8 /* PrimaryButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		2DB9743B2B6592CD009BE2C8 /* Radius */ = {
+			isa = PBXGroup;
+			children = (
+				2DB9743E2B6594DC009BE2C8 /* EyeHubRadius.swift */,
+			);
+			path = Radius;
+			sourceTree = "<group>";
+		};
+		2DB974682B66610C009BE2C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2DB974692B666120009BE2C8 /* Appearance.swift */,
+				2DB9746B2B66612F009BE2C8 /* PaddingModel.swift */,
+				2DB9746D2B66613C009BE2C8 /* ButtonSize.swift */,
+				2DB9746F2B66614A009BE2C8 /* ButtonState.swift */,
+				2DB974732B666172009BE2C8 /* ButtonSubType.swift */,
+				2DB974752B666182009BE2C8 /* ButtonType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2DB9747D2B666425009BE2C8 /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				2DB9747B2B66641F009BE2C8 /* Typography.swift */,
+			);
+			path = Typography;
+			sourceTree = "<group>";
+		};
+		2DB9747E2B6669AB009BE2C8 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2DB974A02B666C87009BE2C8 /* Kanit-Black.ttf */,
+				2DB9749B2B666C87009BE2C8 /* Kanit-BlackItalic.ttf */,
+				2DB974932B666C86009BE2C8 /* Kanit-Bold.ttf */,
+				2DB974992B666C86009BE2C8 /* Kanit-BoldItalic.ttf */,
+				2DB974942B666C86009BE2C8 /* Kanit-ExtraBold.ttf */,
+				2DB9749F2B666C87009BE2C8 /* Kanit-ExtraBoldItalic.ttf */,
+				2DB974952B666C86009BE2C8 /* Kanit-ExtraLight.ttf */,
+				2DB974982B666C86009BE2C8 /* Kanit-ExtraLightItalic.ttf */,
+				2DB974912B666C86009BE2C8 /* Kanit-Italic.ttf */,
+				2DB9749A2B666C86009BE2C8 /* Kanit-Light.ttf */,
+				2DB974972B666C86009BE2C8 /* Kanit-LightItalic.ttf */,
+				2DB974922B666C86009BE2C8 /* Kanit-Medium.ttf */,
+				2DB974962B666C86009BE2C8 /* Kanit-MediumItalic.ttf */,
+				2DB9749C2B666C87009BE2C8 /* Kanit-Regular.ttf */,
+				2DB9749E2B666C87009BE2C8 /* Kanit-SemiBold.ttf */,
+				2DB974A22B666C87009BE2C8 /* Kanit-SemiBoldItalic.ttf */,
+				2DB974A12B666C87009BE2C8 /* Kanit-Thin.ttf */,
+				2DB9749D2B666C87009BE2C8 /* Kanit-ThinItalic.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		2DB974B72B667C1A009BE2C8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2DB974B82B667C39009BE2C8 /* HomeViewController.swift */,
+				2DB974B92B667C39009BE2C8 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2DB974BD2B6681A2009BE2C8 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				2DB974BE2B6681BC009BE2C8 /* OnBoardingViewController.swift */,
+				2DB974BF2B6681BC009BE2C8 /* OnBoardingViewController.xib */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		2DB974C42B67CB7A009BE2C8 /* VoiceConceptViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DB974C52B67CB9F009BE2C8 /* VoiceConceptViewController.swift */,
+				2DB974C62B67CB9F009BE2C8 /* VoiceConceptViewController.xib */,
+			);
+			path = VoiceConceptViewController;
+			sourceTree = "<group>";
+		};
+		2DF334612B6AC0880063944B /* HomeMenuButton */ = {
+			isa = PBXGroup;
+			children = (
+				2DF334672B6AC3DF0063944B /* Model */,
+				2DF334662B6AC3CB0063944B /* ViewModel */,
+				2DF334622B6AC0A50063944B /* HomeMenuButton.swift */,
+				2DF334642B6AC0AE0063944B /* HomeMenuButton.xib */,
+			);
+			path = HomeMenuButton;
+			sourceTree = "<group>";
+		};
+		2DF334662B6AC3CB0063944B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2DF3346C2B6AC4B00063944B /* HomeMenuButtonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2DF334672B6AC3DF0063944B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DF334682B6AC4090063944B /* HomeMenuButtonState.swift */,
+				2DF3346A2B6AC46C0063944B /* HomeMenuButtonActionState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DF3346E2B6AD0940063944B /* CollectionViewHorizontal */ = {
+			isa = PBXGroup;
+			children = (
+				2DF334772B6AD5F40063944B /* CollectionViewCell */,
+				2DF3346F2B6AD16A0063944B /* CollectionView.swift */,
+				2DF334712B6AD17B0063944B /* CollectionView.xib */,
+				2DF334732B6AD3360063944B /* CollectionViewType.swift */,
+			);
+			path = CollectionViewHorizontal;
+			sourceTree = "<group>";
+		};
+		2DF334772B6AD5F40063944B /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DF334792B6AD7910063944B /* HomeScreenCollectionViewCell.swift */,
+				2DF3347A2B6AD7910063944B /* HomeScreenCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		9ED4E67478E51476DB408BBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D76E8DB1A5C2B437BF40323E /* Pods_EyeHub.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA7D8D5D75254273230AFD2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D0A4707885B1B8A1836066E /* Pods-EyeHub.debug.xcconfig */,
+				E916BFFA8F561DF8DDC4B198 /* Pods-EyeHub.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +423,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DB974162B657F17009BE2C8 /* Build configuration list for PBXNativeTarget "EyeHub" */;
 			buildPhases = (
+				2FF9F1F435B94C7CEB3271E3 /* [CP] Check Pods Manifest.lock */,
 				2DB973FE2B657F16009BE2C8 /* Sources */,
 				2DB973FF2B657F16009BE2C8 /* Frameworks */,
 				2DB974002B657F16009BE2C8 /* Resources */,
@@ -125,36 +475,100 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB974B02B666C87009BE2C8 /* Kanit-SemiBold.ttf in Resources */,
+				2DB974A72B666C87009BE2C8 /* Kanit-ExtraLight.ttf in Resources */,
+				2DF3347C2B6AD7910063944B /* HomeScreenCollectionViewCell.xib in Resources */,
+				2DB974B22B666C87009BE2C8 /* Kanit-Black.ttf in Resources */,
+				2D4AC0082B68182900D5F977 /* Sound2.mp3 in Resources */,
+				2DF334722B6AD17B0063944B /* CollectionView.xib in Resources */,
+				2DB974A82B666C87009BE2C8 /* Kanit-MediumItalic.ttf in Resources */,
+				2DB974C82B67CB9F009BE2C8 /* VoiceConceptViewController.xib in Resources */,
 				2DB974122B657F17009BE2C8 /* LaunchScreen.storyboard in Resources */,
+				2DB974BC2B667F4F009BE2C8 /* HomeViewController.xib in Resources */,
+				2DB974AB2B666C87009BE2C8 /* Kanit-BoldItalic.ttf in Resources */,
+				2DB974A92B666C87009BE2C8 /* Kanit-LightItalic.ttf in Resources */,
+				2DB974AE2B666C87009BE2C8 /* Kanit-Regular.ttf in Resources */,
+				2D4AC0062B67E48500D5F977 /* Sound1.mp3 in Resources */,
+				2DB974AC2B666C87009BE2C8 /* Kanit-Light.ttf in Resources */,
+				2DB974B32B666C87009BE2C8 /* Kanit-Thin.ttf in Resources */,
 				2DB9740F2B657F17009BE2C8 /* Assets.xcassets in Resources */,
-				2DB9740D2B657F16009BE2C8 /* Main.storyboard in Resources */,
+				2DB974A42B666C87009BE2C8 /* Kanit-Medium.ttf in Resources */,
+				2DB974AD2B666C87009BE2C8 /* Kanit-BlackItalic.ttf in Resources */,
+				2DB974A52B666C87009BE2C8 /* Kanit-Bold.ttf in Resources */,
+				2DB974A32B666C87009BE2C8 /* Kanit-Italic.ttf in Resources */,
+				2DB974AA2B666C87009BE2C8 /* Kanit-ExtraLightItalic.ttf in Resources */,
+				2DB974C12B6681BC009BE2C8 /* OnBoardingViewController.xib in Resources */,
+				2DB974B12B666C87009BE2C8 /* Kanit-ExtraBoldItalic.ttf in Resources */,
+				2DB974B42B666C87009BE2C8 /* Kanit-SemiBoldItalic.ttf in Resources */,
+				2DB974AF2B666C87009BE2C8 /* Kanit-ThinItalic.ttf in Resources */,
+				2DB974A62B666C87009BE2C8 /* Kanit-ExtraBold.ttf in Resources */,
+				2DF334652B6AC0AE0063944B /* HomeMenuButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FF9F1F435B94C7CEB3271E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EyeHub-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DB973FE2B657F16009BE2C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DB9740A2B657F16009BE2C8 /* ViewController.swift in Sources */,
+				2DB9746E2B66613C009BE2C8 /* ButtonSize.swift in Sources */,
+				2DB974762B666182009BE2C8 /* ButtonType.swift in Sources */,
+				2DB974B62B666DB5009BE2C8 /* UIFonts+Extension.swift in Sources */,
+				2DF3346B2B6AC46C0063944B /* HomeMenuButtonActionState.swift in Sources */,
+				2DB9747C2B66641F009BE2C8 /* Typography.swift in Sources */,
+				2DB974702B66614A009BE2C8 /* ButtonState.swift in Sources */,
+				2DB974742B666172009BE2C8 /* ButtonSubType.swift in Sources */,
+				2DF3347B2B6AD7910063944B /* HomeScreenCollectionViewCell.swift in Sources */,
+				2DF3346D2B6AC4B00063944B /* HomeMenuButtonViewModel.swift in Sources */,
+				2DB974472B663077009BE2C8 /* UIView+Extension.swift in Sources */,
+				2DF334692B6AC4090063944B /* HomeMenuButtonState.swift in Sources */,
+				2DB974292B658244009BE2C8 /* EyeHubColor.swift in Sources */,
+				2DB9743F2B6594DC009BE2C8 /* EyeHubRadius.swift in Sources */,
+				2DF334632B6AC0A50063944B /* HomeMenuButton.swift in Sources */,
+				2DB9746A2B666120009BE2C8 /* Appearance.swift in Sources */,
+				2DB9746C2B66612F009BE2C8 /* PaddingModel.swift in Sources */,
+				2DB974C02B6681BC009BE2C8 /* OnBoardingViewController.swift in Sources */,
+				2DB974BA2B667C39009BE2C8 /* HomeViewController.swift in Sources */,
+				2DB974C72B67CB9F009BE2C8 /* VoiceConceptViewController.swift in Sources */,
+				2DF334742B6AD3360063944B /* CollectionViewType.swift in Sources */,
 				2DB974062B657F16009BE2C8 /* AppDelegate.swift in Sources */,
-				2DB974082B657F16009BE2C8 /* SceneDelegate.swift in Sources */,
+				2DF334762B6AD4750063944B /* UICollectionView+Extensions.swift in Sources */,
+				2DB9747A2B6661A4009BE2C8 /* PrimaryButton.swift in Sources */,
+				2DF334702B6AD16A0063944B /* CollectionView.swift in Sources */,
+				2DB974782B666198009BE2C8 /* ButtonColorAppearanceBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2DB9740B2B657F16009BE2C8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2DB9740C2B657F16009BE2C8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2DB974102B657F17009BE2C8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -218,7 +632,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +689,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -287,6 +701,7 @@
 		};
 		2DB974172B657F17009BE2C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D0A4707885B1B8A1836066E /* Pods-EyeHub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,11 +710,12 @@
 				DEVELOPMENT_TEAM = VZKG7M8FDU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EyeHub/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow the mic";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Please allow the recoginization";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,14 +723,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nattapon.tape.EyeHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		2DB974182B657F17009BE2C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E916BFFA8F561DF8DDC4B198 /* Pods-EyeHub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,11 +743,12 @@
 				DEVELOPMENT_TEAM = VZKG7M8FDU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EyeHub/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow the mic";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Please allow the recoginization";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +756,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nattapon.tape.EyeHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct ButtonPaddingModel {
+    var top: CGFloat
+    var leading: CGFloat
+    var trailing: CGFloat
+    var bottom: CGFloat
+}
