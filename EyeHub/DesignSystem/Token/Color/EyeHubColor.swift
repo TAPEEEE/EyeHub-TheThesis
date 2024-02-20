@@ -10,7 +10,7 @@ import UIKit
 public struct EyeHubColor {
     static let primaryColor = CGColor(red: 66/255, green: 171/255, blue: 194/255, alpha: 1)
     static let backgroundPrimaryColor = CGColor(red: 176/255, green: 200/255, blue:204/255, alpha: 1)
-    static let tintPrimaryColor = CGColor(red: 35/255, green: 85/255, blue: 138/255, alpha: 1)
+    static let tintPrimaryColor = CGColor(red: 236/255, green: 242/255, blue: 243/255, alpha: 1)
     static let pinkColor = CGColor(red: 237/255, green: 115/255, blue: 144/255, alpha: 1)
     static let backgroundPinkColor = CGColor(red: 35/255, green: 85/255, blue: 138/255, alpha: 1)
     static let tintPinkColor = CGColor(red: 35/255, green: 85/255, blue: 138/255, alpha: 1)

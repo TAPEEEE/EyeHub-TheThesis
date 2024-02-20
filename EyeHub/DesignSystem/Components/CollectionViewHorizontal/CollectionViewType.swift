@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 enum CollectionViewType {
-    case homeScreen(title: String, description: String, icon: UIImage)
+    case homeScreen(viewModel: HomeScreenCollectionViewCellViewModel)
 }

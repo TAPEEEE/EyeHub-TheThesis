@@ -15,6 +15,7 @@
                 <outlet property="bannerImageView" destination="1eY-yZ-lUW" id="51s-2T-zdc"/>
                 <outlet property="btn" destination="WWg-j1-jS3" id="cQ0-8o-LR1"/>
                 <outlet property="categoriesView" destination="JXZ-vX-8QX" id="vd1-cK-irf"/>
+                <outlet property="collectionViewHorizontalView" destination="4HE-uR-gxJ" id="jF9-IS-U4J"/>
                 <outlet property="colorButtonView" destination="LhB-Dm-QV4" id="Prn-VA-K7h"/>
                 <outlet property="contentView" destination="Lwr-qm-1UN" id="BfC-UX-XgY"/>
                 <outlet property="contrastButtonView" destination="tBP-GI-oXo" id="ndr-Ks-UwC"/>
@@ -165,16 +166,25 @@
                                         <constraint firstItem="910-jP-R3J" firstAttribute="leading" secondItem="fWn-o6-rIi" secondAttribute="leading" id="sxE-oJ-FG2"/>
                                     </constraints>
                                 </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HE-uR-gxJ" customClass="CollectionView" customModule="EyeHub" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="471.33333333333337" width="393" height="150"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="150" id="KCh-U9-IcR"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="48" translatesAutoresizingMaskIntoConstraints="NO" id="WWg-j1-jS3" customClass="PrimaryButton" customModule="EyeHub" customModuleProvider="target">
-                                    <rect key="frame" x="16" y="535.33333333333337" width="361" height="48"/>
+                                    <rect key="frame" x="16" y="671.33333333333337" width="361" height="48"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="WWg-j1-jS3" secondAttribute="trailing" constant="16" id="6li-p9-aNH"/>
-                                <constraint firstItem="WWg-j1-jS3" firstAttribute="top" secondItem="fWn-o6-rIi" secondAttribute="bottom" constant="80" id="EBW-yJ-VRU"/>
+                                <constraint firstItem="4HE-uR-gxJ" firstAttribute="top" secondItem="fWn-o6-rIi" secondAttribute="bottom" constant="16" id="1NZ-Cw-YsP"/>
+                                <constraint firstAttribute="trailing" secondItem="WWg-j1-jS3" secondAttribute="trailing" constant="16" id="27x-Rq-i56"/>
+                                <constraint firstItem="WWg-j1-jS3" firstAttribute="top" secondItem="4HE-uR-gxJ" secondAttribute="bottom" constant="50" id="6e3-CG-Mcm"/>
                                 <constraint firstItem="fWn-o6-rIi" firstAttribute="leading" secondItem="Lwr-qm-1UN" secondAttribute="leading" constant="16" id="EmA-C6-cNF"/>
                                 <constraint firstAttribute="trailing" secondItem="fWn-o6-rIi" secondAttribute="trailing" constant="16" id="Swt-QA-1cf"/>
+                                <constraint firstItem="4HE-uR-gxJ" firstAttribute="leading" secondItem="Lwr-qm-1UN" secondAttribute="leading" id="XyT-2v-utr"/>
+                                <constraint firstAttribute="trailing" secondItem="4HE-uR-gxJ" secondAttribute="trailing" id="ZqU-Cv-e0G"/>
                                 <constraint firstItem="fWn-o6-rIi" firstAttribute="top" secondItem="Lwr-qm-1UN" secondAttribute="top" constant="8" id="gNd-8R-iaw"/>
                                 <constraint firstAttribute="height" constant="1200" id="gqz-Jn-wLa"/>
                                 <constraint firstItem="WWg-j1-jS3" firstAttribute="leading" secondItem="Lwr-qm-1UN" secondAttribute="leading" constant="16" id="xBL-UF-3ly"/>

@@ -20,10 +20,12 @@ class CollectionView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setUp()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        setUp()
     }
     
     func setCollectionView(viewModels: [CollectionViewType]) {
@@ -32,7 +34,10 @@ class CollectionView: UIView {
     
     private func setUp() {
         setupXib()
-//        collectionView.registerNib(for: <#T##AnyClass#>)
+        collectionView.backgroundColor = .clear
+        collectionView.registerNib(for: HomeScreenCollectionViewCell.self)
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
 }
 
@@ -42,11 +47,17 @@ extension CollectionView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        switch viewModel[indexPath.row] {
+        case .homeScreen(let viewModel):
+            let cell: HomeScreenCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeScreenCollectionViewCell", for: indexPath) as! HomeScreenCollectionViewCell
+            cell.configure(viewModel: viewModel)
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+        let row = indexPath.row
+        delegate?.collectionView(self, didSelectRowAr: row)
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
-    
 }

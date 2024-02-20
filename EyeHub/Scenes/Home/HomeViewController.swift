@@ -21,13 +21,38 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var contrastButtonView: HomeMenuButton!
     @IBOutlet weak var bannerImageView: UIImageView!
     @IBOutlet weak var categoriesView: UIView!
+    @IBOutlet weak var collectionViewHorizontalView: CollectionView!
     
     @IBOutlet weak var contentView: UIView!
     
+    let collectionMenuList: [HorizontalCollectionViewList] = HorizontalCollectionViewList.allCases
     
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
+        let viewModels: [CollectionViewType] = collectionMenuList
+            .map {
+                .homeScreen(viewModel: HomeScreenCollectionViewCellViewModel(
+                    title: $0.cardCell.title,
+                    description: $0.cardCell.description,
+                    icon: $0.cardCell.icon,
+                    cardColor: $0.cardCell.cardColor
+                )
+                )
+            }
+        collectionViewHorizontalView.setCollectionView(viewModels: viewModels)
+    }
+}
+
+extension HomeViewController: CollectionViewDelegate {
+    func collectionView(_ view: CollectionView, didSelectRowAr index: Int) {
+        let menu = collectionMenuList[index]
+        let viewController = menu.viewController
+            .init(
+                nibName: String(describing: menu.viewController.self),
+                bundle: .main
+            )
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
@@ -39,6 +64,7 @@ private extension HomeViewController {
             action: #selector(demoVoice)
         )
         btn.addGestureRecognizer(demoButtontapGesture)
+        collectionViewHorizontalView.delegate = self
     }
     
     @objc func demoVoice() {
@@ -53,6 +79,7 @@ private extension HomeViewController {
     func setUpUI() {
         btn.setUp(.textOnly(text: "Demo เสียง"), type: .primary, size: .large)
         
+        collectionViewHorizontalView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundColor)
         snellenButtonView.setup(viewModel:
                                     HomeMenuButtonViewModel(
                                         tagId: 1,
@@ -87,12 +114,12 @@ private extension HomeViewController {
         }
         
         colorButtonView.setup(viewModel:
-                                    HomeMenuButtonViewModel(
-                                        tagId: 4,
-                                        title: "Color",
-                                        state: .active,
-                                        icon: UIImage(named: "ColorIcon") ?? UIImage()
-                                    )
+                                HomeMenuButtonViewModel(
+                                    tagId: 4,
+                                    title: "Color",
+                                    state: .active,
+                                    icon: UIImage(named: "ColorIcon") ?? UIImage()
+                                )
         ) { tagId in
             debugPrint("Clickable icon did tapped with tagId: \(tagId)")
         }
@@ -120,11 +147,6 @@ private extension HomeViewController {
             $0.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
             $0.font = FontFamily.Kanit.light.font(size: 14)
         }
-        
-        //        categoriesLabel.forEach {
-        //            $0.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
-        //            $0.font = FontFamily.Kanit.medium.font(size: 12)
-        //        }
         
         bannerImageView.layer.cornerRadius = EyeHubRadius.radius16
         bannerImageView.image = UIImage(named: "GardientView")
