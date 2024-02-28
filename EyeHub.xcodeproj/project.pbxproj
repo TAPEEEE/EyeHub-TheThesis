@@ -14,6 +14,9 @@
 		2DA4A61D2B7E542300CC2380 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4A61C2B7E542300CC2380 /* NavigationBar.swift */; };
 		2DA4A61F2B7E543300CC2380 /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA4A61E2B7E543300CC2380 /* NavigationBar.xib */; };
 		2DA4A6232B81038E00CC2380 /* BlankBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4A6222B81038E00CC2380 /* BlankBottomSheet.swift */; };
+		2DA4A6272B84EB4D00CC2380 /* AphabetSnellenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4A6252B84EB4D00CC2380 /* AphabetSnellenViewController.swift */; };
+		2DA4A6282B84EB4D00CC2380 /* AphabetSnellenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA4A6262B84EB4D00CC2380 /* AphabetSnellenViewController.xib */; };
+		2DA4A62C2B84EC5700CC2380 /* HearingTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4A62B2B84EC5700CC2380 /* HearingTestViewModel.swift */; };
 		2DB523AD2B7DFA9D00AFF154 /* HearingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB523AB2B7DFA9D00AFF154 /* HearingViewController.swift */; };
 		2DB523AE2B7DFA9D00AFF154 /* HearingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB523AC2B7DFA9D00AFF154 /* HearingViewController.xib */; };
 		2DB523B02B7E0B8500AFF154 /* animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DB523AF2B7E0B8500AFF154 /* animation.json */; };
@@ -79,6 +82,9 @@
 		2DA4A61C2B7E542300CC2380 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		2DA4A61E2B7E543300CC2380 /* NavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
 		2DA4A6222B81038E00CC2380 /* BlankBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankBottomSheet.swift; sourceTree = "<group>"; };
+		2DA4A6252B84EB4D00CC2380 /* AphabetSnellenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AphabetSnellenViewController.swift; sourceTree = "<group>"; };
+		2DA4A6262B84EB4D00CC2380 /* AphabetSnellenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AphabetSnellenViewController.xib; sourceTree = "<group>"; };
+		2DA4A62B2B84EC5700CC2380 /* HearingTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearingTestViewModel.swift; sourceTree = "<group>"; };
 		2DB523AB2B7DFA9D00AFF154 /* HearingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearingViewController.swift; sourceTree = "<group>"; };
 		2DB523AC2B7DFA9D00AFF154 /* HearingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HearingViewController.xib; sourceTree = "<group>"; };
 		2DB523AF2B7E0B8500AFF154 /* animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation.json; sourceTree = "<group>"; };
@@ -185,9 +191,35 @@
 			path = BlankBottomSheet;
 			sourceTree = "<group>";
 		};
+		2DA4A6242B84EB0000CC2380 /* EyeTestsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4A6292B84EB5900CC2380 /* AphabetSnellenTest */,
+			);
+			path = EyeTestsViewController;
+			sourceTree = "<group>";
+		};
+		2DA4A6292B84EB5900CC2380 /* AphabetSnellenTest */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4A6252B84EB4D00CC2380 /* AphabetSnellenViewController.swift */,
+				2DA4A6262B84EB4D00CC2380 /* AphabetSnellenViewController.xib */,
+			);
+			path = AphabetSnellenTest;
+			sourceTree = "<group>";
+		};
+		2DA4A62A2B84EC2000CC2380 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4A62B2B84EC5700CC2380 /* HearingTestViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		2DB523AA2B7DFA7200AFF154 /* HearingViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2DA4A62A2B84EC2000CC2380 /* ViewModels */,
 				2DB523AB2B7DFA9D00AFF154 /* HearingViewController.swift */,
 				2DB523AC2B7DFA9D00AFF154 /* HearingViewController.xib */,
 			);
@@ -249,6 +281,7 @@
 		2DB9741B2B65804D009BE2C8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2DA4A6242B84EB0000CC2380 /* EyeTestsViewController */,
 				2DB523AA2B7DFA7200AFF154 /* HearingViewController */,
 				2DB974C42B67CB7A009BE2C8 /* VoiceConceptViewController */,
 				2DB974BD2B6681A2009BE2C8 /* OnBoarding */,
@@ -562,6 +595,7 @@
 				2DB9740F2B657F17009BE2C8 /* Assets.xcassets in Resources */,
 				2DB974A42B666C87009BE2C8 /* Kanit-Medium.ttf in Resources */,
 				2DB974AD2B666C87009BE2C8 /* Kanit-BlackItalic.ttf in Resources */,
+				2DA4A6282B84EB4D00CC2380 /* AphabetSnellenViewController.xib in Resources */,
 				2DB523B02B7E0B8500AFF154 /* animation.json in Resources */,
 				2DB974A52B666C87009BE2C8 /* Kanit-Bold.ttf in Resources */,
 				2DB974A32B666C87009BE2C8 /* Kanit-Italic.ttf in Resources */,
@@ -624,11 +658,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA4A6272B84EB4D00CC2380 /* AphabetSnellenViewController.swift in Sources */,
 				2DB9746E2B66613C009BE2C8 /* ButtonSize.swift in Sources */,
 				2DB974762B666182009BE2C8 /* ButtonType.swift in Sources */,
 				2D91A3932B6AEE7700CE086C /* CollectionViewModel.swift in Sources */,
 				2DB974B62B666DB5009BE2C8 /* UIFonts+Extension.swift in Sources */,
 				2DF3346B2B6AC46C0063944B /* HomeMenuButtonActionState.swift in Sources */,
+				2DA4A62C2B84EC5700CC2380 /* HearingTestViewModel.swift in Sources */,
 				2DB9747C2B66641F009BE2C8 /* Typography.swift in Sources */,
 				2DB974702B66614A009BE2C8 /* ButtonState.swift in Sources */,
 				2DB974742B666172009BE2C8 /* ButtonSubType.swift in Sources */,

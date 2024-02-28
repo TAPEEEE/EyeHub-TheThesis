@@ -18,35 +18,46 @@ class HearingViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var navigationBarView: NavigationBar!
     
-    var timer = Timer()
+    // MARK: - Properties
+    private var viewModel = HearingTestViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBindings()
         commonInit()
+        viewModel.checkHeadphoneConnection()
     }
-}
-
-extension HearingViewController: NavigationBarDelegate {
-    func navigationBackButtonDidTap(_ navigation: NavigationBar) {
-        navigationController?.popViewController(animated: true)
-    }
-}
-
-private extension HearingViewController {
     
-    func commonInit() {
+    // MARK: - Private Methods
+    private func commonInit() {
         setUpUI()
-        headPhoneTiggerTimer()
-        uiTiggerHeadphoneConnected()
+        headPhoneTriggerTimer()
     }
     
-    func headPhoneTiggerTimer() {
-        self.timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true, block: { _ in
-            self.uiTiggerHeadphoneConnected()
-        })
+    
+    private func headPhoneTriggerTimer() {
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in
+            self?.viewModel.checkHeadphoneConnection()
+        }
     }
     
-    func setUpUI() {
+    private func setupBindings() {
+        viewModel.onHeadphoneConnectionChanged = { [weak self] isConnected in
+            self?.updateUIForHeadphoneConnection(isConnected)
+        }
+        
+        viewModel.onNavigationBackButtonTap = { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    private func updateUIForHeadphoneConnection(_ isConnected: Bool) {
+        animationView.isHidden = isConnected
+        bottomSheetButtonView.buttonState = isConnected ? .active : .disable
+        titleLabel.text = isConnected ? "เชื่อมต่อหูฟังสำเร็จ" : "กรุณาเชื่อมต่อหูฟัง"
+    }
+    
+    private func setUpUI() {
         animationView.play()
         animationView.loopMode = .loop
         contentView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundColor)
@@ -64,33 +75,10 @@ private extension HearingViewController {
         navigationBarView.set(title: "ทดสอบระดับการได้ยิน")
         navigationBarView.delegate = self
     }
-   
-    func uiTiggerHeadphoneConnected() {
-        animationView.isHidden = isHeadphoneConnected()
-        ? true
-        : false
-        
-        bottomSheetButtonView.buttonState = isHeadphoneConnected() 
-        ? .active
-        : .disable
-        
-        titleLabel.text = isHeadphoneConnected()
-        ? "เชื่อมต่อหูฟังสำเร็จ"
-        : "กรุณาเชื่อมต่อหูฟัง"
-    }
-    
-    func isHeadphoneConnected() -> Bool {
-        let audioSession = AVAudioSession.sharedInstance()
-        do {
-            try audioSession.setCategory(.playAndRecord, mode: .default, options: .allowBluetooth)
-            
-            if audioSession.availableInputs?.first(where: { $0.portType == .bluetoothHFP }) != nil {
-                return true
-            }
-        } catch {
-            print(error.localizedDescription)
-        }
-        return false
-    }
 }
 
+extension HearingViewController: NavigationBarDelegate {
+    func navigationBackButtonDidTap(_ navigation: NavigationBar) {
+        viewModel.backButtonTapped()
+    }
+}
