@@ -44,7 +44,7 @@ enum HorizontalCollectionViewList: Int, CaseIterable {
         case .eye:
             return VoiceConceptViewController.self
         case .vision:
-            return VoiceConceptViewController.self
+            return HearingTestSummaryViewController.self
         case .ear:
             return HearingViewController.self
         }

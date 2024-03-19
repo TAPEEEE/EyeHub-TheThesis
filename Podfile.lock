@@ -1,16 +1,28 @@
 PODS:
+  - AAInfographics (9.0.0)
   - lottie-ios (4.3.4)
 
 DEPENDENCIES:
+  - AAInfographics (from `https://github.com/AAChartModel/AAChartKit-Swift.git`)
   - lottie-ios
 
 SPEC REPOS:
   trunk:
     - lottie-ios
 
+EXTERNAL SOURCES:
+  AAInfographics:
+    :git: https://github.com/AAChartModel/AAChartKit-Swift.git
+
+CHECKOUT OPTIONS:
+  AAInfographics:
+    :commit: a9e3cee765d1bbf7ba00f254755c0993918d5b90
+    :git: https://github.com/AAChartModel/AAChartKit-Swift.git
+
 SPEC CHECKSUMS:
+  AAInfographics: 31fd2891509a97e34693aeaf681daa7b2b4d8c0f
   lottie-ios: 3d98679b41fa6fd6aff2352b3953dbd3df8a397e
 
-PODFILE CHECKSUM: 0a388b1182c3b933906490bd65aee1ba2128b9b5
+PODFILE CHECKSUM: c08869801a6948d0a4db739ff1e9bfb79a63107e
 
 COCOAPODS: 1.12.0

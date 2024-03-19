@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2D4AC0062B67E48500D5F977 /* Sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4AC0052B67E48500D5F977 /* Sound1.mp3 */; };
 		2D4AC0082B68182900D5F977 /* Sound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4AC0072B68182900D5F977 /* Sound2.mp3 */; };
+		2D8F3A8E2BA36156009B675D /* HearingTestSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F3A8C2BA36156009B675D /* HearingTestSummaryViewController.swift */; };
+		2D8F3A8F2BA36156009B675D /* HearingTestSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D8F3A8D2BA36156009B675D /* HearingTestSummaryViewController.xib */; };
 		2D91A3932B6AEE7700CE086C /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91A3922B6AEE7700CE086C /* CollectionViewModel.swift */; };
 		2DA4A6192B7E31A400CC2380 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DA4A6182B7E31A400CC2380 /* success.json */; };
 		2DA4A61D2B7E542300CC2380 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4A61C2B7E542300CC2380 /* NavigationBar.swift */; };
@@ -77,6 +79,8 @@
 /* Begin PBXFileReference section */
 		2D4AC0052B67E48500D5F977 /* Sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound1.mp3; sourceTree = "<group>"; };
 		2D4AC0072B68182900D5F977 /* Sound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound2.mp3; sourceTree = "<group>"; };
+		2D8F3A8C2BA36156009B675D /* HearingTestSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearingTestSummaryViewController.swift; sourceTree = "<group>"; };
+		2D8F3A8D2BA36156009B675D /* HearingTestSummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HearingTestSummaryViewController.xib; sourceTree = "<group>"; };
 		2D91A3922B6AEE7700CE086C /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		2DA4A6182B7E31A400CC2380 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		2DA4A61C2B7E542300CC2380 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
@@ -158,6 +162,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D8F3A8B2BA3611D009B675D /* HearingTestsSummaryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F3A8C2BA36156009B675D /* HearingTestSummaryViewController.swift */,
+				2D8F3A8D2BA36156009B675D /* HearingTestSummaryViewController.xib */,
+			);
+			path = HearingTestsSummaryViewController;
+			sourceTree = "<group>";
+		};
 		2D91A3912B6AEE5700CE086C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +294,7 @@
 		2DB9741B2B65804D009BE2C8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2D8F3A8B2BA3611D009B675D /* HearingTestsSummaryViewController */,
 				2DA4A6242B84EB0000CC2380 /* EyeTestsViewController */,
 				2DB523AA2B7DFA7200AFF154 /* HearingViewController */,
 				2DB974C42B67CB7A009BE2C8 /* VoiceConceptViewController */,
@@ -605,6 +619,7 @@
 				2DB974B42B666C87009BE2C8 /* Kanit-SemiBoldItalic.ttf in Resources */,
 				2DB974AF2B666C87009BE2C8 /* Kanit-ThinItalic.ttf in Resources */,
 				2DB974A62B666C87009BE2C8 /* Kanit-ExtraBold.ttf in Resources */,
+				2D8F3A8F2BA36156009B675D /* HearingTestSummaryViewController.xib in Resources */,
 				2DF334652B6AC0AE0063944B /* HomeMenuButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,6 +685,7 @@
 				2DB974742B666172009BE2C8 /* ButtonSubType.swift in Sources */,
 				2DF3347B2B6AD7910063944B /* HomeScreenCollectionViewCell.swift in Sources */,
 				2DF3346D2B6AC4B00063944B /* HomeMenuButtonViewModel.swift in Sources */,
+				2D8F3A8E2BA36156009B675D /* HearingTestSummaryViewController.swift in Sources */,
 				2DB974472B663077009BE2C8 /* UIView+Extension.swift in Sources */,
 				2DA4A61D2B7E542300CC2380 /* NavigationBar.swift in Sources */,
 				2DF334692B6AC4090063944B /* HomeMenuButtonState.swift in Sources */,

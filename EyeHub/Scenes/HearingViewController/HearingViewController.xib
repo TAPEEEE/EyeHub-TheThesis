@@ -145,6 +145,99 @@
             </constraints>
             <point key="canvasLocation" x="136.64122137404578" y="20.422535211267608"/>
         </view>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="n3F-BT-52G">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NzC-cZ-FZC" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="99" width="393" height="753"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lz-wQ-CdU">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="453"/>
+                        </scrollView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTx-wI-h1i" userLabel="BottomSheet" customClass="BlankBottomSheet" customModule="EyeHub" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="453" width="393" height="300"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="48" translatesAutoresizingMaskIntoConstraints="NO" id="jB4-qj-hMu" customClass="PrimaryButton" customModule="EyeHub" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="212" width="345" height="48"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="FCi-rE-0OW">
+                                    <rect key="frame" x="24" y="24" width="345" height="147"/>
+                                    <subviews>
+                                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="55F-xk-e8j">
+                                            <rect key="frame" x="114.66666666666666" y="0.0" width="115.66666666666666" height="25.666666666666668"/>
+                                            <color key="pageIndicatorTintColor" red="0.92941176889999999" green="0.94901967050000002" blue="0.9529411793" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="currentPageIndicatorTintColor" red="0.37647059560000001" green="0.66274511810000003" blue="0.74901962280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </pageControl>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UYZ-7S-mkJ">
+                                            <rect key="frame" x="0.0" y="57.666666666666622" width="345" height="89.333333333333314"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาเชื่อมต่อหูฟัง" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNy-yr-6Ln">
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เชื่อมต่อหูฟังและกดปุ่มถัดไปเพื่อเริ่มทำแบบทดสอบวัด ระดับการได้ยินของหู" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLu-pg-E1F">
+                                                    <rect key="frame" x="0.0" y="28.333333333333371" width="345" height="61"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="UYZ-7S-mkJ" secondAttribute="trailing" id="4Iu-0y-llo"/>
+                                        <constraint firstItem="UYZ-7S-mkJ" firstAttribute="leading" secondItem="FCi-rE-0OW" secondAttribute="leading" id="Ivu-kJ-ihu"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="jB4-qj-hMu" secondAttribute="trailing" constant="24" id="5X9-bb-R0J"/>
+                                <constraint firstItem="jB4-qj-hMu" firstAttribute="leading" secondItem="rTx-wI-h1i" secondAttribute="leading" constant="24" id="7ua-oC-En9"/>
+                                <constraint firstItem="FCi-rE-0OW" firstAttribute="leading" secondItem="rTx-wI-h1i" secondAttribute="leading" constant="24" id="Gxt-Gu-p3l"/>
+                                <constraint firstAttribute="height" constant="300" id="N7n-ao-q5Z"/>
+                                <constraint firstAttribute="bottom" secondItem="jB4-qj-hMu" secondAttribute="bottom" constant="40" id="Ukd-oy-nwf"/>
+                                <constraint firstAttribute="trailing" secondItem="FCi-rE-0OW" secondAttribute="trailing" constant="24" id="d2v-lk-yhe"/>
+                                <constraint firstItem="FCi-rE-0OW" firstAttribute="top" secondItem="rTx-wI-h1i" secondAttribute="top" constant="24" id="xAO-QU-SD1"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="0lz-wQ-CdU" firstAttribute="top" secondItem="NzC-cZ-FZC" secondAttribute="top" id="Ioc-9C-1k3"/>
+                        <constraint firstAttribute="bottom" secondItem="rTx-wI-h1i" secondAttribute="bottom" id="QbR-EY-VPk"/>
+                        <constraint firstAttribute="trailing" secondItem="rTx-wI-h1i" secondAttribute="trailing" id="QpL-E8-PYA"/>
+                        <constraint firstItem="rTx-wI-h1i" firstAttribute="top" secondItem="0lz-wQ-CdU" secondAttribute="bottom" id="gdk-kk-ztD"/>
+                        <constraint firstItem="0lz-wQ-CdU" firstAttribute="leading" secondItem="NzC-cZ-FZC" secondAttribute="leading" id="rio-K6-dog"/>
+                        <constraint firstItem="rTx-wI-h1i" firstAttribute="leading" secondItem="NzC-cZ-FZC" secondAttribute="leading" id="sLh-K2-qMN"/>
+                        <constraint firstAttribute="trailing" secondItem="0lz-wQ-CdU" secondAttribute="trailing" id="wE4-ot-zJn"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxR-uZ-BDt" userLabel="NavBar" customClass="NavigationBar" customModule="EyeHub" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0Rj-ou-XWd"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="cq4-gt-nBe"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="nxR-uZ-BDt" firstAttribute="leading" secondItem="cq4-gt-nBe" secondAttribute="leading" id="2iD-1M-MaU"/>
+                <constraint firstItem="NzC-cZ-FZC" firstAttribute="trailing" secondItem="cq4-gt-nBe" secondAttribute="trailing" id="4eG-2n-H1w"/>
+                <constraint firstItem="NzC-cZ-FZC" firstAttribute="leading" secondItem="cq4-gt-nBe" secondAttribute="leading" id="QuC-2q-AMW"/>
+                <constraint firstItem="cq4-gt-nBe" firstAttribute="trailing" secondItem="nxR-uZ-BDt" secondAttribute="trailing" id="Xmq-7Z-XtV"/>
+                <constraint firstItem="NzC-cZ-FZC" firstAttribute="top" secondItem="nxR-uZ-BDt" secondAttribute="bottom" id="YHW-fo-crH"/>
+                <constraint firstItem="nxR-uZ-BDt" firstAttribute="top" secondItem="cq4-gt-nBe" secondAttribute="top" id="iHf-YG-Tru"/>
+                <constraint firstAttribute="bottom" secondItem="NzC-cZ-FZC" secondAttribute="bottom" id="wpf-zt-1cK"/>
+            </constraints>
+            <point key="canvasLocation" x="878.62595419847321" y="19.718309859154932"/>
+        </view>
     </objects>
     <designables>
         <designable name="XBE-BO-Qbv"/>

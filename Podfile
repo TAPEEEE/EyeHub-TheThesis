@@ -7,5 +7,6 @@ target 'EyeHub' do
 
   # Pods for EyeHub
   pod 'lottie-ios'
+  pod 'AAInfographics', :git => 'https://github.com/AAChartModel/AAChartKit-Swift.git'
 
 end
