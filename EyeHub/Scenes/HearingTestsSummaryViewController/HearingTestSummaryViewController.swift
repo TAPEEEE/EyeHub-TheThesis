@@ -120,6 +120,7 @@ private extension HearingTestSummaryViewController {
     }
     
     func setUpUI() {
+        self.view.backgroundColor = UIColor.white
         chartsView.layer.cornerRadius = 16
         headerLabel.forEach {
             $0.font = FontFamily.Kanit.medium.font(size: 18)
@@ -128,7 +129,7 @@ private extension HearingTestSummaryViewController {
         chartSectionView.layer.cornerRadius = EyeHubRadius.radius16
         
         
-        contentView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundColor)
+        contentView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
         navigationBarView.set(title: "ผลการทดสอบ")
         navigationBarView.delegate = self
     }

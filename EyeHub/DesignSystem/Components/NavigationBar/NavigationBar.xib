@@ -40,7 +40,7 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="26x-Wu-l0U"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <color key="tintColor" systemColor="labelColor"/>
             <constraints>
                 <constraint firstItem="h9d-XU-hQ9" firstAttribute="top" secondItem="9WW-tL-DoN" secondAttribute="top" constant="8" id="8zT-u3-s97"/>
@@ -60,9 +60,6 @@
         <image name="backarrow" width="24" height="24"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

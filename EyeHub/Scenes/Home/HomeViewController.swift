@@ -72,13 +72,8 @@ private extension HomeViewController {
         navigationController?.pushViewController(scene, animated: true)
     }
     
-    func printText() {
-        print("aaa")
-    }
-    
     func setUpUI() {
         btn.setUp(.textOnly(text: "Demo เสียง"), type: .primary, size: .large)
-        
         collectionViewHorizontalView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundColor)
         snellenButtonView.setup(viewModel:
                                     HomeMenuButtonViewModel(

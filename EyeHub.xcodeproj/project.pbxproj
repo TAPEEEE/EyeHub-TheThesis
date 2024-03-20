@@ -73,6 +73,8 @@
 		2DF334762B6AD4750063944B /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334752B6AD4750063944B /* UICollectionView+Extensions.swift */; };
 		2DF3347B2B6AD7910063944B /* HomeScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334792B6AD7910063944B /* HomeScreenCollectionViewCell.swift */; };
 		2DF3347C2B6AD7910063944B /* HomeScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF3347A2B6AD7910063944B /* HomeScreenCollectionViewCell.xib */; };
+		2DFEA6B62BAA0A67003D9337 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFEA6B52BAA0A67003D9337 /* OnboardingModel.swift */; };
+		2DFEA6B82BAAFF69003D9337 /* ObserverAudioVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFEA6B72BAAFF69003D9337 /* ObserverAudioVolume.swift */; };
 		DE0F44EA3DAA79C7B7D5C951 /* Pods_EyeHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76E8DB1A5C2B437BF40323E /* Pods_EyeHub.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +147,8 @@
 		2DF334752B6AD4750063944B /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		2DF334792B6AD7910063944B /* HomeScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DF3347A2B6AD7910063944B /* HomeScreenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenCollectionViewCell.xib; sourceTree = "<group>"; };
+		2DFEA6B52BAA0A67003D9337 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		2DFEA6B72BAAFF69003D9337 /* ObserverAudioVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverAudioVolume.swift; sourceTree = "<group>"; };
 		5D0A4707885B1B8A1836066E /* Pods-EyeHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeHub.debug.xcconfig"; path = "Target Support Files/Pods-EyeHub/Pods-EyeHub.debug.xcconfig"; sourceTree = "<group>"; };
 		D76E8DB1A5C2B437BF40323E /* Pods_EyeHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EyeHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E916BFFA8F561DF8DDC4B198 /* Pods-EyeHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeHub.release.xcconfig"; path = "Target Support Files/Pods-EyeHub/Pods-EyeHub.release.xcconfig"; sourceTree = "<group>"; };
@@ -232,9 +236,11 @@
 		2DB523AA2B7DFA7200AFF154 /* HearingViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2DFEA6B42BAA0A4A003D9337 /* Models */,
 				2DA4A62A2B84EC2000CC2380 /* ViewModels */,
 				2DB523AB2B7DFA9D00AFF154 /* HearingViewController.swift */,
 				2DB523AC2B7DFA9D00AFF154 /* HearingViewController.xib */,
+				2DFEA6B72BAAFF69003D9337 /* ObserverAudioVolume.swift */,
 			);
 			path = HearingViewController;
 			sourceTree = "<group>";
@@ -510,6 +516,14 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
+		2DFEA6B42BAA0A4A003D9337 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2DFEA6B52BAA0A67003D9337 /* OnboardingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9ED4E67478E51476DB408BBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,11 +701,13 @@
 				2DF3346D2B6AC4B00063944B /* HomeMenuButtonViewModel.swift in Sources */,
 				2D8F3A8E2BA36156009B675D /* HearingTestSummaryViewController.swift in Sources */,
 				2DB974472B663077009BE2C8 /* UIView+Extension.swift in Sources */,
+				2DFEA6B62BAA0A67003D9337 /* OnboardingModel.swift in Sources */,
 				2DA4A61D2B7E542300CC2380 /* NavigationBar.swift in Sources */,
 				2DF334692B6AC4090063944B /* HomeMenuButtonState.swift in Sources */,
 				2DB974292B658244009BE2C8 /* EyeHubColor.swift in Sources */,
 				2DB9743F2B6594DC009BE2C8 /* EyeHubRadius.swift in Sources */,
 				2DB523AD2B7DFA9D00AFF154 /* HearingViewController.swift in Sources */,
+				2DFEA6B82BAAFF69003D9337 /* ObserverAudioVolume.swift in Sources */,
 				2DF334632B6AC0A50063944B /* HomeMenuButton.swift in Sources */,
 				2DB9746A2B666120009BE2C8 /* Appearance.swift in Sources */,
 				2DB9746C2B66612F009BE2C8 /* PaddingModel.swift in Sources */,

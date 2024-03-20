@@ -25,17 +25,23 @@ class HearingTestViewModel {
     }
     
     // MARK: - Private Methods
-    private func isHeadphoneConnected() -> Bool {
-        let audioSession = AVAudioSession.sharedInstance()
-        do {
-            try audioSession.setCategory(.playAndRecord, mode: .default, options: .allowBluetooth)
-            
-            if audioSession.availableInputs?.first(where: { $0.portType == .bluetoothHFP }) != nil {
-                return true
+    func isHeadphoneConnected() -> Bool {
+        let currentRoute = AVAudioSession.sharedInstance().currentRoute
+        if currentRoute.outputs != nil {
+            for description in currentRoute.outputs {
+                if description.portType == AVAudioSession.Port.headphones || description.portType == AVAudioSession.Port.bluetoothA2DP {
+                    print("headphone plugged in")
+                    return true
+                } else {
+                    print("headphone pulled out")
+                    return false
+                }
             }
-        } catch {
-            print(error.localizedDescription)
+        } else {
+            print("requires connection to device")
         }
         return false
     }
 }
+
+
