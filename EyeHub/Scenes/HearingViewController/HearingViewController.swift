@@ -14,7 +14,8 @@ class HearingViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var pageControl: UIPageControl!
     
-    @IBOutlet weak var bottomSheetButtonView: PrimaryButton!
+    @IBOutlet weak var firstPageButtonView: PrimaryButton!
+    @IBOutlet weak var seccondPageButtonView: PrimaryButton!
     @IBOutlet weak var animationView: LottieAnimationView!
     @IBOutlet weak var bottomSheetView: UIView!
     @IBOutlet weak var contentView: UIView!
@@ -25,20 +26,18 @@ class HearingViewController: UIViewController {
     @IBOutlet weak var onboardingPageControl: UIPageControl!
     
     let contentModel: [onBoardingContent] = [
-        onBoardingContent(title: "", description: "เชื่อมต่อหูฟังและกดปุ่มถัดไปเพื่อเริ่มทำแบบทดสอบวัด ระดับการได้ยินของหู"),
-        onBoardingContent(title: "กรุณาเพิ่มเสียง", description: "กรุณาปรับเสียงของหูฟังของคุณให้อยู่ในระดับสูงสุดเพื่อใช้ในการทดสอบ"),
+        onBoardingContent(title: "กรุณาเชื่อมต่อหูฟัง", description: "เชื่อมต่อหูฟังและกดปุ่มถัดไปเพื่อเริ่มทำแบบทดสอบวัด ระดับการได้ยินของหู"),
+        onBoardingContent(title: "กรุณาเพิ่มเสียงในระดับสูงสุด", description: "กรุณาปรับเสียงของหูฟังของคุณให้อยู่ในระดับสูงสุดเพื่อใช้ในการทดสอบ"),
         onBoardingContent(title: "กรุณาอยู่ในสถานที่ที่เงียบ", description: "กรุณาอยู่ในสภาพแวดล้อมที่เหมาะสมเพื่อผลการทดสอบที่แม่นยำ")
     ]
     
     private var currentPage = 0 {
         didSet {
-            if currentPage > 1 {
-                bottomSheetButtonView.setUp(.textOnly(text: "เริ่มทดสอบ"), type: .primary, size: .large)
+            if currentPage == 1 {
+                seccondPageButtonView.isHidden = false
             }
         }
     }
-    
-    var hp: Bool = false
     
     // MARK: - Properties
     private var viewModel = HearingTestViewModel()
@@ -48,70 +47,80 @@ class HearingViewController: UIViewController {
         setupBindings()
         commonInit()
         viewModel.checkHeadphoneConnection()
+        initialVolumeMax()
         onboardingScrollView.isPagingEnabled = true
         setupNotifications()
+    }
+    
+    func initialVolumeMax() {
+        if currentPage != 0 {
+            viewModel.checkVolumeMax()
+        }
     }
     
     func setupNotifications() {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self,
-                       selector: #selector(handleRouteChange),
-                       name: AVAudioSession.routeChangeNotification,
-                       object: nil)
+                                       selector: #selector(handleRouteChange),
+                                       name: AVAudioSession.routeChangeNotification,
+                                       object: nil)
+    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        setupVolumeButtonObservation()
+//    }
+    
+    @objc func volumeChanged(notification: NSNotification) {
+        let volume = notification.userInfo!["AVSystemController_AudioVolumeNotificationParameter"] as! Float
+        print("Volume value:\(volume)")
+
+        //Get the slider by its tag
+        let volumeView = self.view.viewWithTag(100) as! UISlider
+        //Update the slider value to correspond to the volume
+        volumeView.value = volume
     }
 
+    deinit {
+        // Don't forget to remove the observer
+        NotificationCenter.default.removeObserver(self,
+                                                  name: Notification.Name("AVSystemController_SystemVolumeDidChangeNotification"),
+                                                  object: nil)
+    }
 
+    func handleOutputVolumeChange() {
+        self.seccondPageButtonView.buttonState = .disable
+        self.viewModel.checkVolumeMax()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    
+    
     @objc func handleRouteChange(notification: Notification) {
-        print(viewModel.isHeadphoneConnected())
         self.viewModel.checkHeadphoneConnection()
-        self.updateUIForHeadphoneConnection(viewModel.isHeadphoneConnected())
     }
     
     let audioSession = AVAudioSession.sharedInstance()
-    
-    func listenVolumeButton() {
-        do {
-            try audioSession.setActive(true)
-        } catch {
-            print("some error")
-        }
-        audioSession.addObserver(self, forKeyPath: "outputVolume", options: NSKeyValueObservingOptions.new, context: nil)
-    }
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "outputVolume" {
-            let vol = AVAudioSession.sharedInstance().outputVolume
-            print(vol)
-        }
-    }
-    
+
     // MARK: - Private Methods
     private func commonInit() {
         setUpUI()
-//        headPhoneTriggerTimer()
         let demoButtontapGesture = UITapGestureRecognizer(
             target: self,
             action: #selector(demoVoice)
         )
-        bottomSheetButtonView.addGestureRecognizer(demoButtontapGesture)
+        firstPageButtonView.addGestureRecognizer(demoButtontapGesture)
     }
-    
-//    private func headPhoneTriggerTimer() {
-//        Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
-//            switch self?.currentPage {
-//            case 0:
-//                self?.viewModel.checkHeadphoneConnection()
-//            case 1:
-//                self?.listenVolumeButton()
-//            default:
-//                print("aa")
-//            }
-//        }
-//    }
     
     private func setupBindings() {
         viewModel.onHeadphoneConnectionChanged = { [weak self] isConnected in
             self?.updateUIForHeadphoneConnection(isConnected)
+        }
+        
+        viewModel.onVolumeChanged = { [weak self] isMax in
+            self?.updateUIForVolumeMax(isMax)
         }
         
         viewModel.onNavigationBackButtonTap = { [weak self] in
@@ -121,8 +130,11 @@ class HearingViewController: UIViewController {
     
     private func updateUIForHeadphoneConnection(_ isConnected: Bool) {
         animationView.isHidden = isConnected
-        bottomSheetButtonView.buttonState = isConnected ? .active : .disable
-        titleLabel.text = isConnected ? "เชื่อมต่อหูฟังสำเร็จ" : "กรุณาเชื่อมต่อหูฟัง"
+        firstPageButtonView.buttonState = isConnected ? .active : .disable
+    }
+    
+    private func updateUIForVolumeMax(_ isMax: Bool) {
+        firstPageButtonView.buttonState = isMax ? .active : .disable
     }
     
     func updateBottomSheetContent() {
@@ -147,11 +159,13 @@ class HearingViewController: UIViewController {
     }
     
     private func setUpUI() {
+        seccondPageButtonView.setUp(.textOnly(text: "เริ่มทดสอบ"), type: .primary, size: .large)
+        seccondPageButtonView.isHidden = true
         animationView.play()
         animationView.loopMode = .loop
         self.view.backgroundColor = UIColor.white
         contentView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
-        bottomSheetButtonView.setUp(.textOnly(text: "ถัดไป"), type: .primary, size: .large)
+        firstPageButtonView.setUp(.textOnly(text: "ถัดไป"), type: .primary, size: .large)
         titleLabel.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
         titleLabel.font = FontFamily.Kanit.medium.font(size: 18)
         
@@ -169,3 +183,4 @@ extension HearingViewController: NavigationBarDelegate {
         viewModel.backButtonTapped()
     }
 }
+

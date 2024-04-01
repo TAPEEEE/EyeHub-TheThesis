@@ -17,7 +17,7 @@ class HomeMenuButton: UIView {
     public var tagId: Int = .zero
 
     public var action: HomeMenuButtonAction?
-    
+    private let impactFeedback = UIImpactFeedbackGenerator(style: .light)
     public var state: HomeMenuButtonState = .active {
         didSet {
             updateState()
@@ -52,6 +52,7 @@ class HomeMenuButton: UIView {
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         updateUI(event: .begin)
+        impactFeedback.impactOccurred()
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

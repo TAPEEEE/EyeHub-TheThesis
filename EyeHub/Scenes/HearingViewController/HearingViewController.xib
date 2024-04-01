@@ -12,14 +12,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HearingViewController" customModule="EyeHub" customModuleProvider="target">
             <connections>
                 <outlet property="animationView" destination="gA7-bu-euK" id="1yz-ck-Jzm"/>
-                <outlet property="bottomSheetButtonView" destination="jB4-qj-hMu" id="jM5-sz-pnl"/>
                 <outlet property="bottomSheetView" destination="rTx-wI-h1i" id="Pdp-fm-uBZ"/>
                 <outlet property="contentView" destination="NzC-cZ-FZC" id="YXC-Qc-bRA"/>
                 <outlet property="descriptionLabel" destination="VLu-pg-E1F" id="5Dn-E4-j7j"/>
+                <outlet property="firstPageButtonView" destination="jB4-qj-hMu" id="jM5-sz-pnl"/>
                 <outlet property="navigationBarView" destination="nxR-uZ-BDt" id="iIx-eS-LS7"/>
                 <outlet property="onboardingPageControl" destination="55F-xk-e8j" id="p2n-NO-cHv"/>
                 <outlet property="onboardingScrollView" destination="0lz-wQ-CdU" id="1Yw-Jr-zqA"/>
                 <outlet property="requireHeadphoneView" destination="zrx-jE-4FI" id="myB-yO-54L"/>
+                <outlet property="seccondPageButtonView" destination="43Y-CI-zPX" id="y3Y-EW-jIv"/>
                 <outlet property="titleLabel" destination="DNy-yr-6Ln" id="En5-Wo-n3P"/>
                 <outlet property="view" destination="n3F-BT-52G" id="QUD-M5-hPq"/>
             </connections>
@@ -99,6 +100,10 @@
                                     <rect key="frame" x="24" y="212" width="441" height="48"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="48" translatesAutoresizingMaskIntoConstraints="NO" id="43Y-CI-zPX" customClass="PrimaryButton" customModule="EyeHub" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="212" width="441" height="48"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="FCi-rE-0OW">
                                     <rect key="frame" x="24" y="24.000000000000007" width="441" height="126.66666666666669"/>
                                     <subviews>
@@ -135,10 +140,13 @@
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="jB4-qj-hMu" secondAttribute="trailing" constant="24" id="5X9-bb-R0J"/>
                                 <constraint firstItem="jB4-qj-hMu" firstAttribute="leading" secondItem="rTx-wI-h1i" secondAttribute="leading" constant="24" id="7ua-oC-En9"/>
+                                <constraint firstAttribute="trailing" secondItem="43Y-CI-zPX" secondAttribute="trailing" constant="24" id="Bt8-tR-7eY"/>
                                 <constraint firstItem="FCi-rE-0OW" firstAttribute="leading" secondItem="rTx-wI-h1i" secondAttribute="leading" constant="24" id="Gxt-Gu-p3l"/>
                                 <constraint firstAttribute="height" constant="300" id="N7n-ao-q5Z"/>
                                 <constraint firstAttribute="bottom" secondItem="jB4-qj-hMu" secondAttribute="bottom" constant="40" id="Ukd-oy-nwf"/>
+                                <constraint firstItem="43Y-CI-zPX" firstAttribute="leading" secondItem="rTx-wI-h1i" secondAttribute="leading" constant="24" id="YIa-AI-x0m"/>
                                 <constraint firstAttribute="trailing" secondItem="FCi-rE-0OW" secondAttribute="trailing" constant="24" id="d2v-lk-yhe"/>
+                                <constraint firstAttribute="bottom" secondItem="43Y-CI-zPX" secondAttribute="bottom" constant="40" id="ee4-Rj-3Vh"/>
                                 <constraint firstItem="FCi-rE-0OW" firstAttribute="top" secondItem="rTx-wI-h1i" secondAttribute="top" constant="24" id="xAO-QU-SD1"/>
                             </constraints>
                         </view>

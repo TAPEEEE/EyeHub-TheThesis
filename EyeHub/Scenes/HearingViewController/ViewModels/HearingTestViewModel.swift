@@ -7,11 +7,13 @@
 
 import Foundation
 import AVFAudio
+import UIKit
 
 class HearingTestViewModel {
     
     // MARK: - Properties
     var onHeadphoneConnectionChanged: ((Bool) -> Void)?
+    var onVolumeChanged: ((Bool) -> Void)?
     var onNavigationBackButtonTap: (() -> Void)?
     
     // MARK: - Public Methods
@@ -19,28 +21,42 @@ class HearingTestViewModel {
         let isConnected = isHeadphoneConnected()
         onHeadphoneConnectionChanged?(isConnected)
     }
+    
+    func checkVolumeMax() {
+        let isMax = isVolumeMax()
+        onHeadphoneConnectionChanged?(isMax)
+    }
 
     func backButtonTapped() {
         onNavigationBackButtonTap?()
     }
     
+    func isVolumeMax() -> Bool {
+        let vol = AVAudioSession.sharedInstance().outputVolume
+        if vol < 1 {
+            return false
+        }
+        return true
+    }
+    
     // MARK: - Private Methods
     func isHeadphoneConnected() -> Bool {
         let currentRoute = AVAudioSession.sharedInstance().currentRoute
+        let feedbackGenerator = UINotificationFeedbackGenerator()
         if currentRoute.outputs != nil {
             for description in currentRoute.outputs {
                 if description.portType == AVAudioSession.Port.headphones || description.portType == AVAudioSession.Port.bluetoothA2DP {
-                    print("headphone plugged in")
+                    feedbackGenerator.notificationOccurred(.success)
                     return true
                 } else {
-                    print("headphone pulled out")
-                    return false
+                    return true
                 }
             }
         } else {
             print("requires connection to device")
+            feedbackGenerator.notificationOccurred(.error)
         }
-        return false
+        return true
     }
 }
 

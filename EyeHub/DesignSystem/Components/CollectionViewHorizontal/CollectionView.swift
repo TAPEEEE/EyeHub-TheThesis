@@ -17,6 +17,7 @@ class CollectionView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
     weak var delegate: CollectionViewDelegate?
     private var viewModel: [CollectionViewType] = []
+    private let impactFeedback = UIImpactFeedbackGenerator(style: .medium)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,6 +59,7 @@ extension CollectionView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let row = indexPath.row
         delegate?.collectionView(self, didSelectRowAr: row)
+        impactFeedback.impactOccurred()
         collectionView.deselectItem(at: indexPath, animated: true)
     }
 }

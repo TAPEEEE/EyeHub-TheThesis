@@ -24,8 +24,14 @@ enum FontFamily {
             path: "Kanit-Light.ttf"
         )
         
+        static let regular = FontConvertible(
+            name: "Kanit-Regular",
+            family: "Kanit",
+            path: "Kanit-Regular.ttf"
+        )
+        
         static let all: [FontConvertible] = [
-            medium
+            medium, light, regular
         ]
     }
     static let allCustomFonts: [FontConvertible] = [Kanit.all].flatMap { $0 }

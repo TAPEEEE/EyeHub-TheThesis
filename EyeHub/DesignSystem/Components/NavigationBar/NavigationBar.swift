@@ -18,6 +18,7 @@ final class NavigationBar: UIView {
     @IBOutlet weak var navigationButton: UIButton!
    
     weak var delegate: NavigationBarDelegate?
+    private let impactFeedback = UIImpactFeedbackGenerator(style: .heavy)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,6 +38,7 @@ final class NavigationBar: UIView {
 // MARK: - Action
 extension NavigationBar {
     @IBAction func navigationButtonDidTap(_ sender: Any) {
+        self.impactFeedback.impactOccurred()
         delegate?.navigationBackButtonDidTap(self)
     }
 }

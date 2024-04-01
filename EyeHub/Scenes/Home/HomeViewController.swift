@@ -20,17 +20,18 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var colorButtonView: HomeMenuButton!
     @IBOutlet weak var contrastButtonView: HomeMenuButton!
     @IBOutlet weak var bannerImageView: UIImageView!
-    @IBOutlet weak var categoriesView: UIView!
+    @IBOutlet var sectionView: [UIView]!
     @IBOutlet weak var collectionViewHorizontalView: CollectionView!
-    
+    @IBOutlet weak var historyTableView: TableView!
     @IBOutlet weak var contentView: UIView!
     
     let collectionMenuList: [HorizontalCollectionViewList] = HorizontalCollectionViewList.allCases
+    let tableHistoryList: [TableViewList] = TableViewList.allCases
     
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
-        let viewModels: [CollectionViewType] = collectionMenuList
+        let collectionViewModel: [CollectionViewType] = collectionMenuList
             .map {
                 .homeScreen(viewModel: HomeScreenCollectionViewCellViewModel(
                     title: $0.cardCell.title,
@@ -40,13 +41,35 @@ class HomeViewController: UIViewController {
                 )
                 )
             }
-        collectionViewHorizontalView.setCollectionView(viewModels: viewModels)
+        collectionViewHorizontalView.setCollectionView(viewModels: collectionViewModel)
+        
+        let tableViewModel: [TableViewType] = tableHistoryList
+            .map {
+                .historyTable(viewModel: HistoryTableViewCellViewModel(
+                    title: $0.cardCell.title,
+                    icon: $0.cardCell.icon
+                )
+                )
+            }
+        historyTableView.setTableView(viewModels: tableViewModel)
     }
 }
 
 extension HomeViewController: CollectionViewDelegate {
     func collectionView(_ view: CollectionView, didSelectRowAr index: Int) {
         let menu = collectionMenuList[index]
+        let viewController = menu.viewController
+            .init(
+                nibName: String(describing: menu.viewController.self),
+                bundle: .main
+            )
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension HomeViewController: TableViewDelegate {
+    func tableView(_ view: TableView, didSelectRowAr index: Int) {
+        let menu = tableHistoryList[index]
         let viewController = menu.viewController
             .init(
                 nibName: String(describing: menu.viewController.self),
@@ -63,8 +86,9 @@ private extension HomeViewController {
             target: self,
             action: #selector(demoVoice)
         )
-        btn.addGestureRecognizer(demoButtontapGesture)
+//        btn.addGestureRecognizer(demoButtontapGesture)
         collectionViewHorizontalView.delegate = self
+        historyTableView.delegate = self
     }
     
     @objc func demoVoice() {
@@ -73,7 +97,7 @@ private extension HomeViewController {
     }
     
     func setUpUI() {
-        btn.setUp(.textOnly(text: "Demo เสียง"), type: .primary, size: .large)
+//        btn.setUp(.textOnly(text: "Demo เสียง"), type: .primary, size: .large)
         collectionViewHorizontalView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundColor)
         snellenButtonView.setup(viewModel:
                                     HomeMenuButtonViewModel(
@@ -139,16 +163,19 @@ private extension HomeViewController {
         }
         
         descriptionLabel.forEach {
-            $0.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
+            $0.textColor = UIColor(cgColor: EyeHubColor.textDescriptionColor)
             $0.font = FontFamily.Kanit.light.font(size: 14)
         }
         
+        sectionView.forEach {
+            $0.backgroundColor = UIColor.white
+            $0.layer.cornerRadius = EyeHubRadius.radius8
+        }
+        
         bannerImageView.layer.cornerRadius = EyeHubRadius.radius16
-        bannerImageView.image = UIImage(named: "GardientView")
+        bannerImageView.image = UIImage(named: "GardientView1")
         bannerImageView.contentMode = .scaleAspectFill
         
-        categoriesView.backgroundColor = UIColor.white
-        categoriesView.layer.cornerRadius = EyeHubRadius.radius8
         contentView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundColor)
         self.view.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundColor)
     }
