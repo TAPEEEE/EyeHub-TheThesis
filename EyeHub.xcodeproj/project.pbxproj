@@ -72,6 +72,10 @@
 		2DB974C12B6681BC009BE2C8 /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974BF2B6681BC009BE2C8 /* OnBoardingViewController.xib */; };
 		2DB974C72B67CB9F009BE2C8 /* VoiceConceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974C52B67CB9F009BE2C8 /* VoiceConceptViewController.swift */; };
 		2DB974C82B67CB9F009BE2C8 /* VoiceConceptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974C62B67CB9F009BE2C8 /* VoiceConceptViewController.xib */; };
+		2DEB15602BC062EA003FB88C /* HearingTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB155E2BC062EA003FB88C /* HearingTestViewController.swift */; };
+		2DEB15612BC062EA003FB88C /* HearingTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB155F2BC062EA003FB88C /* HearingTestViewController.xib */; };
+		2DEB15642BC07B4D003FB88C /* ToneGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB15632BC07B4D003FB88C /* ToneGenerator.swift */; };
+		2DEB15662BC1D026003FB88C /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB15652BC1D026003FB88C /* AudioController.swift */; };
 		2DF334632B6AC0A50063944B /* HomeMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334622B6AC0A50063944B /* HomeMenuButton.swift */; };
 		2DF334652B6AC0AE0063944B /* HomeMenuButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF334642B6AC0AE0063944B /* HomeMenuButton.xib */; };
 		2DF334692B6AC4090063944B /* HomeMenuButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334682B6AC4090063944B /* HomeMenuButtonState.swift */; };
@@ -155,6 +159,10 @@
 		2DB974BF2B6681BC009BE2C8 /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		2DB974C52B67CB9F009BE2C8 /* VoiceConceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceConceptViewController.swift; sourceTree = "<group>"; };
 		2DB974C62B67CB9F009BE2C8 /* VoiceConceptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoiceConceptViewController.xib; sourceTree = "<group>"; };
+		2DEB155E2BC062EA003FB88C /* HearingTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearingTestViewController.swift; sourceTree = "<group>"; };
+		2DEB155F2BC062EA003FB88C /* HearingTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HearingTestViewController.xib; sourceTree = "<group>"; };
+		2DEB15632BC07B4D003FB88C /* ToneGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneGenerator.swift; sourceTree = "<group>"; };
+		2DEB15652BC1D026003FB88C /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		2DF334622B6AC0A50063944B /* HomeMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuButton.swift; sourceTree = "<group>"; };
 		2DF334642B6AC0AE0063944B /* HomeMenuButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMenuButton.xib; sourceTree = "<group>"; };
 		2DF334682B6AC4090063944B /* HomeMenuButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuButtonState.swift; sourceTree = "<group>"; };
@@ -363,6 +371,7 @@
 		2DB9741B2B65804D009BE2C8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2DEB155D2BC062C4003FB88C /* HearingTestViewController */,
 				2D708EF02BB96607006146ED /* HistoryViewController */,
 				2D8F3A8B2BA3611D009B675D /* HearingTestsSummaryViewController */,
 				2DA4A6242B84EB0000CC2380 /* EyeTestsViewController */,
@@ -377,6 +386,7 @@
 		2DB9741C2B658057009BE2C8 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				2DEB15622BC07B27003FB88C /* ToneGenerator */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -533,6 +543,24 @@
 				2DB974C62B67CB9F009BE2C8 /* VoiceConceptViewController.xib */,
 			);
 			path = VoiceConceptViewController;
+			sourceTree = "<group>";
+		};
+		2DEB155D2BC062C4003FB88C /* HearingTestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DEB155E2BC062EA003FB88C /* HearingTestViewController.swift */,
+				2DEB155F2BC062EA003FB88C /* HearingTestViewController.xib */,
+			);
+			path = HearingTestViewController;
+			sourceTree = "<group>";
+		};
+		2DEB15622BC07B27003FB88C /* ToneGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				2DEB15632BC07B4D003FB88C /* ToneGenerator.swift */,
+				2DEB15652BC1D026003FB88C /* AudioController.swift */,
+			);
+			path = ToneGenerator;
 			sourceTree = "<group>";
 		};
 		2DF334612B6AC0880063944B /* HomeMenuButton */ = {
@@ -701,6 +729,7 @@
 				2DB974B12B666C87009BE2C8 /* Kanit-ExtraBoldItalic.ttf in Resources */,
 				2DB974B42B666C87009BE2C8 /* Kanit-SemiBoldItalic.ttf in Resources */,
 				2DB974AF2B666C87009BE2C8 /* Kanit-ThinItalic.ttf in Resources */,
+				2DEB15612BC062EA003FB88C /* HearingTestViewController.xib in Resources */,
 				2DB974A62B666C87009BE2C8 /* Kanit-ExtraBold.ttf in Resources */,
 				2D8F3A8F2BA36156009B675D /* HearingTestSummaryViewController.xib in Resources */,
 				2D708EEF2BB8C013006146ED /* HistoryTableViewCell.xib in Resources */,
@@ -761,6 +790,7 @@
 				2DB9746E2B66613C009BE2C8 /* ButtonSize.swift in Sources */,
 				2DB974762B666182009BE2C8 /* ButtonType.swift in Sources */,
 				2D91A3932B6AEE7700CE086C /* CollectionViewModel.swift in Sources */,
+				2DEB15662BC1D026003FB88C /* AudioController.swift in Sources */,
 				2DB974B62B666DB5009BE2C8 /* UIFonts+Extension.swift in Sources */,
 				2DF3346B2B6AC46C0063944B /* HomeMenuButtonActionState.swift in Sources */,
 				2DA4A62C2B84EC5700CC2380 /* HearingTestViewModel.swift in Sources */,
@@ -770,11 +800,13 @@
 				2D4D64FB2BBB403600163504 /* OnbaordingViewModel.swift in Sources */,
 				2DF3347B2B6AD7910063944B /* HomeScreenCollectionViewCell.swift in Sources */,
 				2DF3346D2B6AC4B00063944B /* HomeMenuButtonViewModel.swift in Sources */,
+				2DEB15602BC062EA003FB88C /* HearingTestViewController.swift in Sources */,
 				2D708EE52BB8B6FB006146ED /* TableView.swift in Sources */,
 				2D708EE92BB8B92A006146ED /* UITableView+Extension.swift in Sources */,
 				2D8F3A8E2BA36156009B675D /* HearingTestSummaryViewController.swift in Sources */,
 				2DB974472B663077009BE2C8 /* UIView+Extension.swift in Sources */,
 				2DFEA6B62BAA0A67003D9337 /* OnboardingModel.swift in Sources */,
+				2DEB15642BC07B4D003FB88C /* ToneGenerator.swift in Sources */,
 				2DA4A61D2B7E542300CC2380 /* NavigationBar.swift in Sources */,
 				2DF334692B6AC4090063944B /* HomeMenuButtonState.swift in Sources */,
 				2DB974292B658244009BE2C8 /* EyeHubColor.swift in Sources */,

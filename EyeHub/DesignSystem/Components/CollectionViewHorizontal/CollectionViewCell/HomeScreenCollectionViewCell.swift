@@ -29,7 +29,7 @@ class HomeScreenCollectionViewCell: UICollectionViewCell {
     private func setUpUI() {
         bgView.layer.cornerRadius = EyeHubRadius.radius16
         titleLabel.font = FontFamily.Kanit.medium.font(size: 16)
-        descriptionLabel.font = FontFamily.Kanit.light.font(size: 12)
+        descriptionLabel.font = FontFamily.Kanit.light.font(size: 14)
         titleLabel.textColor = UIColor(cgColor: EyeHubColor.backgroundColor)
         descriptionLabel.textColor = UIColor(cgColor: EyeHubColor.backgroundColor)
     }
