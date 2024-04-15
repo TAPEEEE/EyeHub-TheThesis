@@ -9,60 +9,167 @@ import UIKit
 import AVFoundation
 
 class HearingTestViewController: UIViewController {
-    
+    var audioPlayer: AVAudioPlayer?
     var decibel: Float = 4
-    var key = "leftEar"
-    let testHz: [Double] = [125, 250, 500, 1000, 2000, 4000, 8000]
-    var test: [String: [Float]] = ["leftEar": [], "RightEar": []]
-    var count = 0
-    let toneGen = ToneGenerator()
+    var currentEarKey = "leftEar"
+    let testFrequencies: [TestFrequency] = TestFrequency.allCases
+    var testResults: [String: [Float]] = ["leftEar": [], "RightEar": []]
+    var currentTestIndex = 0
     var pan: Float = 1.0
-    var frequency: Double = 500
     
-    @IBOutlet weak var btn: UIButton!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var testStateLabel: UILabel!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var testCardView: UIView!
+    @IBOutlet weak var progressBarView: UIProgressView!
+    @IBOutlet weak var navigationBarView: NavigationBar!
+    @IBOutlet weak var buttonView: UIButton! {
+        didSet {
+            switch buttonView.state {
+            case .disabled:
+                buttonView.backgroundColor = .blue
+            default:
+                buttonView.backgroundColor = .red
+            }
+            buttonView.setTitleColor(UIColor.init(white: 1, alpha: 0.3), for: .disabled)
+            buttonView.setTitleColor(UIColor.init(white: 1, alpha: 1), for: .normal)
+        }
+    }
+    @IBOutlet var titleLabel: [UILabel]!
+    @IBOutlet var descriptionLabel: [UILabel]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btn.isEnabled = false
-        delay()
+        buttonView.isEnabled = false
+        startTestWithDelay()
+        let buttontapGesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(startTestAction)
+        )
+        buttonView.addGestureRecognizer(buttontapGesture)
+        setUpUI()
     }
     
-    @IBAction func action(_ sender: Any) {
-        guard count < testHz.count else { return }
-        appendValueToArray(decibel: Float(toneGen.value))
-        toneGen.stopSound()
-        count += 1
-        if count == testHz.count && key != "RightEar" {
-            key = "RightEar"
-            pan = -1.0
-            count = 0
-        } else {
-            btn.isEnabled = false
+   
+    @IBAction func startTestAction(_ sender: Any) {
+        guard currentTestIndex < testFrequencies.count else { return }
+
+        if let currentTime = stopSound() {
+            appendDecibelValueToArray(decibel: Float(calculateDecibel(x: currentTime)))
         }
-        if let array = test[key], array.count == testHz.count {
+        currentTestIndex += 1
+        
+        let progress = Float(currentTestIndex) / Float(testFrequencies.count)
+        progressBarView.setProgress(progress, animated: true)
+        
+        if currentTestIndex == testFrequencies.count && currentEarKey == "leftEar" {
+            switchToRightEarTest()
+            progressBarView.setProgress(0, animated: true)
+        } else if currentTestIndex == testFrequencies.count && currentEarKey == "RightEar" {
+            buttonView.isEnabled = false
+            let newViewController = HearingTestSummaryViewController()
+            self.navigationController?.pushViewController(newViewController, animated: true)
+            print("end")
             return
         }
-        btn.isEnabled = false
-        delay()
+        if let resultsArray = testResults[currentEarKey], resultsArray.count == testFrequencies.count {
+            return
+        }
+        buttonView.isEnabled = false
+        startTestWithDelay()
     }
     
-    func appendValueToArray(decibel: Float) {
-        if var existingArray = test[key] {
+    func appendDecibelValueToArray(decibel: Float) {
+        if var existingArray = testResults[currentEarKey] {
             existingArray.append(decibel)
-            test[key] = existingArray
+            testResults[currentEarKey] = existingArray
         } else {
-            test[key] = [decibel]
+            testResults[currentEarKey] = [decibel]
         }
     }
     
-    func delay() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
-            btn.isEnabled = true
-            toneGen.setupAudio()
-            toneGen.setUp(frequency: testHz[count], pan: pan)
-            toneGen.playSound()
+    func startTestWithDelay() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
+            buttonView.isEnabled = true
+            let frequency = testFrequencies[currentTestIndex].stringValue
+            testStateLabel.text = frequency + " Hz"
+            playSound(soundFileName: frequency, pan: pan)
         }
-        test.forEach { print("\($0): \($1)") }
+        printTestResults()
+    }
+    
+    func playSound(soundFileName: String, pan: Float) {
+        guard let url = Bundle.main.url(forResource: soundFileName, withExtension: "mp3") else {
+            print("Sound file not found.")
+            return
+        }
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.pan = pan
+            audioPlayer?.play()
+        } catch {
+            print("Error playing sound: \(error.localizedDescription)")
+        }
+    }
+    
+    func stopSound() -> Double? {
+        var currentTime: Double?
+        if let player = audioPlayer, player.isPlaying {
+            currentTime = Double(player.currentTime)
+            player.stop()
+        }
+        return currentTime
+    }
+    
+    func calculateDecibel(x: Double) -> Double {
+        let slope = 1.5
+        let y = slope * x
+        return y
+    }
+    
+    func switchToRightEarTest() {
+        currentEarKey = "RightEar"
+        testStateLabel.text = "ทดสอบหูขวา"
+        pan = -1.0
+        currentTestIndex = 0
+    }
+    
+    func printTestResults() {
+        testResults.forEach { print("\($0): \($1)") }
+    }
+}
+
+extension HearingTestViewController: NavigationBarDelegate {
+    func navigationBackButtonDidTap(_ navigation: NavigationBar) {
+        navigationController?.popViewController(animated: true)
+    }
+}
+
+extension HearingTestViewController {
+    func setUpUI() {
+        testStateLabel.text = "ทดสอบหูซ้าย"
+        self.view.backgroundColor = UIColor.white
+        contentView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
+        testStateLabel.textColor = UIColor(cgColor: EyeHubColor.primaryColor)
+        testStateLabel.font = FontFamily.Kanit.medium.font(size: 40)
+        testCardView.layer.cornerRadius = EyeHubRadius.radius16
+        progressBarView.tintColor = UIColor(cgColor: EyeHubColor.primaryColor)
+        progressBarView.progress = 0
+        buttonView.layer.backgroundColor = EyeHubColor.orangeColor
+        buttonView.layer.cornerRadius = EyeHubRadius.radius16
+        buttonView.titleLabel?.font = FontFamily.Kanit.medium.font(size: 24)
+        
+        titleLabel.forEach {
+            $0.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
+            $0.font = FontFamily.Kanit.medium.font(size: 18)
+        }
+        
+        descriptionLabel.forEach {
+            $0.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
+            $0.font = FontFamily.Kanit.light.font(size: 16)
+        }
+        
+        navigationBarView.set(title: "ทดสอบระดับการได้ยิน")
+        navigationBarView.delegate = self
     }
 }

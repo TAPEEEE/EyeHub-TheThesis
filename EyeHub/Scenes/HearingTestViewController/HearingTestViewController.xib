@@ -11,9 +11,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HearingTestViewController" customModule="EyeHub" customModuleProvider="target">
             <connections>
-                <outlet property="btn" destination="DCK-Fz-Kgi" id="AZL-Ny-dI6"/>
-                <outlet property="label" destination="2PW-KJ-hz0" id="npn-V0-y7k"/>
+                <outlet property="buttonView" destination="bLf-ou-s7N" id="rNE-f6-IDh"/>
+                <outlet property="contentView" destination="j6I-je-Rm3" id="wWM-7J-ePI"/>
+                <outlet property="navigationBarView" destination="uy0-yl-NPI" id="3i0-vZ-ZPX"/>
+                <outlet property="progressBarView" destination="oTe-Me-abb" id="TxT-6P-kIW"/>
+                <outlet property="testCardView" destination="TMs-M1-U0f" id="Rsm-hf-1dd"/>
+                <outlet property="testStateLabel" destination="lG4-jc-4w5" id="OoQ-nE-bux"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="titleLabel" destination="dmN-qq-0YM" collectionClass="NSMutableArray" id="gBE-QZ-rBG"/>
+                <outletCollection property="descriptionLabel" destination="LJ0-HG-Axr" collectionClass="NSMutableArray" id="pj6-fs-DUZ"/>
+                <outletCollection property="descriptionLabel" destination="2q3-zj-wPH" collectionClass="NSMutableArray" id="9mo-sC-LmD"/>
+                <outletCollection property="titleLabel" destination="BrT-ZX-Pa4" collectionClass="NSMutableArray" id="mZp-VP-1Lb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,26 +29,149 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCK-Fz-Kgi">
-                    <rect key="frame" x="159" y="417" width="75" height="41"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                    <connections>
-                        <action selector="action:" destination="-1" eventType="touchUpInside" id="GoB-d5-d44"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2PW-KJ-hz0">
-                    <rect key="frame" x="175" y="344" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uy0-yl-NPI" userLabel="NavBar" customClass="NavigationBar" customModule="EyeHub" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5pr-qh-rgv"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6I-je-Rm3">
+                    <rect key="frame" x="0.0" y="99" width="393" height="753"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lbs-na-viv">
+                            <rect key="frame" x="0.0" y="12" width="393" height="441"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMs-M1-U0f">
+                                    <rect key="frame" x="24" y="90.666666666666657" width="345" height="260"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qCE-hv-51t">
+                                            <rect key="frame" x="27.666666666666657" y="56.000000000000043" width="290" height="147.66666666666663"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="การทดสอบคลื่นเสียงที่ระดับ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrT-ZX-Pa4">
+                                                    <rect key="frame" x="47.666666666666671" y="0.0" width="194.66666666666663" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="240Hz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lG4-jc-4w5">
+                                                    <rect key="frame" x="87" y="40.333333333333314" width="116" height="46.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q3-zj-wPH">
+                                                    <rect key="frame" x="0.0" y="107" width="290" height="40.666666666666657"/>
+                                                    <string key="text">กดปุ่มด้านล่างเมื่อท่านได้ยินสัญญาณเสียง
+เพื่อบันทึกค่าของระดับการได้ยิน</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="qCE-hv-51t" firstAttribute="centerY" secondItem="TMs-M1-U0f" secondAttribute="centerY" id="L1E-qG-zDT"/>
+                                        <constraint firstItem="qCE-hv-51t" firstAttribute="centerX" secondItem="TMs-M1-U0f" secondAttribute="centerX" id="aIt-1Z-rR0"/>
+                                        <constraint firstAttribute="height" constant="260" id="r0y-63-E5Y"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="TMs-M1-U0f" firstAttribute="centerX" secondItem="Lbs-na-viv" secondAttribute="centerX" id="1jH-Fb-y1A"/>
+                                <constraint firstAttribute="trailing" secondItem="TMs-M1-U0f" secondAttribute="trailing" constant="24" id="DnE-d7-uat"/>
+                                <constraint firstItem="TMs-M1-U0f" firstAttribute="centerY" secondItem="Lbs-na-viv" secondAttribute="centerY" id="p1Y-eI-5ZQ"/>
+                                <constraint firstItem="TMs-M1-U0f" firstAttribute="leading" secondItem="Lbs-na-viv" secondAttribute="leading" constant="24" id="pjt-aq-poy"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hy-JI-zMJ" userLabel="BottomSheet" customClass="BlankBottomSheet" customModule="EyeHub" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="453" width="393" height="300"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="gcg-AV-alX">
+                                    <rect key="frame" x="24" y="63.666666666666629" width="345" height="173"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4rd-JO-QqN">
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="69"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ทดสอบหูข้างซ้าย" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmN-qq-0YM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="การทดสอบหูข้างซ้าย กดปุ่ม “ฉันได้ยิน” เมื่อท่านได้ยินสัญญาณเสียงทดสอบ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ0-HG-Axr">
+                                                    <rect key="frame" x="0.0" y="28.333333333333368" width="345" height="40.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLf-ou-s7N">
+                                            <rect key="frame" x="0.0" y="101" width="345" height="72"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="72" id="vuB-Rt-cTw"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="ฉันได้ยิน"/>
+                                            <connections>
+                                                <action selector="startTestAction:" destination="-1" eventType="touchUpInside" id="pQz-14-kUw"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="bLf-ou-s7N" secondAttribute="trailing" id="RNE-oX-gKR"/>
+                                        <constraint firstItem="4rd-JO-QqN" firstAttribute="leading" secondItem="gcg-AV-alX" secondAttribute="leading" id="RPI-0C-SZk"/>
+                                        <constraint firstAttribute="trailing" secondItem="4rd-JO-QqN" secondAttribute="trailing" id="d9O-cQ-Ome"/>
+                                        <constraint firstItem="bLf-ou-s7N" firstAttribute="leading" secondItem="gcg-AV-alX" secondAttribute="leading" id="wab-2G-FRD"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="gcg-AV-alX" firstAttribute="centerY" secondItem="7Hy-JI-zMJ" secondAttribute="centerY" id="2eH-em-8Uz"/>
+                                <constraint firstAttribute="height" constant="300" id="Yhh-tZ-XOo"/>
+                                <constraint firstAttribute="trailing" secondItem="gcg-AV-alX" secondAttribute="trailing" constant="24" id="nAl-tK-nWT"/>
+                                <constraint firstItem="gcg-AV-alX" firstAttribute="centerX" secondItem="7Hy-JI-zMJ" secondAttribute="centerX" id="okt-qk-vbs"/>
+                                <constraint firstItem="gcg-AV-alX" firstAttribute="leading" secondItem="7Hy-JI-zMJ" secondAttribute="leading" constant="24" id="wGi-Kc-pJw"/>
+                            </constraints>
+                        </view>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oTe-Me-abb">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="Yac-fl-uL0"/>
+                            </constraints>
+                        </progressView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="oTe-Me-abb" secondAttribute="trailing" id="2R2-2v-tmp"/>
+                        <constraint firstItem="7Hy-JI-zMJ" firstAttribute="top" secondItem="Lbs-na-viv" secondAttribute="bottom" id="53s-Uw-2wg"/>
+                        <constraint firstItem="oTe-Me-abb" firstAttribute="top" secondItem="j6I-je-Rm3" secondAttribute="top" id="KFx-wg-84Q"/>
+                        <constraint firstItem="Lbs-na-viv" firstAttribute="top" secondItem="oTe-Me-abb" secondAttribute="bottom" id="LNJ-TW-Y5w"/>
+                        <constraint firstAttribute="trailing" secondItem="Lbs-na-viv" secondAttribute="trailing" id="Qo7-YD-Cdp"/>
+                        <constraint firstItem="7Hy-JI-zMJ" firstAttribute="leading" secondItem="j6I-je-Rm3" secondAttribute="leading" id="TCt-cR-Ml8"/>
+                        <constraint firstItem="oTe-Me-abb" firstAttribute="leading" secondItem="j6I-je-Rm3" secondAttribute="leading" id="gE8-oH-xU9"/>
+                        <constraint firstAttribute="bottom" secondItem="7Hy-JI-zMJ" secondAttribute="bottom" id="hBZ-0X-V0P"/>
+                        <constraint firstAttribute="trailing" secondItem="7Hy-JI-zMJ" secondAttribute="trailing" id="vbU-ZI-nYD"/>
+                        <constraint firstItem="Lbs-na-viv" firstAttribute="leading" secondItem="j6I-je-Rm3" secondAttribute="leading" id="yBN-2S-dsh"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="83" y="-11"/>
+            <constraints>
+                <constraint firstItem="uy0-yl-NPI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2NT-qz-7yp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="j6I-je-Rm3" secondAttribute="trailing" id="5iA-WB-xJd"/>
+                <constraint firstItem="uy0-yl-NPI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="8Q4-be-FdO"/>
+                <constraint firstItem="uy0-yl-NPI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Hor-0B-QwW"/>
+                <constraint firstItem="j6I-je-Rm3" firstAttribute="top" secondItem="uy0-yl-NPI" secondAttribute="bottom" id="J9o-fC-q6D"/>
+                <constraint firstItem="j6I-je-Rm3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cxT-TD-OVW"/>
+                <constraint firstAttribute="bottom" secondItem="j6I-je-Rm3" secondAttribute="bottom" id="hHF-44-HOd"/>
+            </constraints>
+            <point key="canvasLocation" x="81.679389312977094" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>

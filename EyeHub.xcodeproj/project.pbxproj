@@ -76,6 +76,11 @@
 		2DEB15612BC062EA003FB88C /* HearingTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB155F2BC062EA003FB88C /* HearingTestViewController.xib */; };
 		2DEB15642BC07B4D003FB88C /* ToneGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB15632BC07B4D003FB88C /* ToneGenerator.swift */; };
 		2DEB15662BC1D026003FB88C /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB15652BC1D026003FB88C /* AudioController.swift */; };
+		2DEB15952BC2EBA5003FB88C /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB15942BC2EBA5003FB88C /* OnBoarding.swift */; };
+		2DEB15972BC2EBB2003FB88C /* OnBoarding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB15962BC2EBB2003FB88C /* OnBoarding.xib */; };
+		2DEB159A2BC44210003FB88C /* 125.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB15992BC44210003FB88C /* 125.mp3 */; };
+		2DEB159D2BC4583E003FB88C /* TestFrequencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB159C2BC4583E003FB88C /* TestFrequencies.swift */; };
+		2DEB15A12BCC168F003FB88C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB15A02BCC168F003FB88C /* GoogleService-Info.plist */; };
 		2DF334632B6AC0A50063944B /* HomeMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334622B6AC0A50063944B /* HomeMenuButton.swift */; };
 		2DF334652B6AC0AE0063944B /* HomeMenuButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF334642B6AC0AE0063944B /* HomeMenuButton.xib */; };
 		2DF334692B6AC4090063944B /* HomeMenuButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334682B6AC4090063944B /* HomeMenuButtonState.swift */; };
@@ -163,6 +168,12 @@
 		2DEB155F2BC062EA003FB88C /* HearingTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HearingTestViewController.xib; sourceTree = "<group>"; };
 		2DEB15632BC07B4D003FB88C /* ToneGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToneGenerator.swift; sourceTree = "<group>"; };
 		2DEB15652BC1D026003FB88C /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		2DEB15942BC2EBA5003FB88C /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
+		2DEB15962BC2EBB2003FB88C /* OnBoarding.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoarding.xib; sourceTree = "<group>"; };
+		2DEB15982BC32EDD003FB88C /* EyeHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EyeHub.entitlements; sourceTree = "<group>"; };
+		2DEB15992BC44210003FB88C /* 125.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 125.mp3; sourceTree = "<group>"; };
+		2DEB159C2BC4583E003FB88C /* TestFrequencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFrequencies.swift; sourceTree = "<group>"; };
+		2DEB15A02BCC168F003FB88C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DF334622B6AC0A50063944B /* HomeMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuButton.swift; sourceTree = "<group>"; };
 		2DF334642B6AC0AE0063944B /* HomeMenuButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMenuButton.xib; sourceTree = "<group>"; };
 		2DF334682B6AC4090063944B /* HomeMenuButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuButtonState.swift; sourceTree = "<group>"; };
@@ -196,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				2D4D64F92BBB402500163504 /* Model */,
+				2DEB15942BC2EBA5003FB88C /* OnBoarding.swift */,
+				2DEB15962BC2EBB2003FB88C /* OnBoarding.xib */,
 			);
 			path = OnboardingView;
 			sourceTree = "<group>";
@@ -337,6 +350,7 @@
 		2DB974042B657F16009BE2C8 /* EyeHub */ = {
 			isa = PBXGroup;
 			children = (
+				2DEB15982BC32EDD003FB88C /* EyeHub.entitlements */,
 				2DB974262B6581BB009BE2C8 /* Assets */,
 				2DB974212B6580CD009BE2C8 /* Extensions */,
 				2DB974202B6580BD009BE2C8 /* Constants */,
@@ -345,6 +359,7 @@
 				2DB9741A2B657FBD009BE2C8 /* Base */,
 				2DB974192B657FAF009BE2C8 /* DesignSystem */,
 				2DB974052B657F16009BE2C8 /* AppDelegate.swift */,
+				2DEB15A02BCC168F003FB88C /* GoogleService-Info.plist */,
 				2DB9740E2B657F17009BE2C8 /* Assets.xcassets */,
 				2DB974102B657F17009BE2C8 /* LaunchScreen.storyboard */,
 				2DB974132B657F17009BE2C8 /* Info.plist */,
@@ -437,6 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				2D4AC0052B67E48500D5F977 /* Sound1.mp3 */,
+				2DEB15992BC44210003FB88C /* 125.mp3 */,
 				2DA4A6182B7E31A400CC2380 /* success.json */,
 				2DB523AF2B7E0B8500AFF154 /* animation.json */,
 				2D4AC0072B68182900D5F977 /* Sound2.mp3 */,
@@ -548,6 +564,7 @@
 		2DEB155D2BC062C4003FB88C /* HearingTestViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2DEB159B2BC45828003FB88C /* Models */,
 				2DEB155E2BC062EA003FB88C /* HearingTestViewController.swift */,
 				2DEB155F2BC062EA003FB88C /* HearingTestViewController.xib */,
 			);
@@ -561,6 +578,14 @@
 				2DEB15652BC1D026003FB88C /* AudioController.swift */,
 			);
 			path = ToneGenerator;
+			sourceTree = "<group>";
+		};
+		2DEB159B2BC45828003FB88C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2DEB159C2BC4583E003FB88C /* TestFrequencies.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2DF334612B6AC0880063944B /* HomeMenuButton */ = {
@@ -723,6 +748,7 @@
 				2DA4A6282B84EB4D00CC2380 /* AphabetSnellenViewController.xib in Resources */,
 				2DB523B02B7E0B8500AFF154 /* animation.json in Resources */,
 				2DB974A52B666C87009BE2C8 /* Kanit-Bold.ttf in Resources */,
+				2DEB159A2BC44210003FB88C /* 125.mp3 in Resources */,
 				2DB974A32B666C87009BE2C8 /* Kanit-Italic.ttf in Resources */,
 				2DB974AA2B666C87009BE2C8 /* Kanit-ExtraLightItalic.ttf in Resources */,
 				2DB974C12B6681BC009BE2C8 /* OnBoardingViewController.xib in Resources */,
@@ -733,6 +759,8 @@
 				2DB974A62B666C87009BE2C8 /* Kanit-ExtraBold.ttf in Resources */,
 				2D8F3A8F2BA36156009B675D /* HearingTestSummaryViewController.xib in Resources */,
 				2D708EEF2BB8C013006146ED /* HistoryTableViewCell.xib in Resources */,
+				2DEB15972BC2EBB2003FB88C /* OnBoarding.xib in Resources */,
+				2DEB15A12BCC168F003FB88C /* GoogleService-Info.plist in Resources */,
 				2DF334652B6AC0AE0063944B /* HomeMenuButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -796,6 +824,7 @@
 				2DA4A62C2B84EC5700CC2380 /* HearingTestViewModel.swift in Sources */,
 				2DB9747C2B66641F009BE2C8 /* Typography.swift in Sources */,
 				2DB974702B66614A009BE2C8 /* ButtonState.swift in Sources */,
+				2DEB15952BC2EBA5003FB88C /* OnBoarding.swift in Sources */,
 				2DB974742B666172009BE2C8 /* ButtonSubType.swift in Sources */,
 				2D4D64FB2BBB403600163504 /* OnbaordingViewModel.swift in Sources */,
 				2DF3347B2B6AD7910063944B /* HomeScreenCollectionViewCell.swift in Sources */,
@@ -815,6 +844,7 @@
 				2D4D64FE2BBB416800163504 /* HistoryViewController.swift in Sources */,
 				2DB523AD2B7DFA9D00AFF154 /* HearingViewController.swift in Sources */,
 				2DF334632B6AC0A50063944B /* HomeMenuButton.swift in Sources */,
+				2DEB159D2BC4583E003FB88C /* TestFrequencies.swift in Sources */,
 				2DB9746A2B666120009BE2C8 /* Appearance.swift in Sources */,
 				2DB9746C2B66612F009BE2C8 /* PaddingModel.swift in Sources */,
 				2DA4A6232B81038E00CC2380 /* BlankBottomSheet.swift in Sources */,
@@ -971,17 +1001,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EyeHub/EyeHub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VZKG7M8FDU;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EyeHub/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your app needs to access your health data to track your headphone audio exposure.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your app needs to update your health data to store your headphone audio exposure information.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow the mic";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Please allow the recoginization";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1005,17 +1039,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EyeHub/EyeHub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VZKG7M8FDU;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EyeHub/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your app needs to access your health data to track your headphone audio exposure.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your app needs to update your health data to store your headphone audio exposure information.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow the mic";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Please allow the recoginization";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

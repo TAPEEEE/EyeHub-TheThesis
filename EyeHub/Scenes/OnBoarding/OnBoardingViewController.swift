@@ -8,19 +8,22 @@
 import UIKit
 
 class OnBoardingViewController: UIViewController {
-
+    @IBOutlet weak var onboardingView: OnBoarding!
+    let modelList = [OnbaordingViewModel(title: "1", description: "vbnvbn", content: .lottieFile(lottie: "")), OnbaordingViewModel(title: "2", description: "vbnvbn", content: .lottieFile(lottie: "")),OnbaordingViewModel(title: "2", description: "vbnvbn", content: .lottieFile(lottie: ""))]
+                                                        
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
+        commonInit()
     }
 }
 
 private extension OnBoardingViewController {
     func commonInit() {
         setUpUI()
+        onboardingView.setUp(model: modelList)
     }
     
     func setUpUI() {
-        self.view.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundColor)
+        self.view.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
     }
 }

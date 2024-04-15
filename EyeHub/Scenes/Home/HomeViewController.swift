@@ -5,6 +5,7 @@
 //  Created by Nattapon Suwanno on 28/1/2567 BE.
 //
 
+import HealthKit
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -81,6 +82,7 @@ extension HomeViewController: TableViewDelegate {
 
 private extension HomeViewController {
     func commonInit() {
+        getPermission()
         setUpUI()
         let demoButtontapGesture = UITapGestureRecognizer(
             target: self,
@@ -94,6 +96,24 @@ private extension HomeViewController {
     @objc func demoVoice() {
         let scene = VoiceConceptViewController(nibName: String(describing: VoiceConceptViewController.self), bundle: .main)
         navigationController?.pushViewController(scene, animated: true)
+    }
+    
+    func getPermission() {
+
+        let healthStore = HKHealthStore()
+
+        let headphoneExposureType = HKQuantityType.quantityType(forIdentifier: .headphoneAudioExposure)!
+
+        healthStore.requestAuthorization(toShare: nil, read: [headphoneExposureType]) { (success, error) in
+            if success {
+                // Authorization granted for reading headphone audio exposure data
+                print("Authorization granted for headphone audio exposure")
+                // You can now query or retrieve the headphone audio exposure data
+            } else {
+                // Authorization denied or an error occurred
+                print("Authorization denied or an error occurred: \(error?.localizedDescription ?? "")")
+            }
+        }
     }
     
     func setUpUI() {
