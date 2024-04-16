@@ -19,7 +19,6 @@
 		2D6A870F2BCED936006E2D41 /* MessageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A870E2BCED936006E2D41 /* MessageBox.swift */; };
 		2D6A87112BCED943006E2D41 /* MessageBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87102BCED943006E2D41 /* MessageBox.xib */; };
 		2D6A87142BCF0C0E006E2D41 /* EarTestResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A87132BCF0C0E006E2D41 /* EarTestResultList.swift */; };
-		2D6A87192BCF21FA006E2D41 /* HearingTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A87182BCF21FA006E2D41 /* HearingTestViewModel.swift */; };
 		2D708EDC2BB8B28A006146ED /* TableViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D708EDB2BB8B28A006146ED /* TableViewType.swift */; };
 		2D708EE52BB8B6FB006146ED /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D708EE42BB8B6FB006146ED /* TableView.swift */; };
 		2D708EE72BB8B707006146ED /* TableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D708EE62BB8B707006146ED /* TableView.xib */; };
@@ -118,7 +117,6 @@
 		2D6A870E2BCED936006E2D41 /* MessageBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBox.swift; sourceTree = "<group>"; };
 		2D6A87102BCED943006E2D41 /* MessageBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageBox.xib; sourceTree = "<group>"; };
 		2D6A87132BCF0C0E006E2D41 /* EarTestResultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarTestResultList.swift; sourceTree = "<group>"; };
-		2D6A87182BCF21FA006E2D41 /* HearingTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearingTestViewModel.swift; sourceTree = "<group>"; };
 		2D708EDB2BB8B28A006146ED /* TableViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewType.swift; sourceTree = "<group>"; };
 		2D708EE42BB8B6FB006146ED /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		2D708EE62BB8B707006146ED /* TableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableView.xib; sourceTree = "<group>"; };
@@ -268,14 +266,6 @@
 			children = (
 			);
 			path = EyeTestsSummaryViewController;
-			sourceTree = "<group>";
-		};
-		2D6A87172BCF21E1006E2D41 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				2D6A87182BCF21FA006E2D41 /* HearingTestViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2D708EDA2BB8B26A006146ED /* TableView */ = {
@@ -629,7 +619,6 @@
 		2DEB155D2BC062C4003FB88C /* HearingTestViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2D6A87172BCF21E1006E2D41 /* ViewModel */,
 				2DEB159B2BC45828003FB88C /* Models */,
 				2DEB155E2BC062EA003FB88C /* HearingTestViewController.swift */,
 				2DEB155F2BC062EA003FB88C /* HearingTestViewController.xib */,
@@ -916,7 +905,6 @@
 				2DB9743F2B6594DC009BE2C8 /* EyeHubRadius.swift in Sources */,
 				2D708EDC2BB8B28A006146ED /* TableViewType.swift in Sources */,
 				2D4D64FE2BBB416800163504 /* HistoryViewController.swift in Sources */,
-				2D6A87192BCF21FA006E2D41 /* HearingTestViewModel.swift in Sources */,
 				2DB523AD2B7DFA9D00AFF154 /* HearingViewController.swift in Sources */,
 				2DF334632B6AC0A50063944B /* HomeMenuButton.swift in Sources */,
 				2DEB159D2BC4583E003FB88C /* TestFrequencies.swift in Sources */,
