@@ -8,12 +8,20 @@
 import UIKit
 import AVFoundation
 
+
+//
+// ไม่ได้แยก ViewModel
+// ไม่ได้แยก ViewModel
+// ไม่ได้แยก ViewModel
+// ไม่ได้แยก ViewModel
+//
+
 class HearingTestViewController: UIViewController {
     var audioPlayer: AVAudioPlayer?
     var decibel: Float = 4
     var currentEarKey = "leftEar"
     let testFrequencies: [TestFrequency] = TestFrequency.allCases
-    var testResults: [String: [Float]] = ["leftEar": [], "RightEar": []]
+    var testResults: [String: [Int]] = ["leftEar": [], "RightEar": []]
     var currentTestIndex = 0
     var pan: Float = 1.0
     
@@ -24,12 +32,6 @@ class HearingTestViewController: UIViewController {
     @IBOutlet weak var navigationBarView: NavigationBar!
     @IBOutlet weak var buttonView: UIButton! {
         didSet {
-            switch buttonView.state {
-            case .disabled:
-                buttonView.backgroundColor = .blue
-            default:
-                buttonView.backgroundColor = .red
-            }
             buttonView.setTitleColor(UIColor.init(white: 1, alpha: 0.3), for: .disabled)
             buttonView.setTitleColor(UIColor.init(white: 1, alpha: 1), for: .normal)
         }
@@ -41,11 +43,6 @@ class HearingTestViewController: UIViewController {
         super.viewDidLoad()
         buttonView.isEnabled = false
         startTestWithDelay()
-        let buttontapGesture = UITapGestureRecognizer(
-            target: self,
-            action: #selector(startTestAction)
-        )
-        buttonView.addGestureRecognizer(buttontapGesture)
         setUpUI()
     }
     
@@ -54,7 +51,7 @@ class HearingTestViewController: UIViewController {
         guard currentTestIndex < testFrequencies.count else { return }
 
         if let currentTime = stopSound() {
-            appendDecibelValueToArray(decibel: Float(calculateDecibel(x: currentTime)))
+            appendDecibelValueToArray(decibel: Int(calculateDecibel(x: currentTime)))
         }
         currentTestIndex += 1
         
@@ -66,9 +63,7 @@ class HearingTestViewController: UIViewController {
             progressBarView.setProgress(0, animated: true)
         } else if currentTestIndex == testFrequencies.count && currentEarKey == "RightEar" {
             buttonView.isEnabled = false
-            let newViewController = HearingTestSummaryViewController()
-            self.navigationController?.pushViewController(newViewController, animated: true)
-            print("end")
+            navigateToSummary()
             return
         }
         if let resultsArray = testResults[currentEarKey], resultsArray.count == testFrequencies.count {
@@ -78,7 +73,12 @@ class HearingTestViewController: UIViewController {
         startTestWithDelay()
     }
     
-    func appendDecibelValueToArray(decibel: Float) {
+    func navigateToSummary() {
+        let newViewController = HearingTestSummaryViewController(testResult: testResults)
+        self.navigationController?.pushViewController(newViewController, animated: true)
+    }
+    
+    func appendDecibelValueToArray(decibel: Int) {
         if var existingArray = testResults[currentEarKey] {
             existingArray.append(decibel)
             testResults[currentEarKey] = existingArray
@@ -88,7 +88,7 @@ class HearingTestViewController: UIViewController {
     }
     
     func startTestWithDelay() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
             buttonView.isEnabled = true
             let frequency = testFrequencies[currentTestIndex].stringValue
             testStateLabel.text = frequency + " Hz"

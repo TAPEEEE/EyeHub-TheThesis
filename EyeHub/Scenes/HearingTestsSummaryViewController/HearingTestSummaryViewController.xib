@@ -14,9 +14,14 @@
                 <outlet property="chartSectionView" destination="LnB-cF-Ydt" id="FlI-a0-a2C"/>
                 <outlet property="chartsView" destination="4xF-PT-xaz" id="UMr-aD-jgB"/>
                 <outlet property="contentView" destination="Iha-3D-URS" id="RDH-Ul-Gja"/>
+                <outlet property="descriptionLabel" destination="6CX-Wm-sdY" id="uAr-vR-fAi"/>
+                <outlet property="headingLabel" destination="N3C-yG-tgs" id="tjs-AR-bRf"/>
+                <outlet property="messageBoxView" destination="Gat-YJ-Vv9" id="EXM-ya-taf"/>
                 <outlet property="navigationBarView" destination="82V-dS-ndp" id="qFM-Sy-yGS"/>
+                <outlet property="resultLabel" destination="3AP-9c-Qj9" id="Puv-el-ggy"/>
+                <outlet property="suggestMessageBoxView" destination="xVb-DA-hIt" id="WaF-iu-9qk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outletCollection property="headerLabel" destination="Ajm-ot-H92" collectionClass="NSMutableArray" id="GZW-Fv-Sea"/>
+                <outletCollection property="titleLabel" destination="Ajm-ot-H92" collectionClass="NSMutableArray" id="GZW-Fv-Sea"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,31 +36,20 @@
                         <constraint firstAttribute="height" constant="40" id="zXm-8s-k9R"/>
                     </constraints>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdE-KJ-gxC">
-                    <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdE-KJ-gxC">
+                    <rect key="frame" x="0.0" y="99" width="393" height="753"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iha-3D-URS">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="2000"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="763.66666666666663"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kk7-be-xCT">
-                                    <rect key="frame" x="16" y="24" width="361" height="20.333333333333329"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ตารางผลการทดสอบ Audiogram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajm-ot-H92">
-                                            <rect key="frame" x="0.0" y="0.0" width="233" height="20.333333333333332"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnB-cF-Ydt">
-                                    <rect key="frame" x="24" y="60.333333333333343" width="345" height="344"/>
+                                    <rect key="frame" x="24" y="157.33333333333331" width="345" height="304"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xF-PT-xaz">
-                                            <rect key="frame" x="0.0" y="16" width="337" height="320"/>
+                                            <rect key="frame" x="0.0" y="16" width="337" height="280"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="320" id="XRU-dW-YW6"/>
+                                                <constraint firstAttribute="height" constant="280" id="XRU-dW-YW6"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -67,15 +61,77 @@
                                         <constraint firstItem="4xF-PT-xaz" firstAttribute="top" secondItem="LnB-cF-Ydt" secondAttribute="top" constant="16" id="vPT-uy-lhs"/>
                                     </constraints>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ตารางผลการทดสอบ Audiogram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajm-ot-H92">
+                                    <rect key="frame" x="16" y="124.99999999999999" width="361" height="20.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="345" placeholderIntrinsicHeight="83" translatesAutoresizingMaskIntoConstraints="NO" id="Gat-YJ-Vv9" customClass="MessageBox" customModule="EyeHub" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="24" width="345" height="83"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mir-96-Ev7" customClass="BlankBottomSheet" customModule="EyeHub" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="497.33333333333337" width="393" height="266.33333333333337"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="การได้ยินของท่านอยู่ในระดับ:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3C-yG-tgs">
+                                            <rect key="frame" x="28" y="32" width="337" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OO1-pJ-4Ah">
+                                            <rect key="frame" x="28" y="64.333333333333258" width="337" height="54"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AP-9c-Qj9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="337" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CX-Wm-sdY">
+                                                    <rect key="frame" x="0.0" y="54" width="337" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="337" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="xVb-DA-hIt" customClass="MessageBox" customModule="EyeHub" customModuleProvider="target">
+                                            <rect key="frame" x="28" y="150.33333333333326" width="337" height="80"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="xVb-DA-hIt" secondAttribute="bottom" constant="36" id="Bk1-Xc-CWu"/>
+                                        <constraint firstItem="N3C-yG-tgs" firstAttribute="top" secondItem="mir-96-Ev7" secondAttribute="top" constant="32" id="C70-iC-2vY"/>
+                                        <constraint firstItem="xVb-DA-hIt" firstAttribute="top" secondItem="OO1-pJ-4Ah" secondAttribute="bottom" constant="32" id="JUG-Eb-sOx"/>
+                                        <constraint firstItem="xVb-DA-hIt" firstAttribute="leading" secondItem="mir-96-Ev7" secondAttribute="leading" constant="28" id="K0z-rd-1hl"/>
+                                        <constraint firstItem="OO1-pJ-4Ah" firstAttribute="top" secondItem="N3C-yG-tgs" secondAttribute="bottom" constant="12" id="M71-3V-0Wz"/>
+                                        <constraint firstAttribute="trailing" secondItem="xVb-DA-hIt" secondAttribute="trailing" constant="28" id="VWg-Bp-HP9"/>
+                                        <constraint firstItem="N3C-yG-tgs" firstAttribute="leading" secondItem="mir-96-Ev7" secondAttribute="leading" constant="28" id="ZQU-2Y-rsh"/>
+                                        <constraint firstAttribute="trailing" secondItem="OO1-pJ-4Ah" secondAttribute="trailing" constant="28" id="f1y-8k-yME"/>
+                                        <constraint firstItem="OO1-pJ-4Ah" firstAttribute="leading" secondItem="mir-96-Ev7" secondAttribute="leading" constant="28" id="fxP-39-Tyr"/>
+                                        <constraint firstAttribute="trailing" secondItem="N3C-yG-tgs" secondAttribute="trailing" constant="28" id="heH-VH-dVd"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="kk7-be-xCT" firstAttribute="leading" secondItem="Iha-3D-URS" secondAttribute="leading" constant="16" id="9Nw-2Z-tT9"/>
-                                <constraint firstItem="kk7-be-xCT" firstAttribute="top" secondItem="Iha-3D-URS" secondAttribute="top" constant="24" id="EGf-5Y-BgB"/>
-                                <constraint firstAttribute="trailing" secondItem="kk7-be-xCT" secondAttribute="trailing" constant="16" id="GQS-0F-pQQ"/>
-                                <constraint firstItem="LnB-cF-Ydt" firstAttribute="top" secondItem="kk7-be-xCT" secondAttribute="bottom" constant="16" id="MFS-Sq-Afg"/>
+                                <constraint firstItem="Ajm-ot-H92" firstAttribute="leading" secondItem="Iha-3D-URS" secondAttribute="leading" constant="16" id="4Dz-ES-l0F"/>
+                                <constraint firstAttribute="trailing" secondItem="Gat-YJ-Vv9" secondAttribute="trailing" constant="24" id="B1N-cj-M54"/>
+                                <constraint firstItem="mir-96-Ev7" firstAttribute="leading" secondItem="Iha-3D-URS" secondAttribute="leading" id="Fud-zV-Dlf"/>
+                                <constraint firstItem="Ajm-ot-H92" firstAttribute="top" secondItem="Gat-YJ-Vv9" secondAttribute="bottom" constant="18" id="GGn-ei-yGp"/>
+                                <constraint firstItem="Gat-YJ-Vv9" firstAttribute="leading" secondItem="Iha-3D-URS" secondAttribute="leading" constant="24" id="Iu5-q1-K6g"/>
+                                <constraint firstAttribute="trailing" secondItem="LnB-cF-Ydt" secondAttribute="trailing" constant="24" id="NM1-6k-7d8"/>
+                                <constraint firstItem="LnB-cF-Ydt" firstAttribute="top" secondItem="Ajm-ot-H92" secondAttribute="bottom" constant="12" id="OYp-Qd-lD8"/>
+                                <constraint firstAttribute="trailing" secondItem="mir-96-Ev7" secondAttribute="trailing" id="Qnb-l8-G2C"/>
+                                <constraint firstItem="mir-96-Ev7" firstAttribute="top" secondItem="LnB-cF-Ydt" secondAttribute="bottom" constant="36" id="YNd-HT-zJC"/>
+                                <constraint firstItem="LnB-cF-Ydt" firstAttribute="leading" secondItem="Iha-3D-URS" secondAttribute="leading" constant="24" id="ZeA-FD-0Gc"/>
+                                <constraint firstItem="Gat-YJ-Vv9" firstAttribute="top" secondItem="Iha-3D-URS" secondAttribute="top" constant="24" id="evZ-wi-zF8"/>
+                                <constraint firstAttribute="trailing" secondItem="Ajm-ot-H92" secondAttribute="trailing" constant="16" id="hup-Ly-ham"/>
                                 <constraint firstAttribute="trailing" secondItem="LnB-cF-Ydt" secondAttribute="trailing" constant="24" id="nSx-OR-MQx"/>
-                                <constraint firstAttribute="height" constant="2000" id="pfT-kv-Cs2"/>
+                                <constraint firstAttribute="bottom" secondItem="mir-96-Ev7" secondAttribute="bottom" id="qIF-1G-4lh"/>
                                 <constraint firstItem="LnB-cF-Ydt" firstAttribute="leading" secondItem="Iha-3D-URS" secondAttribute="leading" constant="24" id="s9W-9B-E85"/>
                             </constraints>
                         </view>
@@ -91,7 +147,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FdE-KJ-gxC" secondAttribute="bottom" id="0S3-qU-Q74"/>
+                <constraint firstAttribute="bottom" secondItem="FdE-KJ-gxC" secondAttribute="bottom" id="0S3-qU-Q74"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="82V-dS-ndp" secondAttribute="trailing" id="MpF-qe-1O9"/>
                 <constraint firstItem="FdE-KJ-gxC" firstAttribute="top" secondItem="82V-dS-ndp" secondAttribute="bottom" id="QxJ-XT-LJN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FdE-KJ-gxC" secondAttribute="trailing" id="XWn-0b-XKo"/>

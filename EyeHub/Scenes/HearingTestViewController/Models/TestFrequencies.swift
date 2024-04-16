@@ -8,7 +8,7 @@
 import Foundation
 
 enum TestFrequency: Int {
-    case hz125 = 125
+    case hz125 = 500
     case hz1000 = 1000
     case hz2000 = 2000
     case hz4000 = 4000
