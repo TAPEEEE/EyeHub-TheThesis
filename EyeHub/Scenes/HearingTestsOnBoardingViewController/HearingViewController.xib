@@ -16,6 +16,7 @@
                 <outlet property="contentView" destination="NzC-cZ-FZC" id="YXC-Qc-bRA"/>
                 <outlet property="descriptionLabel" destination="VLu-pg-E1F" id="5Dn-E4-j7j"/>
                 <outlet property="firstPageButtonView" destination="jB4-qj-hMu" id="jM5-sz-pnl"/>
+                <outlet property="headPhoneView" destination="tNG-YQ-E8q" id="9R9-oG-DTw"/>
                 <outlet property="navigationBarView" destination="nxR-uZ-BDt" id="iIx-eS-LS7"/>
                 <outlet property="onboardingPageControl" destination="55F-xk-e8j" id="p2n-NO-cHv"/>
                 <outlet property="onboardingScrollView" destination="0lz-wQ-CdU" id="1Yw-Jr-zqA"/>
@@ -70,6 +71,22 @@
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCB-fn-h5x" userLabel="requireVolume">
                                                     <rect key="frame" x="489" y="0.0" width="489" height="453"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNG-YQ-E8q" customClass="LottieAnimationView" customModule="Lottie">
+                                                            <rect key="frame" x="104.66666666666663" y="86.666666666666657" width="280" height="280"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="280" id="JJj-7U-qaQ"/>
+                                                                <constraint firstAttribute="height" constant="280" id="L7m-O4-Sg9"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="headPhone"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="tNG-YQ-E8q" firstAttribute="centerX" secondItem="gCB-fn-h5x" secondAttribute="centerX" id="f6u-qZ-8Nc"/>
+                                                        <constraint firstItem="tNG-YQ-E8q" firstAttribute="centerY" secondItem="gCB-fn-h5x" secondAttribute="centerY" id="uHb-BO-UCM"/>
+                                                    </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nC-Bf-qXr" userLabel="requireVolume">
                                                     <rect key="frame" x="978" y="0.0" width="489" height="453"/>
@@ -107,8 +124,8 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="FCi-rE-0OW">
                                     <rect key="frame" x="24" y="24.000000000000007" width="441" height="126.66666666666669"/>
                                     <subviews>
-                                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="55F-xk-e8j">
-                                            <rect key="frame" x="162.66666666666666" y="0.0" width="115.66666666666666" height="25.666666666666668"/>
+                                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="55F-xk-e8j">
+                                            <rect key="frame" x="171.66666666666666" y="0.0" width="97.999999999999972" height="25.666666666666668"/>
                                             <color key="pageIndicatorTintColor" red="0.92941176889999999" green="0.94901967050000002" blue="0.9529411793" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="currentPageIndicatorTintColor" red="0.37647059560000001" green="0.66274511810000003" blue="0.74901962280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </pageControl>

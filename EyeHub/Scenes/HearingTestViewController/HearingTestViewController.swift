@@ -24,6 +24,7 @@ class HearingTestViewController: UIViewController {
     var testResults: [String: [Int]] = ["leftEar": [], "RightEar": []]
     var currentTestIndex = 0
     var pan: Float = 1.0
+    var viewModel = HearingViewModel()
     
     @IBOutlet weak var testStateLabel: UILabel!
     @IBOutlet weak var contentView: UIView!
@@ -50,8 +51,8 @@ class HearingTestViewController: UIViewController {
     @IBAction func startTestAction(_ sender: Any) {
         guard currentTestIndex < testFrequencies.count else { return }
 
-        if let currentTime = stopSound() {
-            appendDecibelValueToArray(decibel: Int(calculateDecibel(x: currentTime)))
+        if let currentTime = viewModel.stopSound() {
+            appendDecibelValueToArray(decibel: Int(viewModel.calculateDecibel(x: currentTime)))
         }
         currentTestIndex += 1
         
@@ -92,39 +93,9 @@ class HearingTestViewController: UIViewController {
             buttonView.isEnabled = true
             let frequency = testFrequencies[currentTestIndex].stringValue
             testStateLabel.text = frequency + " Hz"
-            playSound(soundFileName: frequency, pan: pan)
+            viewModel.playSound(soundFileName: frequency, pan: pan)
         }
         printTestResults()
-    }
-    
-    func playSound(soundFileName: String, pan: Float) {
-        guard let url = Bundle.main.url(forResource: soundFileName, withExtension: "mp3") else {
-            print("Sound file not found.")
-            return
-        }
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.pan = pan
-            audioPlayer?.play()
-        } catch {
-            print("Error playing sound: \(error.localizedDescription)")
-        }
-    }
-    
-    func stopSound() -> Double? {
-        var currentTime: Double?
-        if let player = audioPlayer, player.isPlaying {
-            currentTime = Double(player.currentTime)
-            player.stop()
-        }
-        return currentTime
-    }
-    
-    func calculateDecibel(x: Double) -> Double {
-        let slope = 1.5
-        let y = slope * x
-        return y
     }
     
     func switchToRightEarTest() {

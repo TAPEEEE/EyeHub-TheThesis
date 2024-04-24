@@ -36,7 +36,7 @@ enum TableViewList: Int, CaseIterable {
     var viewController: UIViewController.Type {
         switch self {
         case .eye:
-            return VoiceConceptViewController.self
+            return SnellenTestViewController.self
         case .vision:
             return HearingTestSummaryViewController.self
         case .ear:

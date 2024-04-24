@@ -967,6 +967,7 @@ PODS:
     - nanopb/encode (= 2.30910.0)
   - nanopb/decode (2.30910.0)
   - nanopb/encode (2.30910.0)
+  - PanModal (1.2.7)
   - PromisesObjC (2.4.0)
   - RecaptchaInterop (100.0.0)
 
@@ -975,6 +976,7 @@ DEPENDENCIES:
   - FirebaseAuth
   - FirebaseFirestore
   - lottie-ios
+  - PanModal
 
 SPEC REPOS:
   trunk:
@@ -995,6 +997,7 @@ SPEC REPOS:
     - leveldb-library
     - lottie-ios
     - nanopb
+    - PanModal
     - PromisesObjC
     - RecaptchaInterop
 
@@ -1026,9 +1029,10 @@ SPEC CHECKSUMS:
   leveldb-library: e8eadf9008a61f9e1dde3978c086d2b6d9b9dc28
   lottie-ios: 3d98679b41fa6fd6aff2352b3953dbd3df8a397e
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
+  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
 
-PODFILE CHECKSUM: 8d5ad82bbc5a497e63429f9bbdef1993abb563ac
+PODFILE CHECKSUM: 17d3bd22075c993c0e0fec6835e95df384b21728
 
 COCOAPODS: 1.12.0

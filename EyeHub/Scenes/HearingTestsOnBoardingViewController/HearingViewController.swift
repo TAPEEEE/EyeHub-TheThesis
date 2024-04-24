@@ -12,11 +12,10 @@ import Lottie
 class HearingViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var pageControl: UIPageControl!
-    
     @IBOutlet weak var firstPageButtonView: PrimaryButton!
     @IBOutlet weak var seccondPageButtonView: PrimaryButton!
     @IBOutlet weak var animationView: LottieAnimationView!
+    @IBOutlet weak var headPhoneView: LottieAnimationView!
     @IBOutlet weak var bottomSheetView: UIView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var navigationBarView: NavigationBar!
@@ -27,8 +26,8 @@ class HearingViewController: UIViewController {
     
     let contentModel: [onBoardingContent] = [
         onBoardingContent(title: "กรุณาเชื่อมต่อหูฟัง", description: "เชื่อมต่อหูฟังและกดปุ่มถัดไปเพื่อเริ่มทำแบบทดสอบวัด ระดับการได้ยินของหู"),
-        onBoardingContent(title: "กรุณาเพิ่มเสียงในระดับสูงสุด", description: "กรุณาปรับเสียงของหูฟังของคุณให้อยู่ในระดับสูงสุดเพื่อใช้ในการทดสอบ"),
-        onBoardingContent(title: "กรุณาอยู่ในสถานที่ที่เงียบ", description: "กรุณาอยู่ในสภาพแวดล้อมที่เหมาะสมเพื่อผลการทดสอบที่แม่นยำ")
+        onBoardingContent(title: "กรุณาเพิ่มเสียงในระดับสูงสุด", description: "กรุณาปรับเสียงของหูฟังของคุณให้อยู่ในระดับสูงสุดเพื่อใช้ในการทดสอบ")
+//        onBoardingContent(title: "กรุณาอยู่ในสถานที่ที่เงียบ", description: "กรุณาอยู่ในสภาพแวดล้อมที่เหมาะสมเพื่อผลการทดสอบที่แม่นยำ")
     ]
     
     private var currentPage = 0 {
@@ -112,6 +111,11 @@ class HearingViewController: UIViewController {
             action: #selector(demoVoice)
         )
         firstPageButtonView.addGestureRecognizer(demoButtontapGesture)
+        let startButton = UITapGestureRecognizer(
+            target: self,
+            action: #selector(startTestAction)
+        )
+        seccondPageButtonView.addGestureRecognizer(startButton)
     }
     
     private func setupBindings() {
@@ -158,11 +162,18 @@ class HearingViewController: UIViewController {
         onboardingPageControl.currentPage = currentPage
     }
     
+    @objc func startTestAction() {
+        let navigationVC = HearingTestViewController()
+        navigationController?.pushViewController(navigationVC, animated: true)
+    }
+    
     private func setUpUI() {
         seccondPageButtonView.setUp(.textOnly(text: "เริ่มทดสอบ"), type: .primary, size: .large)
         seccondPageButtonView.isHidden = true
         animationView.play()
         animationView.loopMode = .loop
+        headPhoneView.play()
+        headPhoneView.loopMode = .loop
         self.view.backgroundColor = UIColor.white
         contentView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
         firstPageButtonView.setUp(.textOnly(text: "ถัดไป"), type: .primary, size: .large)
@@ -171,9 +182,7 @@ class HearingViewController: UIViewController {
         
         descriptionLabel.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
         descriptionLabel.font = FontFamily.Kanit.light.font(size: 16)
-        
-        
-        navigationBarView.set(title: "ทดสอบระดับการได้ยิน")
+                navigationBarView.set(title: "ทดสอบระดับการได้ยิน")
         navigationBarView.delegate = self
     }
 }

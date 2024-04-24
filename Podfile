@@ -10,5 +10,6 @@ target 'EyeHub' do
   pod 'AAInfographics', :git => 'https://github.com/AAChartModel/AAChartKit-Swift.git'
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
+  pod 'PanModal'
 
 end
