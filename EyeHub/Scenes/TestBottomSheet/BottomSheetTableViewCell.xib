@@ -13,12 +13,12 @@
         <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="BottomSheetTableViewCell" id="KGk-i7-Jjw" customClass="BottomSheetTableViewCell" customModule="EyeHub" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRa-FU-LCP">
-                        <rect key="frame" x="16" y="8" width="343" height="60"/>
+                        <rect key="frame" x="16" y="4" width="343" height="60"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ahB-ss-9sP">
                                 <rect key="frame" x="16" y="18" width="311" height="24"/>
@@ -51,7 +51,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="jRa-FU-LCP" secondAttribute="trailing" constant="16" id="bWI-Zj-eRb"/>
-                    <constraint firstItem="jRa-FU-LCP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="fSS-Sg-hLL"/>
+                    <constraint firstItem="jRa-FU-LCP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="fSS-Sg-hLL"/>
                     <constraint firstAttribute="bottom" secondItem="jRa-FU-LCP" secondAttribute="bottom" constant="8" id="gsC-06-Uum"/>
                     <constraint firstItem="jRa-FU-LCP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="h77-wi-qMi"/>
                 </constraints>
