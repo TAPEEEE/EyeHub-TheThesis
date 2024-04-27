@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D39C81F2BD86A17001FDE50 /* BottomSheetTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D39C81D2BD86A17001FDE50 /* BottomSheetTestViewController.swift */; };
-		2D39C8202BD86A17001FDE50 /* BottomSheetTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D39C81E2BD86A17001FDE50 /* BottomSheetTestViewController.xib */; };
 		2D39C8232BD86AAC001FDE50 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D39C8212BD86AAC001FDE50 /* BottomSheetViewController.swift */; };
 		2D39C8242BD86AAC001FDE50 /* BottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D39C8222BD86AAC001FDE50 /* BottomSheetViewController.xib */; };
 		2D4AC0062B67E48500D5F977 /* Sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4AC0052B67E48500D5F977 /* Sound1.mp3 */; };
@@ -16,6 +14,10 @@
 		2D4D64FB2BBB403600163504 /* OnbaordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D64FA2BBB403600163504 /* OnbaordingViewModel.swift */; };
 		2D4D64FE2BBB416800163504 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D64FC2BBB416800163504 /* HistoryViewController.swift */; };
 		2D4D64FF2BBB416800163504 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4D64FD2BBB416800163504 /* HistoryViewController.xib */; };
+		2D561DE72BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D561DE52BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.swift */; };
+		2D561DE82BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D561DE62BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.xib */; };
+		2D561DEB2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D561DE92BDDB8B7004CA1C3 /* BottomSheetTableViewCell.swift */; };
+		2D561DEC2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D561DEA2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.xib */; };
 		2D6A87092BCECEA8006E2D41 /* 4000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87052BCECEA8006E2D41 /* 4000.mp3 */; };
 		2D6A870A2BCECEA8006E2D41 /* 8000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87062BCECEA8006E2D41 /* 8000.mp3 */; };
 		2D6A870B2BCECEA8006E2D41 /* 1000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87072BCECEA8006E2D41 /* 1000.mp3 */; };
@@ -114,8 +116,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D39C81D2BD86A17001FDE50 /* BottomSheetTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetTestViewController.swift; sourceTree = "<group>"; };
-		2D39C81E2BD86A17001FDE50 /* BottomSheetTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetTestViewController.xib; sourceTree = "<group>"; };
 		2D39C8212BD86AAC001FDE50 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		2D39C8222BD86AAC001FDE50 /* BottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetViewController.xib; sourceTree = "<group>"; };
 		2D4AC0052B67E48500D5F977 /* Sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound1.mp3; sourceTree = "<group>"; };
@@ -123,6 +123,10 @@
 		2D4D64FA2BBB403600163504 /* OnbaordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbaordingViewModel.swift; sourceTree = "<group>"; };
 		2D4D64FC2BBB416800163504 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		2D4D64FD2BBB416800163504 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		2D561DE52BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnelllenTestCollectionViewCell.swift; sourceTree = "<group>"; };
+		2D561DE62BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SnelllenTestCollectionViewCell.xib; sourceTree = "<group>"; };
+		2D561DE92BDDB8B7004CA1C3 /* BottomSheetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetTableViewCell.swift; sourceTree = "<group>"; };
+		2D561DEA2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetTableViewCell.xib; sourceTree = "<group>"; };
 		2D6A87052BCECEA8006E2D41 /* 4000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4000.mp3; sourceTree = "<group>"; };
 		2D6A87062BCECEA8006E2D41 /* 8000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8000.mp3; sourceTree = "<group>"; };
 		2D6A87072BCECEA8006E2D41 /* 1000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1000.mp3; sourceTree = "<group>"; };
@@ -240,10 +244,10 @@
 		2D39C8172BD86928001FDE50 /* TestBottomSheet */ = {
 			isa = PBXGroup;
 			children = (
-				2D39C81D2BD86A17001FDE50 /* BottomSheetTestViewController.swift */,
-				2D39C81E2BD86A17001FDE50 /* BottomSheetTestViewController.xib */,
 				2D39C8212BD86AAC001FDE50 /* BottomSheetViewController.swift */,
 				2D39C8222BD86AAC001FDE50 /* BottomSheetViewController.xib */,
+				2D561DE92BDDB8B7004CA1C3 /* BottomSheetTableViewCell.swift */,
+				2D561DEA2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.xib */,
 			);
 			path = TestBottomSheet;
 			sourceTree = "<group>";
@@ -739,6 +743,8 @@
 			children = (
 				2DF334792B6AD7910063944B /* HomeScreenCollectionViewCell.swift */,
 				2DF3347A2B6AD7910063944B /* HomeScreenCollectionViewCell.xib */,
+				2D561DE52BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.swift */,
+				2D561DE62BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -833,6 +839,7 @@
 				2DF3347C2B6AD7910063944B /* HomeScreenCollectionViewCell.xib in Resources */,
 				2DB974B22B666C87009BE2C8 /* Kanit-Black.ttf in Resources */,
 				2D4AC0082B68182900D5F977 /* Sound2.mp3 in Resources */,
+				2D561DE82BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.xib in Resources */,
 				2DF334722B6AD17B0063944B /* CollectionView.xib in Resources */,
 				2DB974A82B666C87009BE2C8 /* Kanit-MediumItalic.ttf in Resources */,
 				2DA4A61F2B7E543300CC2380 /* NavigationBar.xib in Resources */,
@@ -845,11 +852,11 @@
 				2DB974AE2B666C87009BE2C8 /* Kanit-Regular.ttf in Resources */,
 				2D6A870A2BCECEA8006E2D41 /* 8000.mp3 in Resources */,
 				2DA4A6192B7E31A400CC2380 /* success.json in Resources */,
+				2D561DEC2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.xib in Resources */,
 				2DB523AE2B7DFA9D00AFF154 /* HearingViewController.xib in Resources */,
 				2D4AC0062B67E48500D5F977 /* Sound1.mp3 in Resources */,
 				2D6A87112BCED943006E2D41 /* MessageBox.xib in Resources */,
 				2D6A870B2BCECEA8006E2D41 /* 1000.mp3 in Resources */,
-				2D39C8202BD86A17001FDE50 /* BottomSheetTestViewController.xib in Resources */,
 				2DB974AC2B666C87009BE2C8 /* Kanit-Light.ttf in Resources */,
 				2DB974B32B666C87009BE2C8 /* Kanit-Thin.ttf in Resources */,
 				2DB9740F2B657F17009BE2C8 /* Assets.xcassets in Resources */,
@@ -944,13 +951,13 @@
 				2DB974702B66614A009BE2C8 /* ButtonState.swift in Sources */,
 				2DEB15952BC2EBA5003FB88C /* OnBoarding.swift in Sources */,
 				2D6A870F2BCED936006E2D41 /* MessageBox.swift in Sources */,
-				2D39C81F2BD86A17001FDE50 /* BottomSheetTestViewController.swift in Sources */,
 				2DB974742B666172009BE2C8 /* ButtonSubType.swift in Sources */,
 				2D4D64FB2BBB403600163504 /* OnbaordingViewModel.swift in Sources */,
 				2DF3347B2B6AD7910063944B /* HomeScreenCollectionViewCell.swift in Sources */,
 				2DF3346D2B6AC4B00063944B /* HomeMenuButtonViewModel.swift in Sources */,
 				2DEB15602BC062EA003FB88C /* HearingTestViewController.swift in Sources */,
 				2D39C8232BD86AAC001FDE50 /* BottomSheetViewController.swift in Sources */,
+				2D561DEB2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.swift in Sources */,
 				2D708EE52BB8B6FB006146ED /* TableView.swift in Sources */,
 				2D708EE92BB8B92A006146ED /* UITableView+Extension.swift in Sources */,
 				2D8F3A8E2BA36156009B675D /* HearingTestSummaryViewController.swift in Sources */,
@@ -967,6 +974,7 @@
 				2DA1F7C42BD568D2007B3BF7 /* HearingViewModel.swift in Sources */,
 				2DB523AD2B7DFA9D00AFF154 /* HearingViewController.swift in Sources */,
 				2DF334632B6AC0A50063944B /* HomeMenuButton.swift in Sources */,
+				2D561DE72BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.swift in Sources */,
 				2DEB159D2BC4583E003FB88C /* TestFrequencies.swift in Sources */,
 				2DB9746A2B666120009BE2C8 /* Appearance.swift in Sources */,
 				2DB9746C2B66612F009BE2C8 /* PaddingModel.swift in Sources */,

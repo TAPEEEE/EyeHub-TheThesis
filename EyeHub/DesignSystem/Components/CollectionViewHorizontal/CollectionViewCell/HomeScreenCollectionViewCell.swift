@@ -14,6 +14,7 @@ struct HomeScreenCollectionViewCellViewModel {
     let cardColor: UIColor
 }
 
+
 class HomeScreenCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!

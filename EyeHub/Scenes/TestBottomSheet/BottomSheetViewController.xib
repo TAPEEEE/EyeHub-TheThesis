@@ -20,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7kW-Pg-0Vh">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7kW-Pg-0Vh">
+                    <rect key="frame" x="0.0" y="95" width="393" height="723"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="eBB-Zg-QjC"/>
@@ -33,7 +33,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7kW-Pg-0Vh" secondAttribute="bottom" id="8PS-yS-MtA"/>
-                <constraint firstItem="7kW-Pg-0Vh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Sdx-Yo-qS8"/>
+                <constraint firstItem="7kW-Pg-0Vh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="Sdx-Yo-qS8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7kW-Pg-0Vh" secondAttribute="trailing" id="XaK-o6-A7t"/>
                 <constraint firstItem="7kW-Pg-0Vh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="d6N-6t-hhi"/>
             </constraints>

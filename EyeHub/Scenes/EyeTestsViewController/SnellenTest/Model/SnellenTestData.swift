@@ -25,6 +25,31 @@ enum SnellenTestData: CGFloat {
             return self.rawValue
     }
     
+    var wrongTestText: [String] {
+        switch self {
+        case .feet70:
+            return ["C", "F", "H"]
+        case .feet60:
+            return ["E R", "F F", "R P"]
+        case .feet50:
+            return ["T U C", "T O O", "F O Z"]
+        case .feet40:
+            return ["L R E", "F P E", "L P F"]
+        case .feet30:
+            return ["", "", ""]
+        case .feet20:
+            return ["", "", "", ""]
+        case .feet15:
+            return ["", "", "", ""]
+        case .feet10:
+            return ["", "", "", ""]
+        case .feet7:
+            return ["", "", "", ""]
+        case .feet4:
+            return ["", "", "", ""]
+        }
+    }
+    
     var testText: String {
         switch self {
         case .feet70:
@@ -34,19 +59,19 @@ enum SnellenTestData: CGFloat {
         case .feet50:
             return "T O Z"
         case .feet40:
-            return "L P E D"
+            return "L P E"
         case .feet30:
-            return "P E C F D"
+            return "P E C"
         case .feet20:
-            return "E D F C Z"
+            return "E D F C"
         case .feet15:
-            return "I R G H X"
+            return "I R G H"
         case .feet10:
-            return "H N M K L E"
+            return "H N M K"
         case .feet7:
-            return "F D R T F E"
+            return "F D R E"
         case .feet4:
-            return "B O F E O P A"
+            return "B O P A"
         }
     }
 }

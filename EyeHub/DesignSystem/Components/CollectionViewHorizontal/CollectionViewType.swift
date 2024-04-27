@@ -10,4 +10,5 @@ import UIKit
 
 enum CollectionViewType {
     case homeScreen(viewModel: HomeScreenCollectionViewCellViewModel)
+    case snelllenTest(title: String)
 }

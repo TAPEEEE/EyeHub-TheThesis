@@ -117,7 +117,6 @@ private extension HomeViewController {
     }
     
     func setUpUI() {
-//        btn.setUp(.textOnly(text: "Demo เสียง"), type: .primary, size: .large)
         collectionViewHorizontalView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundColor)
         snellenButtonView.setup(viewModel:
                                     HomeMenuButtonViewModel(
@@ -127,7 +126,8 @@ private extension HomeViewController {
                                         icon: UIImage(named: "SnellenIcon") ?? UIImage()
                                     )
         ) { tagId in
-            debugPrint("Clickable icon did tapped with tagId: \(tagId)")
+            let snellenViewController = SnellenTestViewController()
+            self.navigationController?.pushViewController(snellenViewController, animated: true)
         }
         
         landoltCButtonView.setup(viewModel:

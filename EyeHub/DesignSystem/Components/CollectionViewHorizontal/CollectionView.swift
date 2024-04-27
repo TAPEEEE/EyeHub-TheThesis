@@ -53,6 +53,10 @@ extension CollectionView: UICollectionViewDelegate, UICollectionViewDataSource {
             let cell: HomeScreenCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeScreenCollectionViewCell", for: indexPath) as! HomeScreenCollectionViewCell
             cell.configure(viewModel: viewModel)
             return cell
+        case .snelllenTest(title: let title):
+            let cell: SnelllenTestCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SnelllenTestCollectionViewCell", for: indexPath) as! SnelllenTestCollectionViewCell
+            cell.configure(text: title)
+            return cell
         }
     }
     

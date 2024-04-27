@@ -14,6 +14,9 @@ class SnellenTestViewController: UIViewController {
     var timer: Timer?
     var totalTime = 5
     var currentTime = 0
+    var questionArr: [String] = []
+    var correctAnswer: Int?
+    var score: Int = 0
     @IBOutlet weak var testStateLabel: UILabel!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var bottomSheetView: UIView!
@@ -28,19 +31,19 @@ class SnellenTestViewController: UIViewController {
     }
     @IBOutlet var titleLabel: [UILabel]!
     @IBOutlet var descriptionLabel: [UILabel]!
-    
+    private let answerViewController = BottomSheetViewController()
     
     @IBAction func testButtonAction(_ sender: Any) {
         if currentTestIndex+1 <= testData.count {
-            //            startTestWithDelay()
-            let vc = BottomSheetViewController()
-            presentPanModal(vc)
-            progressBarView.setProgress(1, animated: false)
+//            let answerBottomSheet = BottomSheetViewController()
+//            createQuestion()
+//            answerBottomSheet.delegate = self
+//            answerBottomSheet.model = questionArr
+//            presentPanModal(answerBottomSheet)
         } else {
             navigationController?.popViewController(animated: true)
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +57,33 @@ extension SnellenTestViewController: NavigationBarDelegate {
     }
 }
 
+extension SnellenTestViewController: BottomSheetDelegate {
+    func didSelectRow(indexPath: Int) {
+        print("Selected item name: \(indexPath)")
+//        currentTestIndex += 1
+//        progressBarView.setProgress(1, animated: false)
+//        questionArr.removeAll()
+//        startTestWithDelay()
+//        if correctAnswer == indexPath {
+//            score += 1
+//            debugPrint("ตอบถูก")
+//        }
+//        debugPrint("คะแนนซ \(score)")
+    }
+}
+
 extension SnellenTestViewController {
     func commonInit() {
         setUpUI()
         startTestWithDelay()
+    }
+    
+    func createQuestion() {
+        questionArr.append(contentsOf: testData[currentTestIndex].wrongTestText)
+        let randomIndex = Int.random(in: 0..<4)
+        correctAnswer = randomIndex
+        questionArr.insert(testData[currentTestIndex].testText, at: randomIndex)
+        questionArr.append("ไม่แน่ใจ")
     }
     
     func startTestWithDelay() {
@@ -77,9 +103,16 @@ extension SnellenTestViewController {
         }
         if currentTime <= 0 {
             timer?.invalidate()
-            buttonView.isEnabled = true
-            currentTestIndex += 1
+            presentAnserBottomSheet()
         }
+    }
+    
+    private func presentAnserBottomSheet() {
+        let answerBottomSheet = BottomSheetViewController()
+        createQuestion()
+        answerBottomSheet.delegate = self
+        answerBottomSheet.model = questionArr
+        presentPanModal(answerBottomSheet)
     }
     
     func setUpUI() {
