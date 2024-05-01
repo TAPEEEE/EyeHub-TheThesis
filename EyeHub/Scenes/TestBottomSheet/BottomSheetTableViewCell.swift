@@ -21,8 +21,8 @@ class BottomSheetTableViewCell: UITableViewCell {
     func setUpUI() {
         bgView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundColor)
         bgView.layer.cornerRadius = EyeHubRadius.radius16
-        checkMarkImageView.image = UIImage(systemName: "circle")
-        checkMarkImageView.tintColor = UIColor(cgColor: EyeHubColor.primaryColor)
+        checkMarkImageView.image = UIImage(systemName: "circle.fill")
+        checkMarkImageView.tintColor = UIColor(cgColor: EyeHubColor.darkGrayColor)
         titleLabel.font = FontFamily.Kanit.semiBold.font(size: 24)
         titleLabel.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
         bgView.layer.borderWidth = 0
@@ -35,6 +35,7 @@ class BottomSheetTableViewCell: UITableViewCell {
             bgView.layer.borderColor = EyeHubColor.primaryColor
             titleLabel.textColor = UIColor(cgColor: EyeHubColor.primaryColor)
             checkMarkImageView.image = UIImage(systemName: "checkmark.circle.fill")
+            checkMarkImageView.tintColor = UIColor(cgColor: EyeHubColor.primaryColor)
             bgView.backgroundColor = UIColor(cgColor: EyeHubColor.tintPrimaryColor)
         } else {
             setUpUI()

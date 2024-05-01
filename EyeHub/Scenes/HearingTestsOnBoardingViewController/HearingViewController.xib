@@ -205,6 +205,10 @@
             <point key="canvasLocation" x="1687.7862595419847" y="13.380281690140846"/>
         </view>
     </objects>
+    <designables>
+        <designable name="gA7-bu-euK"/>
+        <designable name="tNG-YQ-E8q"/>
+    </designables>
     <resources>
         <image name="Airpods" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">

@@ -18,6 +18,10 @@
 		2D561DE82BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D561DE62BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.xib */; };
 		2D561DEB2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D561DE92BDDB8B7004CA1C3 /* BottomSheetTableViewCell.swift */; };
 		2D561DEC2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D561DEA2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.xib */; };
+		2D561DF02BE2A35B004CA1C3 /* EyeTestsSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D561DEE2BE2A35B004CA1C3 /* EyeTestsSummaryViewController.swift */; };
+		2D561DF12BE2A35B004CA1C3 /* EyeTestsSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D561DEF2BE2A35B004CA1C3 /* EyeTestsSummaryViewController.xib */; };
+		2D561DF32BE2A419004CA1C3 /* SnellenTestResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D561DF22BE2A419004CA1C3 /* SnellenTestResultList.swift */; };
+		2D561DF52BE2A5E8004CA1C3 /* EyeTestsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D561DF42BE2A5E8004CA1C3 /* EyeTestsType.swift */; };
 		2D6A87092BCECEA8006E2D41 /* 4000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87052BCECEA8006E2D41 /* 4000.mp3 */; };
 		2D6A870A2BCECEA8006E2D41 /* 8000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87062BCECEA8006E2D41 /* 8000.mp3 */; };
 		2D6A870B2BCECEA8006E2D41 /* 1000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87072BCECEA8006E2D41 /* 1000.mp3 */; };
@@ -127,6 +131,10 @@
 		2D561DE62BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SnelllenTestCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D561DE92BDDB8B7004CA1C3 /* BottomSheetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetTableViewCell.swift; sourceTree = "<group>"; };
 		2D561DEA2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetTableViewCell.xib; sourceTree = "<group>"; };
+		2D561DEE2BE2A35B004CA1C3 /* EyeTestsSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTestsSummaryViewController.swift; sourceTree = "<group>"; };
+		2D561DEF2BE2A35B004CA1C3 /* EyeTestsSummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeTestsSummaryViewController.xib; sourceTree = "<group>"; };
+		2D561DF22BE2A419004CA1C3 /* SnellenTestResultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnellenTestResultList.swift; sourceTree = "<group>"; };
+		2D561DF42BE2A5E8004CA1C3 /* EyeTestsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTestsType.swift; sourceTree = "<group>"; };
 		2D6A87052BCECEA8006E2D41 /* 4000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4000.mp3; sourceTree = "<group>"; };
 		2D6A87062BCECEA8006E2D41 /* 8000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8000.mp3; sourceTree = "<group>"; };
 		2D6A87072BCECEA8006E2D41 /* 1000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1000.mp3; sourceTree = "<group>"; };
@@ -270,6 +278,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2D561DED2BE2A317004CA1C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D561DF22BE2A419004CA1C3 /* SnellenTestResultList.swift */,
+				2D561DF42BE2A5E8004CA1C3 /* EyeTestsType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2D6A870D2BCED91D006E2D41 /* MessageBox */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +314,9 @@
 		2D6A87162BCF20D3006E2D41 /* EyeTestsSummaryViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2D561DED2BE2A317004CA1C3 /* Models */,
+				2D561DEE2BE2A35B004CA1C3 /* EyeTestsSummaryViewController.swift */,
+				2D561DEF2BE2A35B004CA1C3 /* EyeTestsSummaryViewController.xib */,
 			);
 			path = EyeTestsSummaryViewController;
 			sourceTree = "<group>";
@@ -869,6 +889,7 @@
 				2DB974A52B666C87009BE2C8 /* Kanit-Bold.ttf in Resources */,
 				2DEB159A2BC44210003FB88C /* 500.mp3 in Resources */,
 				2DB974A32B666C87009BE2C8 /* Kanit-Italic.ttf in Resources */,
+				2D561DF12BE2A35B004CA1C3 /* EyeTestsSummaryViewController.xib in Resources */,
 				2DB974AA2B666C87009BE2C8 /* Kanit-ExtraLightItalic.ttf in Resources */,
 				2DB974C12B6681BC009BE2C8 /* OnBoardingViewController.xib in Resources */,
 				2DB974B12B666C87009BE2C8 /* Kanit-ExtraBoldItalic.ttf in Resources */,
@@ -954,9 +975,12 @@
 				2DB974742B666172009BE2C8 /* ButtonSubType.swift in Sources */,
 				2D4D64FB2BBB403600163504 /* OnbaordingViewModel.swift in Sources */,
 				2DF3347B2B6AD7910063944B /* HomeScreenCollectionViewCell.swift in Sources */,
+				2D561DF52BE2A5E8004CA1C3 /* EyeTestsType.swift in Sources */,
 				2DF3346D2B6AC4B00063944B /* HomeMenuButtonViewModel.swift in Sources */,
+				2D561DF32BE2A419004CA1C3 /* SnellenTestResultList.swift in Sources */,
 				2DEB15602BC062EA003FB88C /* HearingTestViewController.swift in Sources */,
 				2D39C8232BD86AAC001FDE50 /* BottomSheetViewController.swift in Sources */,
+				2D561DF02BE2A35B004CA1C3 /* EyeTestsSummaryViewController.swift in Sources */,
 				2D561DEB2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.swift in Sources */,
 				2D708EE52BB8B6FB006146ED /* TableView.swift in Sources */,
 				2D708EE92BB8B92A006146ED /* UITableView+Extension.swift in Sources */,

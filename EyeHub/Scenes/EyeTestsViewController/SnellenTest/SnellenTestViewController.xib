@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SnellenTestViewController" customModule="EyeHub" customModuleProvider="target">
             <connections>
                 <outlet property="bottomSheetView" destination="va6-Vv-syz" id="Wff-8H-uKp"/>
-                <outlet property="buttonView" destination="G7R-2b-zho" id="xkq-Pw-yTD"/>
                 <outlet property="contentView" destination="38R-2k-7Vn" id="w7O-pg-Ha6"/>
                 <outlet property="navigationBarView" destination="C5P-ET-Hxr" id="Hoa-aZ-Bw3"/>
                 <outlet property="progressBarView" destination="EW1-Vk-LAW" id="cly-Q8-6Pb"/>
@@ -45,10 +44,10 @@
                     <rect key="frame" x="0.0" y="111" width="393" height="741"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38R-2k-7Vn">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="361"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="561"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9w-0V-B2y">
-                                    <rect key="frame" x="176" y="170.33333333333331" width="41.333333333333343" height="20.333333333333343"/>
+                                    <rect key="frame" x="176" y="270.33333333333331" width="41.333333333333343" height="20.333333333333314"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -61,21 +60,21 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="va6-Vv-syz" userLabel="BottomSheet" customClass="BlankBottomSheet" customModule="EyeHub" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="361" width="393" height="380"/>
+                            <rect key="frame" x="0.0" y="561" width="393" height="180"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="mbV-Qk-buC">
-                                    <rect key="frame" x="24" y="103.66666666666663" width="345" height="173"/>
+                                    <rect key="frame" x="24" y="55.666666666666629" width="345" height="69"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dCl-KM-bEN">
                                             <rect key="frame" x="0.0" y="0.0" width="345" height="69"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="โปรดฟังเสียงสัญญาณ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrm-IG-iOI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="โปรดมองตัวหนังสือที่แสดง" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrm-IG-iOI">
                                                     <rect key="frame" x="0.0" y="0.0" width="345" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="การทดสอบหูข้างซ้าย กดปุ่ม “ฉันได้ยิน” เมื่อท่านได้ยินสัญญาณเสียงทดสอบ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcG-Rw-Bb2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="มองตัวหนังสือเพื่อตอบคำถาม หากมองไม่ชัดกรุณาเลือกตัวเลือก &quot;มองไม่ชัด&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcG-Rw-Bb2">
                                                     <rect key="frame" x="0.0" y="28.333333333333368" width="345" height="40.666666666666657"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -83,21 +82,8 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7R-2b-zho">
-                                            <rect key="frame" x="0.0" y="101" width="345" height="72"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="72" id="K1v-bC-weA"/>
-                                            </constraints>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="ฉันได้ยิน"/>
-                                            <connections>
-                                                <action selector="testButtonAction:" destination="-1" eventType="touchUpInside" id="RK4-Rp-9qU"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="G7R-2b-zho" firstAttribute="leading" secondItem="mbV-Qk-buC" secondAttribute="leading" id="ND7-Qp-XNv"/>
-                                        <constraint firstAttribute="trailing" secondItem="G7R-2b-zho" secondAttribute="trailing" id="WE6-or-O7F"/>
                                         <constraint firstItem="dCl-KM-bEN" firstAttribute="leading" secondItem="mbV-Qk-buC" secondAttribute="leading" id="cRs-G3-EFj"/>
                                         <constraint firstAttribute="trailing" secondItem="dCl-KM-bEN" secondAttribute="trailing" id="scb-hJ-PcB"/>
                                     </constraints>
@@ -108,7 +94,7 @@
                                 <constraint firstAttribute="trailing" secondItem="mbV-Qk-buC" secondAttribute="trailing" constant="24" id="9Hq-Ys-7SJ"/>
                                 <constraint firstItem="mbV-Qk-buC" firstAttribute="leading" secondItem="va6-Vv-syz" secondAttribute="leading" constant="24" id="A1z-f1-DKc"/>
                                 <constraint firstItem="mbV-Qk-buC" firstAttribute="centerX" secondItem="va6-Vv-syz" secondAttribute="centerX" id="KaX-GS-mxa"/>
-                                <constraint firstAttribute="height" constant="380" id="ebZ-pW-4C1"/>
+                                <constraint firstAttribute="height" constant="180" id="ebZ-pW-4C1"/>
                                 <constraint firstItem="mbV-Qk-buC" firstAttribute="centerY" secondItem="va6-Vv-syz" secondAttribute="centerY" id="ocz-xK-7ih"/>
                             </constraints>
                         </view>

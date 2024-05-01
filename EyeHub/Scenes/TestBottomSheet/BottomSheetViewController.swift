@@ -17,12 +17,21 @@ class BottomSheetViewController: UIViewController {
     var panScrollable: UIScrollView?
     var model: [String] = []
     weak var delegate: BottomSheetDelegate?
+    var selectedIndexPath: IndexPath?
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var buttonView: PrimaryButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         tableView.registerNib(for: BottomSheetTableViewCell.self)
+        buttonView.setUp(.textOnly(text: "ยืนยันคำตอบ"), type: .primary, size: .large)
+        buttonView.buttonState = .disable
+        let buttontapGesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(demoVoice)
+        )
+        buttonView.addGestureRecognizer(buttontapGesture)
     }
     
     private func setupTableView() {
@@ -30,6 +39,10 @@ class BottomSheetViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    }
+    
+    @objc func demoVoice() {
+        delegate?.didSelectRow(indexPath: selectedIndexPath?.row ?? 0)
     }
 }
 
@@ -39,10 +52,6 @@ extension BottomSheetViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "BottomSheetTableViewCell", for: indexPath)
-//        cell.
-//        return cell
-//        
         let cell: BottomSheetTableViewCell = tableView.dequeueReusableCell(withIdentifier: "BottomSheetTableViewCell", for: indexPath) as! BottomSheetTableViewCell
         cell.configure(title: model[indexPath.row])
         cell.selectionStyle = .none
@@ -50,19 +59,26 @@ extension BottomSheetViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didSelectRow(indexPath: indexPath.row)
-//        dismiss(animated: true, completion: nil)
-        
+        selectedIndexPath = indexPath
+        buttonView.buttonState = .active
     }
 }
 
 extension BottomSheetViewController: PanModalPresentable {
-    var longFormHeight: PanModalHeight {
-        return .maxHeightWithTopInset(UIScreen.main.bounds.height/4)
+    var shortFormHeight: PanModalHeight {
+        return .contentHeight(520)
     }
     
     var allowsDragToDismiss: Bool {
         return false
+    }
+    
+    var panModalBackgroundColor: UIColor {
+        return UIColor.black.withAlphaComponent(0.5)
+    }
+    
+    var cornerRadius: CGFloat {
+        return EyeHubRadius.radius24
     }
     
     var allowsTapToDismiss: Bool {

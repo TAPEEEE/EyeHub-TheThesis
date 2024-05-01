@@ -1,0 +1,46 @@
+//
+//  EyeTestsType.swift
+//  EyeHub
+//
+//  Created by Nattapon Suwanno on 1/5/2567 BE.
+//
+
+import Foundation
+import UIKit
+
+
+enum enum1 {
+    case a
+}
+
+enum enum2 {
+    case a
+}
+
+enum EyeTestsType {
+    case snellen
+    case landoltC
+    case tumblingE
+    
+    var coverImage: UIImage {
+        switch self {
+        case .snellen:
+            return UIImage(named: "SnellenIcon2") ?? UIImage()
+        case .landoltC:
+            return UIImage(named: "CChartIcon") ?? UIImage()
+        case .tumblingE:
+            return UIImage(named: "EChartIcon") ?? UIImage()
+        }
+    }
+    
+    var testResultType: Any.Type {
+        switch self {
+        case .snellen:
+            return SnellenTestResult.self
+        case .landoltC:
+            return SnellenTestResult.self
+        case .tumblingE:
+            return SnellenTestResult.self
+        }
+    }
+}

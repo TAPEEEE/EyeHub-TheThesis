@@ -4,40 +4,49 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomSheetViewController" customModule="EyeHub" customModuleProvider="target">
             <connections>
+                <outlet property="buttonView" destination="nQD-4P-4ND" id="EfL-Dg-Dm7"/>
                 <outlet property="tableView" destination="7kW-Pg-0Vh" id="odv-Ag-5Ny"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7kW-Pg-0Vh">
-                    <rect key="frame" x="0.0" y="95" width="393" height="723"/>
+                    <rect key="frame" x="8" y="36" width="377" height="360"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="360" id="G2m-oq-4Yf"/>
+                    </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="eBB-Zg-QjC"/>
                         <outlet property="delegate" destination="-1" id="yuY-C1-7jg"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="48" translatesAutoresizingMaskIntoConstraints="NO" id="nQD-4P-4ND" customClass="PrimaryButton" customModule="EyeHub" customModuleProvider="target">
+                    <rect key="frame" x="24" y="456" width="345" height="48"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7kW-Pg-0Vh" secondAttribute="bottom" id="8PS-yS-MtA"/>
-                <constraint firstItem="7kW-Pg-0Vh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="Sdx-Yo-qS8"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7kW-Pg-0Vh" secondAttribute="trailing" id="XaK-o6-A7t"/>
-                <constraint firstItem="7kW-Pg-0Vh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="d6N-6t-hhi"/>
+                <constraint firstItem="nQD-4P-4ND" firstAttribute="top" secondItem="7kW-Pg-0Vh" secondAttribute="bottom" constant="60" id="Bs9-Dt-WQb"/>
+                <constraint firstItem="7kW-Pg-0Vh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ERP-VI-eiX"/>
+                <constraint firstItem="7kW-Pg-0Vh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="Sdx-Yo-qS8"/>
+                <constraint firstAttribute="trailing" secondItem="nQD-4P-4ND" secondAttribute="trailing" constant="24" id="ZG0-1h-QgM"/>
+                <constraint firstItem="nQD-4P-4ND" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="hSY-ze-fMn"/>
+                <constraint firstAttribute="trailing" secondItem="7kW-Pg-0Vh" secondAttribute="trailing" constant="8" id="zKL-H8-gSg"/>
             </constraints>
-            <point key="canvasLocation" x="37" y="-11"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="35.877862595419849" y="-12.67605633802817"/>
         </view>
     </objects>
     <resources>

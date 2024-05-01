@@ -22,7 +22,7 @@ enum SnellenTestData: CGFloat {
     static let allCases: [SnellenTestData] = [.feet70, .feet60, .feet50, .feet40, .feet30, .feet20, .feet15, .feet10, .feet7, .feet4]
     
     var fontSizeRawValue: CGFloat {
-            return self.rawValue
+        return self.rawValue
     }
     
     var wrongTestText: [String] {
@@ -36,17 +36,17 @@ enum SnellenTestData: CGFloat {
         case .feet40:
             return ["L R E", "F P E", "L P F"]
         case .feet30:
-            return ["", "", ""]
+            return ["B E C", "P B C", "F B G"]
         case .feet20:
-            return ["", "", "", ""]
+            return ["B D F C", "E O F C", "E O F G"]
         case .feet15:
-            return ["", "", "", ""]
+            return ["T R G H", "T R C H", "T P C H"]
         case .feet10:
-            return ["", "", "", ""]
+            return ["H M M I", "R M N K", "H M K I"]
         case .feet7:
-            return ["", "", "", ""]
+            return ["E D R E", "F C R E", "F D P E"]
         case .feet4:
-            return ["", "", "", ""]
+            return ["P O P A", "B O B A", "P O B A"]
         }
     }
     
