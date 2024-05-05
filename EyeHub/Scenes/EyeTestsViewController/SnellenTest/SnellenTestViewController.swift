@@ -27,7 +27,7 @@ class SnellenTestViewController: UIViewController {
     @IBOutlet weak var navigationBarView: NavigationBar!
     @IBOutlet var titleLabel: [UILabel]!
     @IBOutlet var descriptionLabel: [UILabel]!
-    private let answerViewController = BottomSheetViewController()
+    private let answerViewController = AnswerBottomSheetViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,7 +135,7 @@ private extension SnellenTestViewController {
     }
     
     private func presentAnserBottomSheet() {
-        let answerBottomSheet = BottomSheetViewController()
+        let answerBottomSheet = AnswerBottomSheetViewController()
         createQuestion()
         
         DispatchQueue.main.async {

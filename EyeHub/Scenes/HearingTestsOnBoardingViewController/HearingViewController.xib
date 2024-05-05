@@ -73,19 +73,17 @@
                                                     <rect key="frame" x="489" y="0.0" width="489" height="453"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNG-YQ-E8q" customClass="LottieAnimationView" customModule="Lottie">
-                                                            <rect key="frame" x="104.66666666666663" y="86.666666666666657" width="280" height="280"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="280" id="JJj-7U-qaQ"/>
-                                                                <constraint firstAttribute="height" constant="280" id="L7m-O4-Sg9"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="0.0" y="36" width="489" height="441"/>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="headPhone"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="VolumeUpButton"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="tNG-YQ-E8q" firstAttribute="centerX" secondItem="gCB-fn-h5x" secondAttribute="centerX" id="f6u-qZ-8Nc"/>
-                                                        <constraint firstItem="tNG-YQ-E8q" firstAttribute="centerY" secondItem="gCB-fn-h5x" secondAttribute="centerY" id="uHb-BO-UCM"/>
+                                                        <constraint firstItem="tNG-YQ-E8q" firstAttribute="leading" secondItem="gCB-fn-h5x" secondAttribute="leading" id="GcW-yo-LuH"/>
+                                                        <constraint firstAttribute="bottom" secondItem="tNG-YQ-E8q" secondAttribute="bottom" constant="-24" id="IQp-cg-dWA"/>
+                                                        <constraint firstItem="tNG-YQ-E8q" firstAttribute="top" secondItem="gCB-fn-h5x" secondAttribute="top" constant="36" id="c55-sR-68m"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tNG-YQ-E8q" secondAttribute="trailing" id="veY-DE-vwD"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nC-Bf-qXr" userLabel="requireVolume">

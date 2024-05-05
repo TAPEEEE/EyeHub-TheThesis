@@ -11,4 +11,8 @@ struct EyeHubTypography {
     static func kanitMedium(size: CGFloat) -> UIFont {
         return UIFont(name: "Kanit-Medium.ttf", size: size) ?? UIFont()
     }
+    
+    static func testFont(size: CGFloat) -> UIFont {
+        return UIFont(name: "Inter-VariableFont.ttf", size: size) ?? UIFont()
+    }
 }

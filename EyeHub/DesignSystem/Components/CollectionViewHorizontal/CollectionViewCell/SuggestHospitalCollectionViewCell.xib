@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SuggestHospitalCollectionViewCell" customModule="EyeHub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="271"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="260" height="271"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5W-Zd-CSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="271"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hospitalNearMe" translatesAutoresizingMaskIntoConstraints="NO" id="O35-zE-TOg">
+                                <rect key="frame" x="0.0" y="0.0" width="260" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="2RV-DM-1OA"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bqO-Zw-IrF">
+                                <rect key="frame" x="16" y="156" width="228" height="89.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="โรงพยาบาลจักษุ รัตนิน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzp-vq-nRg">
+                                        <rect key="frame" x="0.0" y="0.0" width="228" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80/1 ถ. สุขุมวิท แขวงคลองเตยเหนือ เขตวัฒนา กรุงเทพมหานคร 10110" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRA-P6-P2U">
+                                        <rect key="frame" x="0.0" y="28.333333333333343" width="228" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="O35-zE-TOg" secondAttribute="trailing" id="4oF-uA-NkJ"/>
+                            <constraint firstItem="bqO-Zw-IrF" firstAttribute="top" secondItem="O35-zE-TOg" secondAttribute="bottom" constant="16" id="Ag5-4D-jjR"/>
+                            <constraint firstItem="bqO-Zw-IrF" firstAttribute="leading" secondItem="j5W-Zd-CSJ" secondAttribute="leading" constant="16" id="Azk-go-HJ6"/>
+                            <constraint firstItem="O35-zE-TOg" firstAttribute="top" secondItem="j5W-Zd-CSJ" secondAttribute="top" id="Iol-J7-RhF"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="260" id="Ltc-3r-ruQ"/>
+                            <constraint firstAttribute="width" constant="260" id="PK7-9b-vh5"/>
+                            <constraint firstAttribute="trailing" secondItem="bqO-Zw-IrF" secondAttribute="trailing" constant="16" id="da3-j0-rDS"/>
+                            <constraint firstItem="O35-zE-TOg" firstAttribute="leading" secondItem="j5W-Zd-CSJ" secondAttribute="leading" id="iKV-9v-RIa"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="j5W-Zd-CSJ" secondAttribute="trailing" id="Wpx-oB-n9x"/>
+                <constraint firstAttribute="bottom" secondItem="j5W-Zd-CSJ" secondAttribute="bottom" id="YRr-Sr-y2v"/>
+                <constraint firstItem="j5W-Zd-CSJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="haF-X0-CPF"/>
+                <constraint firstItem="j5W-Zd-CSJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="j0t-PG-MB4"/>
+            </constraints>
+            <size key="customSize" width="260" height="271"/>
+            <connections>
+                <outlet property="contentCardView" destination="j5W-Zd-CSJ" id="fHg-6v-XRN"/>
+                <outlet property="descriptionLabel" destination="cRA-P6-P2U" id="Fpc-CL-uz9"/>
+                <outlet property="imageView" destination="O35-zE-TOg" id="ajM-Sr-dDJ"/>
+                <outlet property="titleLabel" destination="Qzp-vq-nRg" id="VdB-ax-wA9"/>
+            </connections>
+            <point key="canvasLocation" x="222.90076335877862" y="96.83098591549296"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="hospitalNearMe" width="1958" height="1469"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

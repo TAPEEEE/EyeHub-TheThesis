@@ -138,7 +138,8 @@ private extension HomeViewController {
                                         icon: UIImage(named: "CChartIcon") ?? UIImage()
                                     )
         ) { tagId in
-            debugPrint("Clickable icon did tapped with tagId: \(tagId)")
+            let landoltCTestViewController = LandoltCTestViewController()
+            self.navigationController?.pushViewController(landoltCTestViewController, animated: true)
         }
         
         TumblingEButtonView.setup(viewModel:
@@ -149,7 +150,8 @@ private extension HomeViewController {
                                         icon: UIImage(named: "EChartIcon") ?? UIImage()
                                     )
         ) { tagId in
-            debugPrint("Clickable icon did tapped with tagId: \(tagId)")
+            let tumblingETestViewController = TumblingETestViewController()
+            self.navigationController?.pushViewController(tumblingETestViewController, animated: true)
         }
         
         colorButtonView.setup(viewModel:

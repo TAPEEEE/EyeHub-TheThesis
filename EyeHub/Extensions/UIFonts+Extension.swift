@@ -36,8 +36,16 @@ enum FontFamily {
             path: "Kanit-SemiBold.ttf"
         )
         
+        static let inter = FontConvertible(
+            name: "Inter-VariableFont",
+            family: "Inter-VariableFont",
+            path: "Inter-VariableFont.ttf"
+        )
+        
+        
+        
         static let all: [FontConvertible] = [
-            medium, light, regular, semiBold
+            medium, light, regular, semiBold, inter
         ]
     }
     static let allCustomFonts: [FontConvertible] = [Kanit.all].flatMap { $0 }

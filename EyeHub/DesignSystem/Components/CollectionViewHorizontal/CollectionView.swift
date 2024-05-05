@@ -37,6 +37,7 @@ class CollectionView: UIView {
         setupXib()
         collectionView.backgroundColor = .clear
         collectionView.registerNib(for: HomeScreenCollectionViewCell.self)
+        collectionView.registerNib(for: SuggestHospitalCollectionViewCell.self)
         collectionView.dataSource = self
         collectionView.delegate = self
     }
@@ -56,6 +57,10 @@ extension CollectionView: UICollectionViewDelegate, UICollectionViewDataSource {
         case .snelllenTest(title: let title):
             let cell: SnelllenTestCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SnelllenTestCollectionViewCell", for: indexPath) as! SnelllenTestCollectionViewCell
             cell.configure(text: title)
+            return cell
+        case .hospitalNearMe(let viewModel):
+            let cell: SuggestHospitalCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SuggestHospitalCollectionViewCell", for: indexPath) as! SuggestHospitalCollectionViewCell
+            cell.configure(viewModel: viewModel)
             return cell
         }
     }

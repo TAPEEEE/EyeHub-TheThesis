@@ -34,6 +34,8 @@ class HearingViewController: UIViewController {
         didSet {
             if currentPage == 1 {
                 seccondPageButtonView.isHidden = false
+                headPhoneView.play()
+                headPhoneView.loopMode = .loop
             }
         }
     }
@@ -172,8 +174,6 @@ class HearingViewController: UIViewController {
         seccondPageButtonView.isHidden = true
         animationView.play()
         animationView.loopMode = .loop
-        headPhoneView.play()
-        headPhoneView.loopMode = .loop
         self.view.backgroundColor = UIColor.white
         contentView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
         firstPageButtonView.setUp(.textOnly(text: "ถัดไป"), type: .primary, size: .large)

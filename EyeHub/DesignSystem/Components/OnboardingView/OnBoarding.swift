@@ -7,6 +7,13 @@
 
 import UIKit
 
+
+@objc protocol OnBoardingDelegate: AnyObject {
+    func navigationBackButtonDidTap(_ navigation: OnBoarding)
+    @objc optional func navigationButtonDidTap(_ navigation: OnBoarding)
+}
+
+
 class OnBoarding: UIView {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var buttonView: PrimaryButton!
@@ -15,13 +22,16 @@ class OnBoarding: UIView {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
-    
-    
+    @IBOutlet weak var onboard3: UIImageView!
+    @IBOutlet weak var onboard2: UIImageView!
+    @IBOutlet weak var onboard1: UIImageView!
+    weak var delegate: OnBoardingDelegate?
     var contentModel: [OnbaordingViewModel] = []
-    private var currentPage = 0 {
+    var currentPage = 0 {
             didSet {
                 if currentPage > 1 {
                     buttonView.setUp(.textOnly(text: "เริ่มต้นใช้งาน"), type: .primary, size: .large)
+                    
                 }
             }
         }
@@ -51,13 +61,16 @@ class OnBoarding: UIView {
                 self.updateBottomSheetContent()
             })
         } else {
-            
+            delegate?.navigationBackButtonDidTap(self)
         }
     }
     
     func updateBottomSheetContent() {
         titleLabel.text = contentModel[currentPage].title
         descriptionLabel.text = contentModel[currentPage].description
+        onboard3.image = UIImage(named: contentModel[2].content) ?? UIImage()
+        onboard2.image = UIImage(named: contentModel[1].content) ?? UIImage()
+        onboard1.image = UIImage(named: contentModel[0].content) ?? UIImage()
     }
 }
 

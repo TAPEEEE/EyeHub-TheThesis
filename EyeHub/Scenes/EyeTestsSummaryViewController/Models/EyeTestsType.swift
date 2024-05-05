@@ -9,14 +9,6 @@ import Foundation
 import UIKit
 
 
-enum enum1 {
-    case a
-}
-
-enum enum2 {
-    case a
-}
-
 enum EyeTestsType {
     case snellen
     case landoltC

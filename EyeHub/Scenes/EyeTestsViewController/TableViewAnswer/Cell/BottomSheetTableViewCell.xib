@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomSheetTableViewCell" customModule="EyeHub" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="BottomSheetTableViewCell" rowHeight="68" id="KGk-i7-Jjw" customClass="BottomSheetTableViewCell" customModule="EyeHub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRa-FU-LCP">
+                        <rect key="frame" x="16" y="6" width="343" height="60"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ahB-ss-9sP">
+                                <rect key="frame" x="24" y="18" width="295" height="24"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4dv-x7-zaz">
+                                        <rect key="frame" x="0.0" y="0.99999999999999822" width="24" height="22.666666666666664"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="3oz-6F-w44"/>
+                                            <constraint firstAttribute="height" constant="24" id="Bn3-mt-csE"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7A-CM-teZ">
+                                        <rect key="frame" x="40" y="0.0" width="255" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ahB-ss-9sP" secondAttribute="trailing" constant="24" id="ATa-CN-wem"/>
+                            <constraint firstItem="ahB-ss-9sP" firstAttribute="centerX" secondItem="jRa-FU-LCP" secondAttribute="centerX" id="CLJ-Hz-epB"/>
+                            <constraint firstAttribute="height" constant="60" id="NRW-SK-UFv"/>
+                            <constraint firstItem="ahB-ss-9sP" firstAttribute="centerY" secondItem="jRa-FU-LCP" secondAttribute="centerY" id="X3C-SC-6eg"/>
+                            <constraint firstItem="ahB-ss-9sP" firstAttribute="leading" secondItem="jRa-FU-LCP" secondAttribute="leading" constant="24" id="hlo-1J-wKq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jRa-FU-LCP" secondAttribute="trailing" constant="16" id="bWI-Zj-eRb"/>
+                    <constraint firstItem="jRa-FU-LCP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="fSS-Sg-hLL"/>
+                    <constraint firstAttribute="bottom" secondItem="jRa-FU-LCP" secondAttribute="bottom" constant="6" id="gsC-06-Uum"/>
+                    <constraint firstItem="jRa-FU-LCP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="h77-wi-qMi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bgView" destination="jRa-FU-LCP" id="CCx-ZR-aY9"/>
+                <outlet property="checkMarkImageView" destination="4dv-x7-zaz" id="Gd5-Kj-UqJ"/>
+                <outlet property="titleLabel" destination="t7A-CM-teZ" id="BeZ-bi-Aoa"/>
+            </connections>
+            <point key="canvasLocation" x="171.75572519083968" y="-66.901408450704224"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -11,10 +11,5 @@ import UIKit
 struct OnbaordingViewModel {
     let title: String
     let description: String
-    let content: contentImage
-}
-
-enum contentImage {
-    case coverImage(image: UIImage)
-    case lottieFile(lottie: String)
+    let content: String
 }
