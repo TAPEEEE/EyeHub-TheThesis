@@ -10,7 +10,7 @@ import UIKit
 import PanModal
 
 protocol BottomSheetDelegate: AnyObject {
-    func didSelectRow(indexPath: Int)
+    func didSelectRow(indexPath: Int, value: String)
 }
 
 class AnswerBottomSheetViewController: UIViewController {
@@ -43,7 +43,7 @@ class AnswerBottomSheetViewController: UIViewController {
     }
     
     @objc func demoVoice() {
-        delegate?.didSelectRow(indexPath: selectedIndexPath?.row ?? 0)
+        delegate?.didSelectRow(indexPath: selectedIndexPath?.row ?? 0, value: model[selectedIndexPath?.row ?? 0])
     }
 }
 

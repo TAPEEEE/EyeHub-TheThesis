@@ -24,15 +24,4 @@ enum EyeTestsType {
             return UIImage(named: "EChartIcon") ?? UIImage()
         }
     }
-    
-    var testResultType: Any.Type {
-        switch self {
-        case .snellen:
-            return SnellenTestResult.self
-        case .landoltC:
-            return SnellenTestResult.self
-        case .tumblingE:
-            return SnellenTestResult.self
-        }
-    }
 }

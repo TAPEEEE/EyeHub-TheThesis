@@ -42,7 +42,7 @@ extension SnellenTestViewController: NavigationBarDelegate {
 }
 
 extension SnellenTestViewController: BottomSheetDelegate {
-    func didSelectRow(indexPath: Int) {
+    func didSelectRow(indexPath: Int, value: String) {
         print("Selected item name: \(indexPath)")
         dismiss(animated: true, completion: nil)
         

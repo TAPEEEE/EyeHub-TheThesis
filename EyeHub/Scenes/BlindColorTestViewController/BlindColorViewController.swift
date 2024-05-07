@@ -8,16 +8,13 @@
 import UIKit
 
 class BlindColorViewController: UIViewController {
-    let testData: [BlindColorTestData] = BlindColorTestData.allCases
-    var currentTestIndex = 0
-    var timer: Timer?
-    var totalTime = 5
-    var currentTime = 0
-    var questionArr: [String] = []
-    var correctAnswer: Int?
-    var score: Int = 0
-    var currentKey: String = "leftEye"
-    var testResults: [String: Int] = ["leftEye": 0, "rightEye": 0]
+    private let testData: [BlindColorTestData] = BlindColorTestData.allCases
+    private var currentTestIndex = 0
+    private var timer: Timer?
+    private var totalTime = 1
+    private var currentTime = 0
+    private var questionArr: [String] = []
+    private var testResults: [BlindColorResult] = []
     @IBOutlet weak var testImage: UIImageView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var bottomSheetView: UIView!
@@ -41,22 +38,15 @@ extension BlindColorViewController: NavigationBarDelegate {
 }
 
 extension BlindColorViewController: BottomSheetDelegate {
-    func didSelectRow(indexPath: Int) {
-        print("Selected item name: \(indexPath)")
-        dismiss(animated: true, completion: nil)
-        
+    func didSelectRow(indexPath: Int, value: String) {
         updateTestProgress()
-        
-        if isCorrectAnswer(indexPath) {
-            handleCorrectAnswer()
-        }
-        
+        dismiss(animated: true, completion: nil)
+        testResults.append(calculate(indexPath: indexPath, value: value))
         if isEndOfTest() {
-            switchToNextTest()
+            navigateToSummary()
         } else {
             startTestWithDelay()
         }
-        
         print(testResults)
     }
 }
@@ -72,29 +62,33 @@ private extension BlindColorViewController {
         progressBarView.setProgress(1, animated: false)
         questionArr.removeAll()
     }
-
-    private func isCorrectAnswer(_ indexPath: Int) -> Bool {
-        return correctAnswer == indexPath
-    }
-
-    private func handleCorrectAnswer() {
-        score += 1
-        testResults[currentKey] = score
-        debugPrint("✅")
-    }
-
-    private func isEndOfTest() -> Bool {
-        return currentTestIndex == testData.count && currentKey == "leftEye"
-    }
-
-    private func switchToNextTest() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
-            startTestWithDelay()
+    
+    private func calculate(indexPath: Int, value: String) -> BlindColorResult {
+        let result: BlindColorResult
+        switch value {
+        case testData[currentTestIndex-1].normal:
+            result = .normal
+        case testData[currentTestIndex-1].redAndGreenBlind:
+            if indexPath != 2  {
+                result = .redandbreenBlind
+            } else {
+                result = .blindColor
+            }
+        case testData[currentTestIndex-1].blindColor:
+            result = .blindColor
+        default:
+            result = .noneCase
         }
+        return result
     }
     
+    private func isEndOfTest() -> Bool {
+        return currentTestIndex == testData.count
+    }
+    
+    
     func navigateToSummary() {
-        let newViewController = EyeTestsSummaryViewController(testType: .snellen, testResult: testResults)
+        let newViewController = BlindColorTestSummaryViewController(testResult: testResults)
         self.navigationController?.pushViewController(newViewController, animated: true)
     }
     
@@ -107,9 +101,6 @@ private extension BlindColorViewController {
             navigateToSummary()
             return
         }
-
-//        testStateLabel.font = FontFamily.Kanit.medium.font(size: testData[currentTestIndex].rawValue)
-//        testStateLabel.text = textTestValue.testText
         
         testImage.image = testData[currentTestIndex].imagePlate
         timer?.invalidate()

@@ -38,6 +38,9 @@
 		2D60344D2BE7FC3B0049214D /* BlindColorTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60344C2BE7FC3B0049214D /* BlindColorTestData.swift */; };
 		2D6034552BE998980049214D /* BlindColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6034532BE998980049214D /* BlindColorViewController.swift */; };
 		2D6034562BE998980049214D /* BlindColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6034542BE998980049214D /* BlindColorViewController.xib */; };
+		2D60345E2BEAA3EA0049214D /* BlindColorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60345D2BEAA3EA0049214D /* BlindColorResult.swift */; };
+		2D6034612BEAB93E0049214D /* BlindColorTestSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60345F2BEAB93E0049214D /* BlindColorTestSummaryViewController.swift */; };
+		2D6034622BEAB93E0049214D /* BlindColorTestSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6034602BEAB93E0049214D /* BlindColorTestSummaryViewController.xib */; };
 		2D6A87092BCECEA8006E2D41 /* 4000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87052BCECEA8006E2D41 /* 4000.mp3 */; };
 		2D6A870A2BCECEA8006E2D41 /* 8000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87062BCECEA8006E2D41 /* 8000.mp3 */; };
 		2D6A870B2BCECEA8006E2D41 /* 1000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87072BCECEA8006E2D41 /* 1000.mp3 */; };
@@ -173,6 +176,9 @@
 		2D60344C2BE7FC3B0049214D /* BlindColorTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindColorTestData.swift; sourceTree = "<group>"; };
 		2D6034532BE998980049214D /* BlindColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindColorViewController.swift; sourceTree = "<group>"; };
 		2D6034542BE998980049214D /* BlindColorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlindColorViewController.xib; sourceTree = "<group>"; };
+		2D60345D2BEAA3EA0049214D /* BlindColorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindColorResult.swift; sourceTree = "<group>"; };
+		2D60345F2BEAB93E0049214D /* BlindColorTestSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindColorTestSummaryViewController.swift; sourceTree = "<group>"; };
+		2D6034602BEAB93E0049214D /* BlindColorTestSummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlindColorTestSummaryViewController.xib; sourceTree = "<group>"; };
 		2D6A87052BCECEA8006E2D41 /* 4000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4000.mp3; sourceTree = "<group>"; };
 		2D6A87062BCECEA8006E2D41 /* 8000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8000.mp3; sourceTree = "<group>"; };
 		2D6A87072BCECEA8006E2D41 /* 1000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1000.mp3; sourceTree = "<group>"; };
@@ -343,11 +349,10 @@
 		2D561DF72BE3F04E004CA1C3 /* CollectionViewAnswer */ = {
 			isa = PBXGroup;
 			children = (
+				2D60345B2BEA70AF0049214D /* Model */,
 				2D561DFC2BE3F132004CA1C3 /* Cell */,
 				2D561DF82BE3F093004CA1C3 /* CollectionViewAnswerBottomSheetViewController.swift */,
 				2D561DF92BE3F093004CA1C3 /* CollectionViewAnswerBottomSheetViewController.xib */,
-				2D561E062BE3FA73004CA1C3 /* CollectionViewTestType.swift */,
-				2D561E082BE41602004CA1C3 /* CardModel.swift */,
 			);
 			path = CollectionViewAnswer;
 			sourceTree = "<group>";
@@ -395,6 +400,57 @@
 				2D60344C2BE7FC3B0049214D /* BlindColorTestData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		2D6034572BEA6FD40049214D /* BlindColorTestSummaryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D60345C2BEAA3C90049214D /* Model */,
+				2D60345F2BEAB93E0049214D /* BlindColorTestSummaryViewController.swift */,
+				2D6034602BEAB93E0049214D /* BlindColorTestSummaryViewController.xib */,
+			);
+			path = BlindColorTestSummaryViewController;
+			sourceTree = "<group>";
+		};
+		2D6034582BEA70120049214D /* SnellenTestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DA1F7C52BD572B5007B3BF7 /* SnellenTest */,
+			);
+			path = SnellenTestViewController;
+			sourceTree = "<group>";
+		};
+		2D6034592BEA70510049214D /* LandoltCTestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D561E022BE3F607004CA1C3 /* LandoltCTest */,
+			);
+			path = LandoltCTestViewController;
+			sourceTree = "<group>";
+		};
+		2D60345A2BEA70630049214D /* TumblingETestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DDF31EE2BE65A0000E15D4B /* Tumbling E */,
+			);
+			path = TumblingETestViewController;
+			sourceTree = "<group>";
+		};
+		2D60345B2BEA70AF0049214D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D561E062BE3FA73004CA1C3 /* CollectionViewTestType.swift */,
+				2D561E082BE41602004CA1C3 /* CardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D60345C2BEAA3C90049214D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D60345D2BEAA3EA0049214D /* BlindColorResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2D6A870D2BCED91D006E2D41 /* MessageBox */ = {
@@ -522,17 +578,14 @@
 			path = BlankBottomSheet;
 			sourceTree = "<group>";
 		};
-		2DA4A6242B84EB0000CC2380 /* EyeTestsViewController */ = {
+		2DA4A6242B84EB0000CC2380 /* EyeTestsAnswerViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2DDF31EE2BE65A0000E15D4B /* Tumbling E */,
-				2D561E022BE3F607004CA1C3 /* LandoltCTest */,
 				2D561DF72BE3F04E004CA1C3 /* CollectionViewAnswer */,
 				2D39C8172BD86928001FDE50 /* TableViewAnswer */,
-				2DA1F7C52BD572B5007B3BF7 /* SnellenTest */,
 				2DA4A6292B84EB5900CC2380 /* AphabetSnellenTest */,
 			);
-			path = EyeTestsViewController;
+			path = EyeTestsAnswerViewController;
 			sourceTree = "<group>";
 		};
 		2DA4A6292B84EB5900CC2380 /* AphabetSnellenTest */ = {
@@ -620,13 +673,17 @@
 		2DB9741B2B65804D009BE2C8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2D60345A2BEA70630049214D /* TumblingETestViewController */,
+				2D6034592BEA70510049214D /* LandoltCTestViewController */,
+				2D6034582BEA70120049214D /* SnellenTestViewController */,
+				2D6034572BEA6FD40049214D /* BlindColorTestSummaryViewController */,
 				2D60344B2BE7FC1D0049214D /* BlindColorTestViewController */,
 				2DB523AA2B7DFA7200AFF154 /* HearingTestsOnBoardingViewController */,
 				2DEB155D2BC062C4003FB88C /* HearingTestViewController */,
 				2D8F3A8B2BA3611D009B675D /* HearingTestsSummaryViewController */,
 				2D708EF02BB96607006146ED /* TestHistoryViewController */,
 				2D6A87152BCF203E006E2D41 /* EyeTestsOnBoardingViewController */,
-				2DA4A6242B84EB0000CC2380 /* EyeTestsViewController */,
+				2DA4A6242B84EB0000CC2380 /* EyeTestsAnswerViewController */,
 				2D6A87162BCF20D3006E2D41 /* EyeTestsSummaryViewController */,
 				2DB974C42B67CB7A009BE2C8 /* VoiceConceptViewController */,
 				2DB974BD2B6681A2009BE2C8 /* OnBoarding */,
@@ -1035,6 +1092,7 @@
 				2DEB159A2BC44210003FB88C /* 500.mp3 in Resources */,
 				2DB974A32B666C87009BE2C8 /* Kanit-Italic.ttf in Resources */,
 				2D561DF12BE2A35B004CA1C3 /* EyeTestsSummaryViewController.xib in Resources */,
+				2D6034622BEAB93E0049214D /* BlindColorTestSummaryViewController.xib in Resources */,
 				2DB974AA2B666C87009BE2C8 /* Kanit-ExtraLightItalic.ttf in Resources */,
 				2DB974C12B6681BC009BE2C8 /* OnBoardingViewController.xib in Resources */,
 				2DB974B12B666C87009BE2C8 /* Kanit-ExtraBoldItalic.ttf in Resources */,
@@ -1120,6 +1178,7 @@
 				2D561E072BE3FA73004CA1C3 /* CollectionViewTestType.swift in Sources */,
 				2DB9747C2B66641F009BE2C8 /* Typography.swift in Sources */,
 				2DB974702B66614A009BE2C8 /* ButtonState.swift in Sources */,
+				2D60345E2BEAA3EA0049214D /* BlindColorResult.swift in Sources */,
 				2D561DFA2BE3F093004CA1C3 /* CollectionViewAnswerBottomSheetViewController.swift in Sources */,
 				2DEB15952BC2EBA5003FB88C /* OnBoarding.swift in Sources */,
 				2D6A870F2BCED936006E2D41 /* MessageBox.swift in Sources */,
@@ -1165,6 +1224,7 @@
 				2DDF31F42BE65B5D00E15D4B /* TumblingETestViewController.swift in Sources */,
 				2D6034472BE6BDDC0049214D /* SuggestHospitalCollectionViewCell.swift in Sources */,
 				2DB974C72B67CB9F009BE2C8 /* VoiceConceptViewController.swift in Sources */,
+				2D6034612BEAB93E0049214D /* BlindColorTestSummaryViewController.swift in Sources */,
 				2DF334742B6AD3360063944B /* CollectionViewType.swift in Sources */,
 				2D708EEB2BB8BB17006146ED /* TableViewViewModel.swift in Sources */,
 				2DB974062B657F16009BE2C8 /* AppDelegate.swift in Sources */,

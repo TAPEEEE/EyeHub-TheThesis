@@ -28,9 +28,9 @@ enum BlindColorTestData {
         case .plate2:
             return ["29", "70", "ไม่สามารถอ่านได้"]
         case .plate3:
-            return ["3", "22", "ไม่สามารถอ่านได้"]
+            return ["3", "5", "ไม่สามารถอ่านได้"]
         case .plate4:
-            return ["74", "22", "ไม่สามารถอ่านได้"]
+            return ["74", "21", "ไม่สามารถอ่านได้"]
         case .plate5:
             return ["45", "22", "ไม่สามารถอ่านได้"]
         case .plate6:
@@ -38,7 +38,7 @@ enum BlindColorTestData {
         case .plate7:
             return ["73", "22", "ไม่สามารถอ่านได้"]
         case .plate8:
-            return ["12", "22", "ไม่สามารถอ่านได้"]
+            return ["12", "45", "ไม่สามารถอ่านได้"]
         case .plate9:
             return ["42", "22", "ไม่สามารถอ่านได้"]
         }
@@ -61,7 +61,7 @@ enum BlindColorTestData {
         case .plate7:
             return "73"
         case .plate8:
-            return "ไม่สามารถอ่านเป็นตัวเลขได้"
+            return "ไม่สามารถอ่านได้"
         case .plate9:
             return "42"
         }
