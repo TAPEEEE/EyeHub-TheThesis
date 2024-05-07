@@ -162,7 +162,8 @@ private extension HomeViewController {
                                     icon: UIImage(named: "ColorIcon") ?? UIImage()
                                 )
         ) { tagId in
-            debugPrint("Clickable icon did tapped with tagId: \(tagId)")
+            let blindColorViewController = BlindColorViewController()
+            self.navigationController?.pushViewController(blindColorViewController, animated: true)
         }
         
         contrastButtonView.setup(viewModel:

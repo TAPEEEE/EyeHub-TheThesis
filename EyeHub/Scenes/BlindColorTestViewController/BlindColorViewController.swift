@@ -1,25 +1,24 @@
 //
-//  SnellenTestViewController.swift
+//  BlindColorViewController.swift
 //  EyeHub
 //
-//  Created by Nattapon Suwanno on 24/4/2567 BE.
+//  Created by Nattapon Suwanno on 7/5/2567 BE.
 //
 
 import UIKit
-import PanModal
 
-class SnellenTestViewController: UIViewController {
-    let testData: [SnellenTestData] = SnellenTestData.allCases
+class BlindColorViewController: UIViewController {
+    let testData: [BlindColorTestData] = BlindColorTestData.allCases
     var currentTestIndex = 0
     var timer: Timer?
-    var totalTime = 1
+    var totalTime = 5
     var currentTime = 0
     var questionArr: [String] = []
     var correctAnswer: Int?
     var score: Int = 0
     var currentKey: String = "leftEye"
     var testResults: [String: Int] = ["leftEye": 0, "rightEye": 0]
-    @IBOutlet weak var testStateLabel: UILabel!
+    @IBOutlet weak var testImage: UIImageView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var bottomSheetView: UIView!
     @IBOutlet weak var testStackView: UIStackView!
@@ -35,13 +34,13 @@ class SnellenTestViewController: UIViewController {
     }
 }
 
-extension SnellenTestViewController: NavigationBarDelegate {
+extension BlindColorViewController: NavigationBarDelegate {
     func navigationBackButtonDidTap(_ navigation: NavigationBar) {
         navigationController?.popViewController(animated: true)
     }
 }
 
-extension SnellenTestViewController: BottomSheetDelegate {
+extension BlindColorViewController: BottomSheetDelegate {
     func didSelectRow(indexPath: Int) {
         print("Selected item name: \(indexPath)")
         dismiss(animated: true, completion: nil)
@@ -62,7 +61,7 @@ extension SnellenTestViewController: BottomSheetDelegate {
     }
 }
 
-private extension SnellenTestViewController {
+private extension BlindColorViewController {
     func commonInit() {
         setUpUI()
         startTestWithDelay()
@@ -73,23 +72,22 @@ private extension SnellenTestViewController {
         progressBarView.setProgress(1, animated: false)
         questionArr.removeAll()
     }
-    
+
     private func isCorrectAnswer(_ indexPath: Int) -> Bool {
         return correctAnswer == indexPath
     }
-    
+
     private func handleCorrectAnswer() {
         score += 1
         testResults[currentKey] = score
         debugPrint("✅")
     }
-    
+
     private func isEndOfTest() -> Bool {
         return currentTestIndex == testData.count && currentKey == "leftEye"
     }
-    
+
     private func switchToNextTest() {
-        switchToRightEyeTest()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
             startTestWithDelay()
         }
@@ -101,21 +99,19 @@ private extension SnellenTestViewController {
     }
     
     func createQuestion() {
-        questionArr.append(contentsOf: testData[currentTestIndex].wrongTestText)
-        let randomIndex = Int.random(in: 0..<4)
-        correctAnswer = randomIndex
-        questionArr.insert(testData[currentTestIndex].testText, at: randomIndex)
-        questionArr.append("มองไม่ชัด")
+        questionArr.append(contentsOf: testData[currentTestIndex].choiceAnswer)
     }
     
     func startTestWithDelay() {
-        if currentTestIndex == testData.count && currentKey == "rightEye" {
+        if currentTestIndex == testData.count {
             navigateToSummary()
             return
         }
-        let textTestValue = testData[currentTestIndex]
-        testStateLabel.font = FontFamily.Kanit.medium.font(size: testData[currentTestIndex].rawValue)
-        testStateLabel.text = textTestValue.testText
+
+//        testStateLabel.font = FontFamily.Kanit.medium.font(size: testData[currentTestIndex].rawValue)
+//        testStateLabel.text = textTestValue.testText
+        
+        testImage.image = testData[currentTestIndex].imagePlate
         timer?.invalidate()
         currentTime = totalTime
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
@@ -130,37 +126,26 @@ private extension SnellenTestViewController {
         
         if currentTime <= 0 {
             timer?.invalidate()
-            presentAnserBottomSheet()
+            presentAnswerBottomSheet()
         }
     }
     
-    private func presentAnserBottomSheet() {
+    private func presentAnswerBottomSheet() {
         let answerBottomSheet = AnswerBottomSheetViewController()
         createQuestion()
-        
         answerBottomSheet.delegate = self
         answerBottomSheet.model = self.questionArr
-        
         DispatchQueue.main.async {
             self.presentPanModal(answerBottomSheet)
         }
     }
     
-    func switchToRightEyeTest() {
-        currentKey = "rightEye"
-        testStateLabel.text = "สลับข้าง"
-        testStateLabel.font = FontFamily.Kanit.medium.font(size: 56)
-        score = 0
-        currentTestIndex = 0
-    }
-    
     func setUpUI() {
+        testImage.layer.cornerRadius = testImage.frame.height/2
         progressBarView.progress = 1
         testStackView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
         self.view.backgroundColor =  UIColor.white
         contentView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
-        testStateLabel.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
-        testStateLabel.font = FontFamily.Kanit.medium.font(size: 40)
         progressBarView.tintColor = UIColor(cgColor: EyeHubColor.primaryColor)
         
         titleLabel.forEach {

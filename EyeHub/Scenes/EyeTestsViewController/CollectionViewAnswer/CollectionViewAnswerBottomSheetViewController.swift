@@ -25,6 +25,7 @@ class CollectionViewAnswerBottomSheetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
+        print(model)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerNib(for: BottomSheetAnswerCollectionViewCell.self)

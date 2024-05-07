@@ -35,6 +35,9 @@
 		2D6034472BE6BDDC0049214D /* SuggestHospitalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6034452BE6BDDC0049214D /* SuggestHospitalCollectionViewCell.swift */; };
 		2D6034482BE6BDDC0049214D /* SuggestHospitalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6034462BE6BDDC0049214D /* SuggestHospitalCollectionViewCell.xib */; };
 		2D60344A2BE6C3190049214D /* HospitalNearMeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6034492BE6C3190049214D /* HospitalNearMeModel.swift */; };
+		2D60344D2BE7FC3B0049214D /* BlindColorTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60344C2BE7FC3B0049214D /* BlindColorTestData.swift */; };
+		2D6034552BE998980049214D /* BlindColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6034532BE998980049214D /* BlindColorViewController.swift */; };
+		2D6034562BE998980049214D /* BlindColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6034542BE998980049214D /* BlindColorViewController.xib */; };
 		2D6A87092BCECEA8006E2D41 /* 4000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87052BCECEA8006E2D41 /* 4000.mp3 */; };
 		2D6A870A2BCECEA8006E2D41 /* 8000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87062BCECEA8006E2D41 /* 8000.mp3 */; };
 		2D6A870B2BCECEA8006E2D41 /* 1000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87072BCECEA8006E2D41 /* 1000.mp3 */; };
@@ -167,6 +170,9 @@
 		2D6034452BE6BDDC0049214D /* SuggestHospitalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestHospitalCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D6034462BE6BDDC0049214D /* SuggestHospitalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestHospitalCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D6034492BE6C3190049214D /* HospitalNearMeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalNearMeModel.swift; sourceTree = "<group>"; };
+		2D60344C2BE7FC3B0049214D /* BlindColorTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindColorTestData.swift; sourceTree = "<group>"; };
+		2D6034532BE998980049214D /* BlindColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindColorViewController.swift; sourceTree = "<group>"; };
+		2D6034542BE998980049214D /* BlindColorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlindColorViewController.xib; sourceTree = "<group>"; };
 		2D6A87052BCECEA8006E2D41 /* 4000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4000.mp3; sourceTree = "<group>"; };
 		2D6A87062BCECEA8006E2D41 /* 8000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8000.mp3; sourceTree = "<group>"; };
 		2D6A87072BCECEA8006E2D41 /* 1000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1000.mp3; sourceTree = "<group>"; };
@@ -371,6 +377,24 @@
 				2D561E042BE3F647004CA1C3 /* LandoltCTestData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2D60344B2BE7FC1D0049214D /* BlindColorTestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2D6034522BE9985F0049214D /* Data */,
+				2D6034532BE998980049214D /* BlindColorViewController.swift */,
+				2D6034542BE998980049214D /* BlindColorViewController.xib */,
+			);
+			path = BlindColorTestViewController;
+			sourceTree = "<group>";
+		};
+		2D6034522BE9985F0049214D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2D60344C2BE7FC3B0049214D /* BlindColorTestData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		2D6A870D2BCED91D006E2D41 /* MessageBox */ = {
@@ -596,6 +620,7 @@
 		2DB9741B2B65804D009BE2C8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2D60344B2BE7FC1D0049214D /* BlindColorTestViewController */,
 				2DB523AA2B7DFA7200AFF154 /* HearingTestsOnBoardingViewController */,
 				2DEB155D2BC062C4003FB88C /* HearingTestViewController */,
 				2D8F3A8B2BA3611D009B675D /* HearingTestsSummaryViewController */,
@@ -967,6 +992,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6034562BE998980049214D /* BlindColorViewController.xib in Resources */,
 				2DB974B02B666C87009BE2C8 /* Kanit-SemiBold.ttf in Resources */,
 				2DB974A72B666C87009BE2C8 /* Kanit-ExtraLight.ttf in Resources */,
 				2DF3347C2B6AD7910063944B /* HomeScreenCollectionViewCell.xib in Resources */,
@@ -1124,6 +1150,7 @@
 				2DB9743F2B6594DC009BE2C8 /* EyeHubRadius.swift in Sources */,
 				2D708EDC2BB8B28A006146ED /* TableViewType.swift in Sources */,
 				2D4D64FE2BBB416800163504 /* HistoryViewController.swift in Sources */,
+				2D6034552BE998980049214D /* BlindColorViewController.swift in Sources */,
 				2DA1F7C42BD568D2007B3BF7 /* HearingViewModel.swift in Sources */,
 				2DB523AD2B7DFA9D00AFF154 /* HearingViewController.swift in Sources */,
 				2D561E102BE42352004CA1C3 /* BottomSheetAnswerCollectionViewCell.swift in Sources */,
@@ -1145,6 +1172,7 @@
 				2D708EEE2BB8C013006146ED /* HistoryTableViewCell.swift in Sources */,
 				2D6A87142BCF0C0E006E2D41 /* EarTestResultList.swift in Sources */,
 				2DB9747A2B6661A4009BE2C8 /* PrimaryButton.swift in Sources */,
+				2D60344D2BE7FC3B0049214D /* BlindColorTestData.swift in Sources */,
 				2DF334702B6AD16A0063944B /* CollectionView.swift in Sources */,
 				2DB974782B666198009BE2C8 /* ButtonColorAppearanceBuilder.swift in Sources */,
 			);

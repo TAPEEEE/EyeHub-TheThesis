@@ -23,6 +23,7 @@ class AnswerBottomSheetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(model)
         setupTableView()
         tableView.registerNib(for: BottomSheetTableViewCell.self)
         buttonView.setUp(.textOnly(text: "ยืนยันคำตอบ"), type: .primary, size: .large)

@@ -42,9 +42,9 @@ enum HorizontalCollectionViewList: Int, CaseIterable {
     var viewController: UIViewController.Type {
         switch self {
         case .eye:
-            return HearingTestSummaryViewController.self
+            return SnellenTestViewController.self
         case .vision:
-            return HearingTestSummaryViewController.self
+            return BlindColorViewController.self
         case .ear:
             return HearingViewController.self
         }

@@ -159,12 +159,11 @@ private extension TumblingETestViewController {
     private func presentAnserBottomSheet() {
         let answerBottomSheet = CollectionViewAnswerBottomSheetViewController()
         createQuestion()
-        
+        answerBottomSheet.delegate = self
+        answerBottomSheet.model = self.questionArr
         DispatchQueue.main.async {
-            answerBottomSheet.delegate = self
-            answerBottomSheet.model = self.questionArr
+            self.presentPanModal(answerBottomSheet)
         }
-        presentPanModal(answerBottomSheet)
     }
     
     func switchToRightEyeTest() {

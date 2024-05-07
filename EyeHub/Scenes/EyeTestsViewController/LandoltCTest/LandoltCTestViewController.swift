@@ -160,11 +160,13 @@ private extension LandoltCTestViewController {
         let answerBottomSheet = CollectionViewAnswerBottomSheetViewController()
         createQuestion()
         
+        
+        answerBottomSheet.delegate = self
+        answerBottomSheet.model = self.questionArr
+        
         DispatchQueue.main.async {
-            answerBottomSheet.delegate = self
-            answerBottomSheet.model = self.questionArr
+            self.presentPanModal(answerBottomSheet)
         }
-        presentPanModal(answerBottomSheet)
     }
     
     func switchToRightEyeTest() {
