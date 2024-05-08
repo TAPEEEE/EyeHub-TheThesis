@@ -47,6 +47,8 @@
 		2D60346A2BEBFAD30049214D /* AudiogramTestHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6034682BEBFAD30049214D /* AudiogramTestHistoryViewController.xib */; };
 		2D60346E2BEBFB560049214D /* HistoryBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60346C2BEBFB560049214D /* HistoryBottomSheetViewController.swift */; };
 		2D60346F2BEBFB560049214D /* HistoryBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D60346D2BEBFB560049214D /* HistoryBottomSheetViewController.xib */; };
+		2D6034722BEC12F60049214D /* EyeTestOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6034702BEC12F60049214D /* EyeTestOnboardingViewController.swift */; };
+		2D6034732BEC12F60049214D /* EyeTestOnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6034712BEC12F60049214D /* EyeTestOnboardingViewController.xib */; };
 		2D6A87092BCECEA8006E2D41 /* 4000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87052BCECEA8006E2D41 /* 4000.mp3 */; };
 		2D6A870A2BCECEA8006E2D41 /* 8000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87062BCECEA8006E2D41 /* 8000.mp3 */; };
 		2D6A870B2BCECEA8006E2D41 /* 1000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87072BCECEA8006E2D41 /* 1000.mp3 */; };
@@ -191,6 +193,8 @@
 		2D6034682BEBFAD30049214D /* AudiogramTestHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudiogramTestHistoryViewController.xib; sourceTree = "<group>"; };
 		2D60346C2BEBFB560049214D /* HistoryBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryBottomSheetViewController.swift; sourceTree = "<group>"; };
 		2D60346D2BEBFB560049214D /* HistoryBottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryBottomSheetViewController.xib; sourceTree = "<group>"; };
+		2D6034702BEC12F60049214D /* EyeTestOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTestOnboardingViewController.swift; sourceTree = "<group>"; };
+		2D6034712BEC12F60049214D /* EyeTestOnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeTestOnboardingViewController.xib; sourceTree = "<group>"; };
 		2D6A87052BCECEA8006E2D41 /* 4000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4000.mp3; sourceTree = "<group>"; };
 		2D6A87062BCECEA8006E2D41 /* 8000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8000.mp3; sourceTree = "<group>"; };
 		2D6A87072BCECEA8006E2D41 /* 1000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1000.mp3; sourceTree = "<group>"; };
@@ -494,6 +498,8 @@
 		2D6A87152BCF203E006E2D41 /* EyeTestsOnBoardingViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2D6034702BEC12F60049214D /* EyeTestOnboardingViewController.swift */,
+				2D6034712BEC12F60049214D /* EyeTestOnboardingViewController.xib */,
 			);
 			path = EyeTestsOnBoardingViewController;
 			sourceTree = "<group>";
@@ -1096,6 +1102,7 @@
 				2DB974AE2B666C87009BE2C8 /* Kanit-Regular.ttf in Resources */,
 				2D6A870A2BCECEA8006E2D41 /* 8000.mp3 in Resources */,
 				2DDF31F52BE65B5D00E15D4B /* TumblingETestViewController.xib in Resources */,
+				2D6034732BEC12F60049214D /* EyeTestOnboardingViewController.xib in Resources */,
 				2DA4A6192B7E31A400CC2380 /* success.json in Resources */,
 				2DDF31ED2BE642C000E15D4B /* Inter-VariableFont.ttf in Resources */,
 				2D561DEC2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.xib in Resources */,
@@ -1264,6 +1271,7 @@
 				2D708EEE2BB8C013006146ED /* HistoryTableViewCell.swift in Sources */,
 				2D6A87142BCF0C0E006E2D41 /* EarTestResultList.swift in Sources */,
 				2DB9747A2B6661A4009BE2C8 /* PrimaryButton.swift in Sources */,
+				2D6034722BEC12F60049214D /* EyeTestOnboardingViewController.swift in Sources */,
 				2D60344D2BE7FC3B0049214D /* BlindColorTestData.swift in Sources */,
 				2DF334702B6AD16A0063944B /* CollectionView.swift in Sources */,
 				2DB974782B666198009BE2C8 /* ButtonColorAppearanceBuilder.swift in Sources */,
@@ -1336,7 +1344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1393,7 +1401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1424,7 +1432,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1462,7 +1470,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

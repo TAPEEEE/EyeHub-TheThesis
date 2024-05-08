@@ -101,11 +101,6 @@ private extension HomeViewController {
     func commonInit() {
         getPermission()
         setUpUI()
-        let demoButtontapGesture = UITapGestureRecognizer(
-            target: self,
-            action: #selector(demoVoice)
-        )
-//        btn.addGestureRecognizer(demoButtontapGesture)
         collectionViewHorizontalView.delegate = self
         historyTableView.delegate = self
     }
@@ -143,8 +138,8 @@ private extension HomeViewController {
                                         icon: UIImage(named: "SnellenIcon") ?? UIImage()
                                     )
         ) { tagId in
-            let snellenViewController = SnellenTestViewController()
-            self.navigationController?.pushViewController(snellenViewController, animated: true)
+            let eyeTestOnboardingViewController = EyeTestOnboardingViewController()
+            self.navigationController?.pushViewController(eyeTestOnboardingViewController, animated: true)
         }
         
         landoltCButtonView.setup(viewModel:
