@@ -1,18 +1,14 @@
 //
-//  BlindColorTestSummaryViewController.swift
+//  EyeTestsHistoryViewController.swift
 //  EyeHub
 //
-//  Created by Nattapon Suwanno on 8/5/2567 BE.
+//  Created by Nattapon Suwanno on 9/5/2567 BE.
 //
 
 import UIKit
 
-struct HistoryBlindColorTest {
-    var testResult: String
-    var description: String
-}
+class EyeTestsHistoryViewController: UIViewController {
 
-class BlindColorTestSummaryViewController: UIViewController {
     @IBOutlet weak var navigationBarView: NavigationBar!
     @IBOutlet weak var suggestMessageBoxView: MessageBox!
     @IBOutlet weak var headingLabel: UILabel!
@@ -22,56 +18,16 @@ class BlindColorTestSummaryViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet var titleLabel: [UILabel]!
     @IBOutlet weak var collectionView: CollectionView!
-    var testResult: [BlindColorResult]
-    var lastTestResult: BlindColorResult
-    var countDict = [BlindColorResult: Int]()
     let collectionMenuList: [HospitalNearMeModel] = [HospitalNearMeModel(image: "hospitalNearMe1", title: "Lesik Center โรงพยาบาลพระราม 9", description: "99 ซอย โรงพยาบาลพระราม 9 ถนนพระราม 9 แขวงบางกะปิ เขตห้วยขวาง กรุงเทพมหานคร 10310"), HospitalNearMeModel(image: "hospitalNearMe", title: "โรงพยาบาลจักษุ รัตนิน", description: "80/1 ถ. สุขุมวิท แขวงคลองเตยเหนือ เขตวัฒนา กรุงเทพมหานคร 10110"), HospitalNearMeModel(image: "hospitalNearMe2", title: "โรงพยาบาลเมดพาร์ค - MedPark Hospital", description: "3333 ถ. พระรามที่ ๔ แขวงคลองเตย เขตคลองเตย กรุงเทพมหานคร 10110")]
-    
-    init(testResult: [BlindColorResult]) {
-        self.testResult = testResult
-
-        for item in testResult {
-            if let count = countDict[item] {
-                countDict[item] = count + 1
-            } else {
-                countDict[item] = 1
-            }
-        }
-
-        var maxCount = 0
-        var mostRepeatedCase: BlindColorResult?
-
-        for (key, value) in countDict {
-            if value > maxCount {
-                maxCount = value
-                mostRepeatedCase = key
-            }
-        }
-
-        if let mostRepeatedCase = mostRepeatedCase {
-            print("Case ที่ปรากฏซ้ำกันมากที่สุดคือ \(mostRepeatedCase) และปรากฏ \(maxCount) ครั้ง")
-        }
-        self.lastTestResult = mostRepeatedCase ?? .normal
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
         resultUpdate()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
-            UserDefaults.standard.set(lastTestResult.result, forKey: "titleHistoryBlindColorTest")
-            UserDefaults.standard.set(lastTestResult.description, forKey: "descriptionHistoryBlindColorTest")
-        }
     }
 }
 
-extension BlindColorTestSummaryViewController: NavigationBarDelegate {
+extension EyeTestsHistoryViewController: NavigationBarDelegate {
     func navigationBackButtonDidTap(_ navigation: NavigationBar) {
         if let navigationController = self.navigationController {
             navigationController.popToRootViewController(animated: true)
@@ -79,14 +35,14 @@ extension BlindColorTestSummaryViewController: NavigationBarDelegate {
     }
 }
 
-extension BlindColorTestSummaryViewController {
+extension EyeTestsHistoryViewController {
     func commonInit() {
         setUpUI()
     }
     
     func resultUpdate() {
-        resultLabel.text = lastTestResult.result
-        descriptionLabel.text = lastTestResult.description
+        resultLabel.text = UserDefaults.standard.string(forKey: "titleHistoryEyeTest") ?? "เกิดข้อผิดพลาด"
+        descriptionLabel.text = UserDefaults.standard.string(forKey: "descriptionHistoryEyeTest") ?? "เกิดข้อผิดพลาดกรุณาลองใหม่อีกครั้งในภายหลัง"
     }
     
     func setUpUI() {
@@ -97,7 +53,7 @@ extension BlindColorTestSummaryViewController {
         collectionView.setCollectionView(viewModels: collectionViewModel)
         
         self.view.backgroundColor = UIColor.white
-        coverImage.image = UIImage(named: "ColorIcon") ?? UIImage()
+        coverImage.image = UIImage(named: "SnellenIcon") ?? UIImage()
         resultLabel.font = FontFamily.Kanit.medium.font(size: 24)
         headingLabel.font = FontFamily.Kanit.medium.font(size: 16)
         descriptionLabel.font = FontFamily.Kanit.regular.font(size: 14)
@@ -111,8 +67,9 @@ extension BlindColorTestSummaryViewController {
 
         suggestMessageBoxView.setUp(type: .warning, title: "การทดสอบเป็นการคัดกรองแบบเบื้องต้นเท่านั้น", description: "เพื่อความถูกต้องแม่นยำมากขึ้นท่านสามารถปรึกษานักทัศนมาตรหรือแพทย์ผู้เชี่ยวชาญเพื่อตรวจอย่างละเอียด")
         contentView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
-        navigationBarView.set(title: "ผลการทดสอบ")
+        navigationBarView.set(title: "ผลการทดสอบสายตา")
         navigationBarView.delegate = self
     }
 }
+
 

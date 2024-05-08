@@ -27,7 +27,6 @@ class SnellenTestViewController: UIViewController {
     @IBOutlet weak var navigationBarView: NavigationBar!
     @IBOutlet var titleLabel: [UILabel]!
     @IBOutlet var descriptionLabel: [UILabel]!
-    private let answerViewController = AnswerBottomSheetViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()

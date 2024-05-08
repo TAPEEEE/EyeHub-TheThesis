@@ -36,10 +36,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8h-0f-ejn">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwr-qm-1UN">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="921.66666666666663"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="891.66666666666663"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="fWn-o6-rIi">
                                     <rect key="frame" x="18" y="8" width="357" height="435.33333333333331"/>
@@ -175,10 +175,10 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlm-yh-3Qv" userLabel="HistoryView">
-                                    <rect key="frame" x="16" y="633.33333333333337" width="361" height="248.33333333333337"/>
+                                    <rect key="frame" x="16" y="633.33333333333337" width="361" height="218.33333333333337"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Yo9-bb-tMt">
-                                            <rect key="frame" x="16" y="16" width="329" height="216.33333333333334"/>
+                                            <rect key="frame" x="16" y="16" width="329" height="186.33333333333334"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ผลการทดสอบ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xw-5L-AsZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="101" height="20.333333333333332"/>
@@ -187,10 +187,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1g-2K-7zY" customClass="TableView" customModule="EyeHub" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="36.333333333333258" width="329" height="180"/>
+                                                    <rect key="frame" x="0.0" y="36.333333333333258" width="329" height="150"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="180" id="1z1-ur-XRO"/>
+                                                        <constraint firstAttribute="height" constant="150" id="1z1-ur-XRO"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -234,7 +234,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="m8h-0f-ejn" secondAttribute="bottom" id="LOU-oa-uSW"/>
+                <constraint firstAttribute="bottom" secondItem="m8h-0f-ejn" secondAttribute="bottom" id="LOU-oa-uSW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="m8h-0f-ejn" secondAttribute="trailing" id="OOC-th-Cdd"/>
                 <constraint firstItem="m8h-0f-ejn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="P4U-iN-mGI"/>
                 <constraint firstItem="Lwr-qm-1UN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="vSX-ZZ-BcW"/>

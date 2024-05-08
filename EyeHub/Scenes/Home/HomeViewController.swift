@@ -71,14 +71,31 @@ extension HomeViewController: CollectionViewDelegate {
 extension HomeViewController: TableViewDelegate {
     func tableView(_ view: TableView, didSelectRowAr index: Int) {
         let menu = tableHistoryList[index]
+        let bottomSheet = HistoryBottomSheetViewController()
         let viewController = menu.viewController
             .init(
                 nibName: String(describing: menu.viewController.self),
                 bundle: .main
             )
-        navigationController?.pushViewController(viewController, animated: true)
+        // เดี๋ยวมา refactor
+        if menu.viewController == BlindColorHistoryViewController.self {
+            let title = UserDefaults.standard.string(forKey: "titleHistoryBlindColorTest")
+            if title == nil {
+                self.presentPanModal(bottomSheet)
+            } else {
+                navigationController?.pushViewController(viewController, animated: true)
+            }
+        } else if menu.viewController == EyeTestsHistoryViewController.self {
+            let title = UserDefaults.standard.string(forKey: "titleHistoryEyeTest")
+            if title == nil {
+                self.presentPanModal(bottomSheet)
+            } else {
+                navigationController?.pushViewController(viewController, animated: true)
+            }
+        }
     }
 }
+
 
 private extension HomeViewController {
     func commonInit() {

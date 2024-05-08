@@ -52,17 +52,20 @@ extension EyeTestsSummaryViewController {
     }
     
     func resultUpdate() {
-        switch testType {
-        case .snellen:
-            resultLabel.text = SnellenTestResult.evaluate(leftEyeScore: testResult["leftEye"]!, rightEyeScore: testResult["rightEye"]!).title
-            descriptionLabel.text = SnellenTestResult.evaluate(leftEyeScore: testResult["leftEye"]!, rightEyeScore: testResult["rightEye"]!).description
-        case .landoltC:
-            resultLabel.text = SnellenTestResult.evaluate(leftEyeScore: testResult["leftEye"]!, rightEyeScore: testResult["rightEye"]!).title
-            descriptionLabel.text = SnellenTestResult.evaluate(leftEyeScore: testResult["leftEye"]!, rightEyeScore: testResult["rightEye"]!).description
-        case .tumblingE:
-            resultLabel.text = SnellenTestResult.evaluate(leftEyeScore: testResult["leftEye"]!, rightEyeScore: testResult["rightEye"]!).title
-            descriptionLabel.text = SnellenTestResult.evaluate(leftEyeScore: testResult["leftEye"]!, rightEyeScore: testResult["rightEye"]!).description
+        var title = ""
+        var description = ""
+        
+        if let leftEyeScore = testResult["leftEye"], let rightEyeScore = testResult["rightEye"] {
+            let result = SnellenTestResult.evaluate(leftEyeScore: leftEyeScore, rightEyeScore: rightEyeScore)
+            title = result.title
+            description = result.description
+            
+            resultLabel.text = title
+            descriptionLabel.text = description
         }
+        
+        UserDefaults.standard.set(title, forKey: "titleHistoryEyeTest")
+        UserDefaults.standard.set(description, forKey: "descriptionHistoryEyeTest")
     }
     
     func setUpUI() {

@@ -1,13 +1,13 @@
 //
-//  HistoryViewController.swift
+//  AudiogramTestHistoryViewController.swift
 //  EyeHub
 //
-//  Created by Nattapon Suwanno on 2/4/2567 BE.
+//  Created by Nattapon Suwanno on 9/5/2567 BE.
 //
 
 import UIKit
 
-class HistoryViewController: UIViewController {
+class AudiogramTestHistoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

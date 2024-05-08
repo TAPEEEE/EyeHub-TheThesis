@@ -20,6 +20,8 @@ class CollectionViewAnswerBottomSheetViewController: UIViewController {
     weak var delegate: CollectionViewBottomSheetDelegate?
     var selectedIndexPath: IndexPath?
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var buttonView: PrimaryButton!
     override func viewDidLoad() {
@@ -71,6 +73,11 @@ extension CollectionViewAnswerBottomSheetViewController {
             action: #selector(demoVoice)
         )
         buttonView.addGestureRecognizer(buttontapGesture)
+        titleLabel.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
+        titleLabel.font = FontFamily.Kanit.medium.font(size: 18)
+        
+        descriptionLabel.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
+        descriptionLabel.font = FontFamily.Kanit.light.font(size: 16)
     }
     
     @objc func demoVoice() {
@@ -80,7 +87,7 @@ extension CollectionViewAnswerBottomSheetViewController {
 
 extension CollectionViewAnswerBottomSheetViewController: PanModalPresentable {
     var shortFormHeight: PanModalHeight {
-        return .contentHeight(520)
+        return .contentHeight(580)
     }
     
     var allowsDragToDismiss: Bool {

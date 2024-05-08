@@ -11,7 +11,7 @@ import UIKit
 enum TableViewList: Int, CaseIterable {
     case eye
     case vision
-    case ear
+//    case ear
     
     var cardCell: HistoryTableViewCellViewModel {
         switch self {
@@ -25,22 +25,22 @@ enum TableViewList: Int, CaseIterable {
                 title: "การทดสอบการมองเห็น",
                 icon: UIImage(named: "ColorTest16x16") ?? UIImage()
             )
-        case .ear:
-            return HistoryTableViewCellViewModel(
-                title: "การทดสอบสุขภาพหู",
-                icon: UIImage(named: "EarTest16x16") ?? UIImage()
-            )
+//        case .ear:
+//            return HistoryTableViewCellViewModel(
+//                title: "การทดสอบสุขภาพหู",
+//                icon: UIImage(named: "EarTest16x16") ?? UIImage()
+//            )
         }
     }
     
     var viewController: UIViewController.Type {
         switch self {
         case .eye:
-            return EyeTestsSummaryViewController.self
+            return EyeTestsHistoryViewController.self
         case .vision:
-            return HearingTestSummaryViewController.self
-        case .ear:
-            return HearingViewController.self
+            return BlindColorHistoryViewController.self
+//        case .ear:
+//            return HearingViewController.self
         }
     }
 }

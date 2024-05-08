@@ -70,6 +70,7 @@ class ToneGenerator {
 //        }
 
     }
+    
     func startChangingValue() {
         timer = Timer.scheduledTimer(withTimeInterval: Double(duration) / Double(targetValue), repeats: true) { [weak self] timer in
             guard let self = self else {

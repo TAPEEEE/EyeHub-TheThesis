@@ -20,6 +20,8 @@ class AnswerBottomSheetViewController: UIViewController {
     var selectedIndexPath: IndexPath?
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonView: PrimaryButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,11 @@ class AnswerBottomSheetViewController: UIViewController {
         tableView.registerNib(for: BottomSheetTableViewCell.self)
         buttonView.setUp(.textOnly(text: "ยืนยันคำตอบ"), type: .primary, size: .large)
         buttonView.buttonState = .disable
+        titleLabel.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
+        titleLabel.font = FontFamily.Kanit.medium.font(size: 18)
+        
+        descriptionLabel.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
+        descriptionLabel.font = FontFamily.Kanit.light.font(size: 16)
         let buttontapGesture = UITapGestureRecognizer(
             target: self,
             action: #selector(demoVoice)
@@ -67,7 +74,7 @@ extension AnswerBottomSheetViewController: UITableViewDelegate, UITableViewDataS
 
 extension AnswerBottomSheetViewController: PanModalPresentable {
     var shortFormHeight: PanModalHeight {
-        return .contentHeight(520)
+        return .contentHeight(580)
     }
     
     var allowsDragToDismiss: Bool {

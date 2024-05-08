@@ -8,10 +8,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomSheetViewController" customModule="EyeHub" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnswerBottomSheetViewController" customModule="EyeHub" customModuleProvider="target">
             <connections>
                 <outlet property="buttonView" destination="nQD-4P-4ND" id="EfL-Dg-Dm7"/>
+                <outlet property="descriptionLabel" destination="0Vb-WL-vLc" id="jUb-GC-08U"/>
                 <outlet property="tableView" destination="7kW-Pg-0Vh" id="odv-Ag-5Ny"/>
+                <outlet property="titleLabel" destination="Tme-bA-QZJ" id="bIs-qV-j84"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7kW-Pg-0Vh">
-                    <rect key="frame" x="8" y="36" width="377" height="360"/>
+                    <rect key="frame" x="8" y="28" width="377" height="360"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="360" id="G2m-oq-4Yf"/>
@@ -32,16 +34,36 @@
                     </connections>
                 </tableView>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="361" placeholderIntrinsicHeight="48" translatesAutoresizingMaskIntoConstraints="NO" id="nQD-4P-4ND" customClass="PrimaryButton" customModule="EyeHub" customModuleProvider="target">
-                    <rect key="frame" x="24" y="456" width="345" height="48"/>
+                    <rect key="frame" x="24" y="521" width="345" height="48"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jjx-41-c83">
+                    <rect key="frame" x="16" y="436" width="361" height="61"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เลือกคำตอบของท่าน" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tme-bA-QZJ">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เลือกคำตอบที่ตรงหรือใกล้เคียงกับรูปภาพที่ท่านมองเห็น" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vb-WL-vLc">
+                            <rect key="frame" x="0.0" y="20.333333333333311" width="361" height="40.666666666666657"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="nQD-4P-4ND" firstAttribute="top" secondItem="7kW-Pg-0Vh" secondAttribute="bottom" constant="60" id="Bs9-Dt-WQb"/>
+                <constraint firstItem="nQD-4P-4ND" firstAttribute="top" secondItem="Jjx-41-c83" secondAttribute="bottom" constant="24" id="BYw-02-VkX"/>
                 <constraint firstItem="7kW-Pg-0Vh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ERP-VI-eiX"/>
-                <constraint firstItem="7kW-Pg-0Vh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="36" id="Sdx-Yo-qS8"/>
+                <constraint firstItem="Jjx-41-c83" firstAttribute="top" secondItem="7kW-Pg-0Vh" secondAttribute="bottom" constant="48" id="L7v-6Q-hxC"/>
+                <constraint firstItem="7kW-Pg-0Vh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="28" id="Sdx-Yo-qS8"/>
+                <constraint firstAttribute="trailing" secondItem="Jjx-41-c83" secondAttribute="trailing" constant="16" id="WJI-Tt-ZgT"/>
                 <constraint firstAttribute="trailing" secondItem="nQD-4P-4ND" secondAttribute="trailing" constant="24" id="ZG0-1h-QgM"/>
+                <constraint firstItem="Jjx-41-c83" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="fi4-51-1DP"/>
                 <constraint firstItem="nQD-4P-4ND" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="hSY-ze-fMn"/>
                 <constraint firstAttribute="trailing" secondItem="7kW-Pg-0Vh" secondAttribute="trailing" constant="8" id="zKL-H8-gSg"/>
             </constraints>
