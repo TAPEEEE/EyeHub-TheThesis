@@ -13,7 +13,7 @@ class LandoltCTestViewController: UIViewController {
     var currentTestIndex = 0
     var timer: Timer?
     var audioPlayer: AVAudioPlayer?
-    var totalTime = 1
+    var totalTime = 3
     var currentTime = 0
     var questionArr: [EandCModel] = []
     var correctAnswer: Int?
@@ -70,7 +70,9 @@ private extension LandoltCTestViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
             startTestWithDelay()
         }
+        configureAudioSession()
     }
+    
     
     private func updateTestProgress() {
         currentTestIndex += 1
@@ -121,6 +123,7 @@ private extension LandoltCTestViewController {
     }
     
     func startTestWithDelay() {
+        testLabel.text = "C"
         if currentTestIndex == testData.count && currentKey == "rightEye" {
             navigateToSummary()
             return
@@ -171,8 +174,8 @@ private extension LandoltCTestViewController {
     
     func switchToRightEyeTest() {
         currentKey = "rightEye"
-        //        testStateLabel.text = "สลับข้าง"
-        //        testStateLabel.font = FontFamily.Kanit.medium.font(size: 56)
+        testLabel.text = "สลับข้าง"
+        testLabel.font = FontFamily.Kanit.medium.font(size: 56)
         score = 0
         currentTestIndex = 0
     }
@@ -196,8 +199,8 @@ private extension LandoltCTestViewController {
         testStackView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
         self.view.backgroundColor =  UIColor.white
         contentView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
-        //        testStateLabel.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
-        //        testStateLabel.font = FontFamily.Kanit.medium.font(size: 40)
+        testLabel.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
+        testLabel.font = FontFamily.Kanit.medium.font(size: 40)
         progressBarView.tintColor = UIColor(cgColor: EyeHubColor.primaryColor)
         
         titleLabel.forEach {

@@ -51,8 +51,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USc-eI-XUN">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="561"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4e-QZ-nlQ">
-                                    <rect key="frame" x="166.66666666666666" y="233.33333333333329" width="60" height="94.666666666666657"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ทดสอบตาข้างซ้าย" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4e-QZ-nlQ">
+                                    <rect key="frame" x="-95.666666666666714" y="233.33333333333329" width="584.33333333333337" height="94.666666666666657"/>
                                     <fontDescription key="fontDescription" name="Inter-Regular_Black" family="Inter" pointSize="78"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>

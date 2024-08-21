@@ -12,7 +12,7 @@ class SnellenTestViewController: UIViewController {
     let testData: [SnellenTestData] = SnellenTestData.allCases
     var currentTestIndex = 0
     var timer: Timer?
-    var totalTime = 1
+    var totalTime = 3
     var currentTime = 0
     var questionArr: [String] = []
     var correctAnswer: Int?

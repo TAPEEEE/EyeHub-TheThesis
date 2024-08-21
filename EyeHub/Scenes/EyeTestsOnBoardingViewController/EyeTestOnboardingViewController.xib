@@ -11,11 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EyeTestOnboardingViewController" customModule="EyeHub" customModuleProvider="target">
             <connections>
-                <outlet property="buttonView" destination="xeA-Fh-ZQ2" id="nNr-4k-Wba"/>
-                <outlet property="contentView" destination="DNn-t9-ilf" id="kcq-Mg-hXN"/>
-                <outlet property="descriptionLabel" destination="RhF-bN-B29" id="IHV-d8-HHe"/>
-                <outlet property="navvigationBar" destination="p80-Yz-UHL" id="gex-aW-nkN"/>
-                <outlet property="titleLabel" destination="L0j-1Q-55q" id="X3b-eC-jrr"/>
+                <outlet property="buttonView" destination="xeA-Fh-ZQ2" id="tpz-eH-gd6"/>
+                <outlet property="cameraView" destination="HQC-3n-URS" id="OY8-TE-JCw"/>
+                <outlet property="contentView" destination="DNn-t9-ilf" id="wFH-3C-DYD"/>
+                <outlet property="descriptionLabel" destination="RhF-bN-B29" id="pfL-Ia-tDp"/>
+                <outlet property="navigationBar" destination="p80-Yz-UHL" id="xKz-aJ-ZSb"/>
+                <outlet property="titleLabel" destination="L0j-1Q-55q" id="tcK-hd-8f8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,6 +28,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNn-t9-ilf">
                     <rect key="frame" x="0.0" y="99" width="393" height="753"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQC-3n-URS">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="483"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZh-6j-zT7" userLabel="BottomSheet" customClass="BlankBottomSheet" customModule="EyeHub" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="453" width="393" height="300"/>
                             <subviews>
@@ -84,32 +89,16 @@
                                 <constraint firstAttribute="bottom" secondItem="xeA-Fh-ZQ2" secondAttribute="bottom" constant="40" id="xCh-YE-CgI"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ML9-fu-8cU" userLabel="CameraView">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="453"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiY-ZD-7RN">
-                                    <rect key="frame" x="167" y="216.33333333333331" width="59.333333333333343" height="20.333333333333343"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstItem="kiY-ZD-7RN" firstAttribute="centerY" secondItem="ML9-fu-8cU" secondAttribute="centerY" id="Jmg-Vb-cUt"/>
-                                <constraint firstItem="kiY-ZD-7RN" firstAttribute="centerX" secondItem="ML9-fu-8cU" secondAttribute="centerX" id="lB5-IG-CEn"/>
-                            </constraints>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="OZh-6j-zT7" secondAttribute="bottom" id="1bP-Cw-AC0"/>
                         <constraint firstItem="OZh-6j-zT7" firstAttribute="leading" secondItem="DNn-t9-ilf" secondAttribute="leading" id="2ER-hv-eQK"/>
                         <constraint firstAttribute="trailing" secondItem="OZh-6j-zT7" secondAttribute="trailing" id="6LO-Ud-39V"/>
-                        <constraint firstItem="OZh-6j-zT7" firstAttribute="top" secondItem="ML9-fu-8cU" secondAttribute="bottom" id="6hR-Ys-wjG"/>
-                        <constraint firstAttribute="trailing" secondItem="ML9-fu-8cU" secondAttribute="trailing" id="MP2-g4-Gs6"/>
-                        <constraint firstItem="ML9-fu-8cU" firstAttribute="leading" secondItem="DNn-t9-ilf" secondAttribute="leading" id="Uc3-r4-ijZ"/>
-                        <constraint firstItem="ML9-fu-8cU" firstAttribute="top" secondItem="DNn-t9-ilf" secondAttribute="top" id="f5P-7R-jqz"/>
+                        <constraint firstItem="HQC-3n-URS" firstAttribute="top" secondItem="DNn-t9-ilf" secondAttribute="top" id="7Fd-lE-YTg"/>
+                        <constraint firstItem="HQC-3n-URS" firstAttribute="leading" secondItem="DNn-t9-ilf" secondAttribute="leading" id="Bl2-gs-Vf7"/>
+                        <constraint firstItem="OZh-6j-zT7" firstAttribute="top" secondItem="HQC-3n-URS" secondAttribute="bottom" constant="-30" id="gK2-uT-ryJ"/>
+                        <constraint firstAttribute="trailing" secondItem="HQC-3n-URS" secondAttribute="trailing" id="oXc-Hp-NWz"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="p80-Yz-UHL" customClass="NavigationBar" customModule="EyeHub" customModuleProvider="target">

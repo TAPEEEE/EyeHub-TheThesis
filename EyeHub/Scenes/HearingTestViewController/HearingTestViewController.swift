@@ -37,6 +37,7 @@ class HearingTestViewController: UIViewController {
             buttonView.setTitleColor(UIColor.init(white: 1, alpha: 1), for: .normal)
         }
     }
+    
     @IBOutlet var titleLabel: [UILabel]!
     @IBOutlet var descriptionLabel: [UILabel]!
     
@@ -45,6 +46,7 @@ class HearingTestViewController: UIViewController {
         buttonView.isEnabled = false
         startTestWithDelay()
         setUpUI()
+        configureAudioSession()
     }
     
    
@@ -89,7 +91,7 @@ class HearingTestViewController: UIViewController {
     }
     
     func startTestWithDelay() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
             buttonView.isEnabled = true
             let frequency = testFrequencies[currentTestIndex].stringValue
             testStateLabel.text = frequency + " Hz"

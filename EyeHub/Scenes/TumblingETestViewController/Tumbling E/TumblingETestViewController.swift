@@ -13,7 +13,7 @@ class TumblingETestViewController: UIViewController {
     var currentTestIndex = 0
     var timer: Timer?
     var audioPlayer: AVAudioPlayer?
-    var totalTime = 1
+    var totalTime = 3
     var currentTime = 0
     var questionArr: [EandCModel] = []
     var correctAnswer: Int?
@@ -33,6 +33,7 @@ class TumblingETestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
+        configureAudioSession()
     }
 }
 
@@ -121,6 +122,7 @@ private extension TumblingETestViewController {
     }
     
     func startTestWithDelay() {
+        testLabel.text = "E"
         if currentTestIndex == testData.count && currentKey == "rightEye" {
             navigateToSummary()
             return
@@ -168,8 +170,8 @@ private extension TumblingETestViewController {
     
     func switchToRightEyeTest() {
         currentKey = "rightEye"
-        //        testStateLabel.text = "สลับข้าง"
-        //        testStateLabel.font = FontFamily.Kanit.medium.font(size: 56)
+        testLabel.text = "สลับข้าง"
+        testLabel.font = FontFamily.Kanit.medium.font(size: 56)
         score = 0
         currentTestIndex = 0
     }
@@ -193,8 +195,8 @@ private extension TumblingETestViewController {
         testStackView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
         self.view.backgroundColor =  UIColor.white
         contentView.backgroundColor = UIColor(cgColor: EyeHubColor.backgroundGreyColor)
-        //        testStateLabel.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
-        //        testStateLabel.font = FontFamily.Kanit.medium.font(size: 40)
+        testLabel.textColor = UIColor(cgColor: EyeHubColor.textBaseColor)
+        testLabel.font = FontFamily.Kanit.medium.font(size: 40)
         progressBarView.tintColor = UIColor(cgColor: EyeHubColor.primaryColor)
         
         titleLabel.forEach {

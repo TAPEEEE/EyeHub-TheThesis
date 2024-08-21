@@ -9,8 +9,14 @@
 /* Begin PBXBuildFile section */
 		2D39C8232BD86AAC001FDE50 /* AnswerBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D39C8212BD86AAC001FDE50 /* AnswerBottomSheetViewController.swift */; };
 		2D39C8242BD86AAC001FDE50 /* AnswerBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D39C8222BD86AAC001FDE50 /* AnswerBottomSheetViewController.xib */; };
+		2D41B2F82C2489A3000E4EF3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D41B2F72C2489A3000E4EF3 /* GoogleService-Info.plist */; };
 		2D4AC0062B67E48500D5F977 /* Sound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4AC0052B67E48500D5F977 /* Sound1.mp3 */; };
 		2D4AC0082B68182900D5F977 /* Sound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4AC0072B68182900D5F977 /* Sound2.mp3 */; };
+		2D4C9F272BECB12900749B87 /* 4000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4C9F222BECB12800749B87 /* 4000.mp3 */; };
+		2D4C9F282BECB12900749B87 /* 500.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4C9F232BECB12900749B87 /* 500.mp3 */; };
+		2D4C9F292BECB12900749B87 /* 1000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4C9F242BECB12900749B87 /* 1000.mp3 */; };
+		2D4C9F2A2BECB12900749B87 /* 2000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4C9F252BECB12900749B87 /* 2000.mp3 */; };
+		2D4C9F2D2BECB17600749B87 /* 8000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D4C9F2C2BECB17600749B87 /* 8000.mp3 */; };
 		2D4D64FB2BBB403600163504 /* OnbaordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D64FA2BBB403600163504 /* OnbaordingViewModel.swift */; };
 		2D4D64FE2BBB416800163504 /* BlindColorHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D64FC2BBB416800163504 /* BlindColorHistoryViewController.swift */; };
 		2D4D64FF2BBB416800163504 /* BlindColorHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4D64FD2BBB416800163504 /* BlindColorHistoryViewController.xib */; };
@@ -49,10 +55,6 @@
 		2D60346F2BEBFB560049214D /* HistoryBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D60346D2BEBFB560049214D /* HistoryBottomSheetViewController.xib */; };
 		2D6034722BEC12F60049214D /* EyeTestOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6034702BEC12F60049214D /* EyeTestOnboardingViewController.swift */; };
 		2D6034732BEC12F60049214D /* EyeTestOnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6034712BEC12F60049214D /* EyeTestOnboardingViewController.xib */; };
-		2D6A87092BCECEA8006E2D41 /* 4000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87052BCECEA8006E2D41 /* 4000.mp3 */; };
-		2D6A870A2BCECEA8006E2D41 /* 8000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87062BCECEA8006E2D41 /* 8000.mp3 */; };
-		2D6A870B2BCECEA8006E2D41 /* 1000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87072BCECEA8006E2D41 /* 1000.mp3 */; };
-		2D6A870C2BCECEA8006E2D41 /* 2000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87082BCECEA8006E2D41 /* 2000.mp3 */; };
 		2D6A870F2BCED936006E2D41 /* MessageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A870E2BCED936006E2D41 /* MessageBox.swift */; };
 		2D6A87112BCED943006E2D41 /* MessageBox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A87102BCED943006E2D41 /* MessageBox.xib */; };
 		2D6A87142BCF0C0E006E2D41 /* EarTestResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A87132BCF0C0E006E2D41 /* EarTestResultList.swift */; };
@@ -67,6 +69,8 @@
 		2D8F3A8F2BA36156009B675D /* HearingTestSummaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D8F3A8D2BA36156009B675D /* HearingTestSummaryViewController.xib */; };
 		2D91A3932B6AEE7700CE086C /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91A3922B6AEE7700CE086C /* CollectionViewModel.swift */; };
 		2D96EB652BD05EF60082E315 /* headPhone.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D96EB642BD05EF60082E315 /* headPhone.json */; };
+		2DA03FEF2C74DAF40043A399 /* AVAudio+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA03FEE2C74DAF40043A399 /* AVAudio+Extension.swift */; };
+		2DA03FF12C74DBD30043A399 /* distaance.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2DA03FF02C74DBD30043A399 /* distaance.mp3 */; };
 		2DA1F7C42BD568D2007B3BF7 /* HearingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1F7C32BD568D2007B3BF7 /* HearingViewModel.swift */; };
 		2DA1F7C82BD572EB007B3BF7 /* SnellenTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1F7C72BD572EB007B3BF7 /* SnellenTestData.swift */; };
 		2DA1F7CB2BD84422007B3BF7 /* SnellenTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1F7C92BD84422007B3BF7 /* SnellenTestViewController.swift */; };
@@ -121,6 +125,8 @@
 		2DB974C12B6681BC009BE2C8 /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974BF2B6681BC009BE2C8 /* OnBoardingViewController.xib */; };
 		2DB974C72B67CB9F009BE2C8 /* VoiceConceptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB974C52B67CB9F009BE2C8 /* VoiceConceptViewController.swift */; };
 		2DB974C82B67CB9F009BE2C8 /* VoiceConceptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB974C62B67CB9F009BE2C8 /* VoiceConceptViewController.xib */; };
+		2DCA35BE2C74BB6E00A9B62E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCA35BD2C74BB6E00A9B62E /* CameraView.swift */; };
+		2DCA35C02C74BB7C00A9B62E /* CameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DCA35BF2C74BB7C00A9B62E /* CameraView.xib */; };
 		2DDF31EA2BE57C5400E15D4B /* firstEyeTest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2DDF31E82BE57C5400E15D4B /* firstEyeTest.mp3 */; };
 		2DDF31EB2BE57C5400E15D4B /* seccondEyeTest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2DDF31E92BE57C5400E15D4B /* seccondEyeTest.mp3 */; };
 		2DDF31ED2BE642C000E15D4B /* Inter-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDF31EC2BE642C000E15D4B /* Inter-VariableFont.ttf */; };
@@ -133,9 +139,7 @@
 		2DEB15662BC1D026003FB88C /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB15652BC1D026003FB88C /* AudioController.swift */; };
 		2DEB15952BC2EBA5003FB88C /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB15942BC2EBA5003FB88C /* OnBoarding.swift */; };
 		2DEB15972BC2EBB2003FB88C /* OnBoarding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB15962BC2EBB2003FB88C /* OnBoarding.xib */; };
-		2DEB159A2BC44210003FB88C /* 500.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB15992BC44210003FB88C /* 500.mp3 */; };
 		2DEB159D2BC4583E003FB88C /* TestFrequencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB159C2BC4583E003FB88C /* TestFrequencies.swift */; };
-		2DEB15A12BCC168F003FB88C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB15A02BCC168F003FB88C /* GoogleService-Info.plist */; };
 		2DEB15A32BCECB34003FB88C /* TestResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB15A22BCECB34003FB88C /* TestResults.swift */; };
 		2DF334632B6AC0A50063944B /* HomeMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334622B6AC0A50063944B /* HomeMenuButton.swift */; };
 		2DF334652B6AC0AE0063944B /* HomeMenuButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF334642B6AC0AE0063944B /* HomeMenuButton.xib */; };
@@ -149,14 +153,20 @@
 		2DF3347B2B6AD7910063944B /* HomeScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF334792B6AD7910063944B /* HomeScreenCollectionViewCell.swift */; };
 		2DF3347C2B6AD7910063944B /* HomeScreenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF3347A2B6AD7910063944B /* HomeScreenCollectionViewCell.xib */; };
 		2DFEA6B62BAA0A67003D9337 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFEA6B52BAA0A67003D9337 /* OnboardingModel.swift */; };
-		DE0F44EA3DAA79C7B7D5C951 /* Pods_EyeHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D76E8DB1A5C2B437BF40323E /* Pods_EyeHub.framework */; };
+		837CD2E0479E8C1CECE1C771 /* Pods_EyeHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC03F0A65536A1B5414D03FD /* Pods_EyeHub.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D39C8212BD86AAC001FDE50 /* AnswerBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerBottomSheetViewController.swift; sourceTree = "<group>"; };
 		2D39C8222BD86AAC001FDE50 /* AnswerBottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerBottomSheetViewController.xib; sourceTree = "<group>"; };
+		2D41B2F72C2489A3000E4EF3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D4AC0052B67E48500D5F977 /* Sound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound1.mp3; sourceTree = "<group>"; };
 		2D4AC0072B68182900D5F977 /* Sound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sound2.mp3; sourceTree = "<group>"; };
+		2D4C9F222BECB12800749B87 /* 4000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4000.mp3; sourceTree = "<group>"; };
+		2D4C9F232BECB12900749B87 /* 500.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 500.mp3; sourceTree = "<group>"; };
+		2D4C9F242BECB12900749B87 /* 1000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1000.mp3; sourceTree = "<group>"; };
+		2D4C9F252BECB12900749B87 /* 2000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2000.mp3; sourceTree = "<group>"; };
+		2D4C9F2C2BECB17600749B87 /* 8000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8000.mp3; sourceTree = "<group>"; };
 		2D4D64FA2BBB403600163504 /* OnbaordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbaordingViewModel.swift; sourceTree = "<group>"; };
 		2D4D64FC2BBB416800163504 /* BlindColorHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindColorHistoryViewController.swift; sourceTree = "<group>"; };
 		2D4D64FD2BBB416800163504 /* BlindColorHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlindColorHistoryViewController.xib; sourceTree = "<group>"; };
@@ -195,10 +205,6 @@
 		2D60346D2BEBFB560049214D /* HistoryBottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryBottomSheetViewController.xib; sourceTree = "<group>"; };
 		2D6034702BEC12F60049214D /* EyeTestOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTestOnboardingViewController.swift; sourceTree = "<group>"; };
 		2D6034712BEC12F60049214D /* EyeTestOnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EyeTestOnboardingViewController.xib; sourceTree = "<group>"; };
-		2D6A87052BCECEA8006E2D41 /* 4000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4000.mp3; sourceTree = "<group>"; };
-		2D6A87062BCECEA8006E2D41 /* 8000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8000.mp3; sourceTree = "<group>"; };
-		2D6A87072BCECEA8006E2D41 /* 1000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1000.mp3; sourceTree = "<group>"; };
-		2D6A87082BCECEA8006E2D41 /* 2000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2000.mp3; sourceTree = "<group>"; };
 		2D6A870E2BCED936006E2D41 /* MessageBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBox.swift; sourceTree = "<group>"; };
 		2D6A87102BCED943006E2D41 /* MessageBox.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageBox.xib; sourceTree = "<group>"; };
 		2D6A87132BCF0C0E006E2D41 /* EarTestResultList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarTestResultList.swift; sourceTree = "<group>"; };
@@ -213,6 +219,8 @@
 		2D8F3A8D2BA36156009B675D /* HearingTestSummaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HearingTestSummaryViewController.xib; sourceTree = "<group>"; };
 		2D91A3922B6AEE7700CE086C /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		2D96EB642BD05EF60082E315 /* headPhone.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = headPhone.json; sourceTree = "<group>"; };
+		2DA03FEE2C74DAF40043A399 /* AVAudio+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAudio+Extension.swift"; sourceTree = "<group>"; };
+		2DA03FF02C74DBD30043A399 /* distaance.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = distaance.mp3; sourceTree = "<group>"; };
 		2DA1F7C32BD568D2007B3BF7 /* HearingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearingViewModel.swift; sourceTree = "<group>"; };
 		2DA1F7C72BD572EB007B3BF7 /* SnellenTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnellenTestData.swift; sourceTree = "<group>"; };
 		2DA1F7C92BD84422007B3BF7 /* SnellenTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnellenTestViewController.swift; sourceTree = "<group>"; };
@@ -269,6 +277,8 @@
 		2DB974BF2B6681BC009BE2C8 /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		2DB974C52B67CB9F009BE2C8 /* VoiceConceptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceConceptViewController.swift; sourceTree = "<group>"; };
 		2DB974C62B67CB9F009BE2C8 /* VoiceConceptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoiceConceptViewController.xib; sourceTree = "<group>"; };
+		2DCA35BD2C74BB6E00A9B62E /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		2DCA35BF2C74BB7C00A9B62E /* CameraView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraView.xib; sourceTree = "<group>"; };
 		2DDF31E82BE57C5400E15D4B /* firstEyeTest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = firstEyeTest.mp3; sourceTree = "<group>"; };
 		2DDF31E92BE57C5400E15D4B /* seccondEyeTest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = seccondEyeTest.mp3; sourceTree = "<group>"; };
 		2DDF31EC2BE642C000E15D4B /* Inter-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont.ttf"; sourceTree = "<group>"; };
@@ -282,9 +292,7 @@
 		2DEB15942BC2EBA5003FB88C /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
 		2DEB15962BC2EBB2003FB88C /* OnBoarding.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoarding.xib; sourceTree = "<group>"; };
 		2DEB15982BC32EDD003FB88C /* EyeHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EyeHub.entitlements; sourceTree = "<group>"; };
-		2DEB15992BC44210003FB88C /* 500.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 500.mp3; sourceTree = "<group>"; };
 		2DEB159C2BC4583E003FB88C /* TestFrequencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFrequencies.swift; sourceTree = "<group>"; };
-		2DEB15A02BCC168F003FB88C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DEB15A22BCECB34003FB88C /* TestResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResults.swift; sourceTree = "<group>"; };
 		2DF334622B6AC0A50063944B /* HomeMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuButton.swift; sourceTree = "<group>"; };
 		2DF334642B6AC0AE0063944B /* HomeMenuButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMenuButton.xib; sourceTree = "<group>"; };
@@ -298,9 +306,9 @@
 		2DF334792B6AD7910063944B /* HomeScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		2DF3347A2B6AD7910063944B /* HomeScreenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenCollectionViewCell.xib; sourceTree = "<group>"; };
 		2DFEA6B52BAA0A67003D9337 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
-		5D0A4707885B1B8A1836066E /* Pods-EyeHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeHub.debug.xcconfig"; path = "Target Support Files/Pods-EyeHub/Pods-EyeHub.debug.xcconfig"; sourceTree = "<group>"; };
-		D76E8DB1A5C2B437BF40323E /* Pods_EyeHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EyeHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E916BFFA8F561DF8DDC4B198 /* Pods-EyeHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeHub.release.xcconfig"; path = "Target Support Files/Pods-EyeHub/Pods-EyeHub.release.xcconfig"; sourceTree = "<group>"; };
+		8475A4B7FF7B86E65A3F975E /* Pods-EyeHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeHub.debug.xcconfig"; path = "Target Support Files/Pods-EyeHub/Pods-EyeHub.debug.xcconfig"; sourceTree = "<group>"; };
+		D23F3676A794579889D09A1C /* Pods-EyeHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyeHub.release.xcconfig"; path = "Target Support Files/Pods-EyeHub/Pods-EyeHub.release.xcconfig"; sourceTree = "<group>"; };
+		FC03F0A65536A1B5414D03FD /* Pods_EyeHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EyeHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,7 +316,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE0F44EA3DAA79C7B7D5C951 /* Pods_EyeHub.framework in Frameworks */,
+				837CD2E0479E8C1CECE1C771 /* Pods_EyeHub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,7 +662,7 @@
 				2DB974042B657F16009BE2C8 /* EyeHub */,
 				2DB974032B657F16009BE2C8 /* Products */,
 				CA7D8D5D75254273230AFD2F /* Pods */,
-				9ED4E67478E51476DB408BBA /* Frameworks */,
+				4CE1A38DA770C62DC6AD38E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -678,7 +686,7 @@
 				2DB9741A2B657FBD009BE2C8 /* Base */,
 				2DB974192B657FAF009BE2C8 /* DesignSystem */,
 				2DB974052B657F16009BE2C8 /* AppDelegate.swift */,
-				2DEB15A02BCC168F003FB88C /* GoogleService-Info.plist */,
+				2D41B2F72C2489A3000E4EF3 /* GoogleService-Info.plist */,
 				2DB9740E2B657F17009BE2C8 /* Assets.xcassets */,
 				2DB974102B657F17009BE2C8 /* LaunchScreen.storyboard */,
 				2DB974132B657F17009BE2C8 /* Info.plist */,
@@ -735,6 +743,7 @@
 		2DB9741D2B65807E009BE2C8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2DCA35BC2C74BB4800A9B62E /* Camera */,
 				2D6A870D2BCED91D006E2D41 /* MessageBox */,
 				2D4D64F82BBB400B00163504 /* OnboardingView */,
 				2D708EDA2BB8B26A006146ED /* TableView */,
@@ -771,6 +780,7 @@
 				2DB974B52B666DB5009BE2C8 /* UIFonts+Extension.swift */,
 				2DF334752B6AD4750063944B /* UICollectionView+Extensions.swift */,
 				2D708EE82BB8B92A006146ED /* UITableView+Extension.swift */,
+				2DA03FEE2C74DAF40043A399 /* AVAudio+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -778,14 +788,15 @@
 		2DB974262B6581BB009BE2C8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2DA03FF02C74DBD30043A399 /* distaance.mp3 */,
 				2D4AC0052B67E48500D5F977 /* Sound1.mp3 */,
-				2DEB15992BC44210003FB88C /* 500.mp3 */,
-				2D6A87072BCECEA8006E2D41 /* 1000.mp3 */,
 				2DDF31E82BE57C5400E15D4B /* firstEyeTest.mp3 */,
 				2DDF31E92BE57C5400E15D4B /* seccondEyeTest.mp3 */,
-				2D6A87082BCECEA8006E2D41 /* 2000.mp3 */,
-				2D6A87052BCECEA8006E2D41 /* 4000.mp3 */,
-				2D6A87062BCECEA8006E2D41 /* 8000.mp3 */,
+				2D4C9F232BECB12900749B87 /* 500.mp3 */,
+				2D4C9F242BECB12900749B87 /* 1000.mp3 */,
+				2D4C9F252BECB12900749B87 /* 2000.mp3 */,
+				2D4C9F222BECB12800749B87 /* 4000.mp3 */,
+				2D4C9F2C2BECB17600749B87 /* 8000.mp3 */,
 				2D96EB642BD05EF60082E315 /* headPhone.json */,
 				2D6034432BE6B2BC0049214D /* VolumeUpButton.json */,
 				2DA4A6182B7E31A400CC2380 /* success.json */,
@@ -897,6 +908,15 @@
 			path = VoiceConceptViewController;
 			sourceTree = "<group>";
 		};
+		2DCA35BC2C74BB4800A9B62E /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				2DCA35BD2C74BB6E00A9B62E /* CameraView.swift */,
+				2DCA35BF2C74BB7C00A9B62E /* CameraView.xib */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 		2DDF31EE2BE65A0000E15D4B /* Tumbling E */ = {
 			isa = PBXGroup;
 			children = (
@@ -1004,10 +1024,10 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		9ED4E67478E51476DB408BBA /* Frameworks */ = {
+		4CE1A38DA770C62DC6AD38E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D76E8DB1A5C2B437BF40323E /* Pods_EyeHub.framework */,
+				FC03F0A65536A1B5414D03FD /* Pods_EyeHub.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1015,8 +1035,8 @@
 		CA7D8D5D75254273230AFD2F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5D0A4707885B1B8A1836066E /* Pods-EyeHub.debug.xcconfig */,
-				E916BFFA8F561DF8DDC4B198 /* Pods-EyeHub.release.xcconfig */,
+				8475A4B7FF7B86E65A3F975E /* Pods-EyeHub.debug.xcconfig */,
+				D23F3676A794579889D09A1C /* Pods-EyeHub.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1028,11 +1048,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DB974162B657F17009BE2C8 /* Build configuration list for PBXNativeTarget "EyeHub" */;
 			buildPhases = (
-				2FF9F1F435B94C7CEB3271E3 /* [CP] Check Pods Manifest.lock */,
+				84B9EBEB86C59BFC59EF2C43 /* [CP] Check Pods Manifest.lock */,
 				2DB973FE2B657F16009BE2C8 /* Sources */,
 				2DB973FF2B657F16009BE2C8 /* Frameworks */,
 				2DB974002B657F16009BE2C8 /* Resources */,
-				0454D74CCE73BC01E2C2D89A /* [CP] Embed Pods Frameworks */,
+				0830869B056A8F75C247FF86 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1086,6 +1106,7 @@
 				2DB974A72B666C87009BE2C8 /* Kanit-ExtraLight.ttf in Resources */,
 				2DF3347C2B6AD7910063944B /* HomeScreenCollectionViewCell.xib in Resources */,
 				2DB974B22B666C87009BE2C8 /* Kanit-Black.ttf in Resources */,
+				2D4C9F2D2BECB17600749B87 /* 8000.mp3 in Resources */,
 				2D4AC0082B68182900D5F977 /* Sound2.mp3 in Resources */,
 				2D561DE82BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.xib in Resources */,
 				2DDF31EB2BE57C5400E15D4B /* seccondEyeTest.mp3 in Resources */,
@@ -1100,18 +1121,20 @@
 				2DB974A92B666C87009BE2C8 /* Kanit-LightItalic.ttf in Resources */,
 				2D561E0D2BE4174E004CA1C3 /* LandoltCTestViewController.xib in Resources */,
 				2DB974AE2B666C87009BE2C8 /* Kanit-Regular.ttf in Resources */,
-				2D6A870A2BCECEA8006E2D41 /* 8000.mp3 in Resources */,
+				2DA03FF12C74DBD30043A399 /* distaance.mp3 in Resources */,
 				2DDF31F52BE65B5D00E15D4B /* TumblingETestViewController.xib in Resources */,
 				2D6034732BEC12F60049214D /* EyeTestOnboardingViewController.xib in Resources */,
 				2DA4A6192B7E31A400CC2380 /* success.json in Resources */,
+				2D4C9F292BECB12900749B87 /* 1000.mp3 in Resources */,
 				2DDF31ED2BE642C000E15D4B /* Inter-VariableFont.ttf in Resources */,
 				2D561DEC2BDDB8B7004CA1C3 /* BottomSheetTableViewCell.xib in Resources */,
 				2D60346F2BEBFB560049214D /* HistoryBottomSheetViewController.xib in Resources */,
 				2DB523AE2B7DFA9D00AFF154 /* HearingViewController.xib in Resources */,
+				2D41B2F82C2489A3000E4EF3 /* GoogleService-Info.plist in Resources */,
+				2D4C9F282BECB12900749B87 /* 500.mp3 in Resources */,
 				2D60346A2BEBFAD30049214D /* AudiogramTestHistoryViewController.xib in Resources */,
 				2D4AC0062B67E48500D5F977 /* Sound1.mp3 in Resources */,
 				2D6A87112BCED943006E2D41 /* MessageBox.xib in Resources */,
-				2D6A870B2BCECEA8006E2D41 /* 1000.mp3 in Resources */,
 				2DB974AC2B666C87009BE2C8 /* Kanit-Light.ttf in Resources */,
 				2DDF31EA2BE57C5400E15D4B /* firstEyeTest.mp3 in Resources */,
 				2DB974B32B666C87009BE2C8 /* Kanit-Thin.ttf in Resources */,
@@ -1119,12 +1142,11 @@
 				2DB974A42B666C87009BE2C8 /* Kanit-Medium.ttf in Resources */,
 				2D708EE72BB8B707006146ED /* TableView.xib in Resources */,
 				2DB974AD2B666C87009BE2C8 /* Kanit-BlackItalic.ttf in Resources */,
+				2D4C9F272BECB12900749B87 /* 4000.mp3 in Resources */,
 				2DA4A6282B84EB4D00CC2380 /* AphabetSnellenViewController.xib in Resources */,
-				2D6A870C2BCECEA8006E2D41 /* 2000.mp3 in Resources */,
 				2D6034482BE6BDDC0049214D /* SuggestHospitalCollectionViewCell.xib in Resources */,
 				2DB523B02B7E0B8500AFF154 /* animation.json in Resources */,
 				2DB974A52B666C87009BE2C8 /* Kanit-Bold.ttf in Resources */,
-				2DEB159A2BC44210003FB88C /* 500.mp3 in Resources */,
 				2DB974A32B666C87009BE2C8 /* Kanit-Italic.ttf in Resources */,
 				2D561DF12BE2A35B004CA1C3 /* EyeTestsSummaryViewController.xib in Resources */,
 				2D6034662BEBFAA70049214D /* EyeTestsHistoryViewController.xib in Resources */,
@@ -1139,12 +1161,12 @@
 				2DEB15612BC062EA003FB88C /* HearingTestViewController.xib in Resources */,
 				2DB974A62B666C87009BE2C8 /* Kanit-ExtraBold.ttf in Resources */,
 				2D39C8242BD86AAC001FDE50 /* AnswerBottomSheetViewController.xib in Resources */,
-				2D6A87092BCECEA8006E2D41 /* 4000.mp3 in Resources */,
 				2D561E112BE42352004CA1C3 /* BottomSheetAnswerCollectionViewCell.xib in Resources */,
 				2D8F3A8F2BA36156009B675D /* HearingTestSummaryViewController.xib in Resources */,
 				2D708EEF2BB8C013006146ED /* HistoryTableViewCell.xib in Resources */,
+				2D4C9F2A2BECB12900749B87 /* 2000.mp3 in Resources */,
+				2DCA35C02C74BB7C00A9B62E /* CameraView.xib in Resources */,
 				2DEB15972BC2EBB2003FB88C /* OnBoarding.xib in Resources */,
-				2DEB15A12BCC168F003FB88C /* GoogleService-Info.plist in Resources */,
 				2DF334652B6AC0AE0063944B /* HomeMenuButton.xib in Resources */,
 				2DA1F7CC2BD84422007B3BF7 /* SnellenTestViewController.xib in Resources */,
 				2D96EB652BD05EF60082E315 /* headPhone.json in Resources */,
@@ -1154,7 +1176,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0454D74CCE73BC01E2C2D89A /* [CP] Embed Pods Frameworks */ = {
+		0830869B056A8F75C247FF86 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1171,7 +1193,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EyeHub/Pods-EyeHub-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2FF9F1F435B94C7CEB3271E3 /* [CP] Check Pods Manifest.lock */ = {
+		84B9EBEB86C59BFC59EF2C43 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1247,10 +1269,12 @@
 				2DB974292B658244009BE2C8 /* EyeHubColor.swift in Sources */,
 				2DB9743F2B6594DC009BE2C8 /* EyeHubRadius.swift in Sources */,
 				2D708EDC2BB8B28A006146ED /* TableViewType.swift in Sources */,
+				2DA03FEF2C74DAF40043A399 /* AVAudio+Extension.swift in Sources */,
 				2D4D64FE2BBB416800163504 /* BlindColorHistoryViewController.swift in Sources */,
 				2D6034552BE998980049214D /* BlindColorViewController.swift in Sources */,
 				2DA1F7C42BD568D2007B3BF7 /* HearingViewModel.swift in Sources */,
 				2DB523AD2B7DFA9D00AFF154 /* HearingViewController.swift in Sources */,
+				2DCA35BE2C74BB6E00A9B62E /* CameraView.swift in Sources */,
 				2D561E102BE42352004CA1C3 /* BottomSheetAnswerCollectionViewCell.swift in Sources */,
 				2DF334632B6AC0A50063944B /* HomeMenuButton.swift in Sources */,
 				2D561DE72BDD69B6004CA1C3 /* SnelllenTestCollectionViewCell.swift in Sources */,
@@ -1413,17 +1437,19 @@
 		};
 		2DB974172B657F17009BE2C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D0A4707885B1B8A1836066E /* Pods-EyeHub.debug.xcconfig */;
+			baseConfigurationReference = 8475A4B7FF7B86E65A3F975E /* Pods-EyeHub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EyeHub/EyeHub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VZKG7M8FDU;
+				DEVELOPMENT_TEAM = M58MND63UU;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EyeHub/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "เราต้องการใช้กล้องเพื่อวัดระยะห่างระหว่างหน้าจอกับใบหน้า";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your app needs to access your health data to track your headphone audio exposure.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your app needs to update your health data to store your headphone audio exposure information.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow the mic";
@@ -1451,17 +1477,20 @@
 		};
 		2DB974182B657F17009BE2C8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E916BFFA8F561DF8DDC4B198 /* Pods-EyeHub.release.xcconfig */;
+			baseConfigurationReference = D23F3676A794579889D09A1C /* Pods-EyeHub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EyeHub/EyeHub.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VZKG7M8FDU;
+				DEVELOPMENT_TEAM = M58MND63UU;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EyeHub/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "เราต้องการใช้กล้องเพื่อวัดระยะห่างระหว่างหน้าจอกับใบหน้า";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your app needs to access your health data to track your headphone audio exposure.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your app needs to update your health data to store your headphone audio exposure information.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow the mic";
@@ -1476,6 +1505,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nattapon.tape.EyeHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

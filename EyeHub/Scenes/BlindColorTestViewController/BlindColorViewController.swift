@@ -11,7 +11,7 @@ class BlindColorViewController: UIViewController {
     private let testData: [BlindColorTestData] = BlindColorTestData.allCases
     private var currentTestIndex = 0
     private var timer: Timer?
-    private var totalTime = 1
+    private var totalTime = 3
     private var currentTime = 0
     private var questionArr: [String] = []
     private var testResults: [BlindColorResult] = []

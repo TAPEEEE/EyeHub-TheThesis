@@ -67,10 +67,6 @@ class HearingViewController: UIViewController {
                                        object: nil)
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        setupVolumeButtonObservation()
-//    }
-    
     @objc func volumeChanged(notification: NSNotification) {
         let volume = notification.userInfo!["AVSystemController_AudioVolumeNotificationParameter"] as! Float
         print("Volume value:\(volume)")
@@ -140,7 +136,7 @@ class HearingViewController: UIViewController {
     }
     
     private func updateUIForVolumeMax(_ isMax: Bool) {
-        firstPageButtonView.buttonState = isMax ? .active : .disable
+        seccondPageButtonView.buttonState = isMax ? .active : .disable
     }
     
     func updateBottomSheetContent() {
